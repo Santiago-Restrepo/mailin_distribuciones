@@ -1,0 +1,145 @@
+mixin offer(descuento, imgUrl, nombre, precioAnterior, precioNuevo)
+    .product
+        span.product__discount #{descuento}      
+        img(src=""+imgUrl, alt="Imagen del producto "+nombre).product__image
+        h5.product__name #{nombre}
+        .product__prices
+            h6.product__prices-before #{precioAnterior}
+            h6.product__prices-new #{precioNuevo}
+
+mixin line(imgUrl, nombre, lineaUrl)
+    .line 
+        img(src=""+imgUrl, alt="Imagen de la línea"+nombre)
+        .line__container 
+            h3.line__container-name #{nombre}
+            a(href=""+lineaUrl).line__container-button ver catálogo 
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home
+    body
+        header 
+            span.hamburguer_menu
+                img(src="images/hamburguer_menu.png", alt="Menú de hamburguesa")
+            .general_menu
+                ul.desktop_menu
+                    li
+                        a(href="index.html" alt="Dirigirse a home") home   
+                    li
+                        a(href="index.html#contact" alt="Dirigirse a contacto ") contacto   
+                    li
+                        a(href="index.html#sales" alt="Dirigirse a ofertas") ofertas   
+                    li
+                        a(href="index.html#lines" alt="Dirigirse a líneas") líneas
+                    li
+                        a(href="index.html#story" alt="Dirigirse a historia") historia   
+                    li
+                        a(href="index.html#location" alt="Dirigirse a ubicación") ubicación
+                ul.mobile_menu
+                    li
+                        a(href="index.html" alt="Dirigirse a home") home    
+                    li
+                        a(href="index.html#contact" alt="Dirigirse a contacto ") contacto   
+                    li
+                        a(href="index.html#sales" alt="Dirigirse a ofertas") ofertas   
+                    li líneas
+                        ul.desktop_menu
+                            li
+                                a(href="index.html" alt="Dirigirse a línea bebé") bebé   
+                            li
+                                a(href="index.html#contact" alt="Dirigirse a línea capilar") capilar   
+                            li
+                                a(href="index.html#sales" alt="Dirigirse a línea cuidado corporal") cuidado corporal   
+                            li
+                                a(href="index.html#lines" alt="Dirigirse a línea cosmética") cosmética
+                            li
+                                a(href="index.html#story" alt="Dirigirse a línea quema grasa") quema grasa   
+                            li
+                                a(href="index.html#location" alt="Dirigirse a línea estuches") estuches                  
+                    li
+                        a(href="index.html#story" alt="Dirigirse a historia") historia   
+                    li
+                        a(href="index.html#location" alt="Dirigirse a ubicación") ubicación
+
+            span.logo
+                img(src="images/logo.png", alt="Logo de Mailin distribuciones")
+        section.hero
+        section#sales
+            .glider
+                .glider__container
+                    button.glider__left
+                        img(src="", alt="")
+                    .glider__list
+                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                    button.glider__right
+                        img(src="", alt="")
+                    .glider__dots(role="tablist")
+        section#lines 
+            h2.lines__title Descubre nuestros productos 
+            span.lines__label líneas
+            .catalog
+                +line("images/EJEMPLO.png", "bebé", "html/bebe.html")
+                +line("images/EJEMPLO.png", "cosmética", "html/cosmetica.html")
+                +line("images/EJEMPLO.png", "cuidado corporal", "html/cuidado-corporal.html")
+                +line("images/EJEMPLO.png", "capilar", "html/capilar.html")
+                +line("images/EJEMPLO.png", "quema grasa", "html/quema-grasa.html")
+                +line("images/EJEMPLO.png", "estuches", "html/estuches.html")
+        section#story 
+            img(src="images/hojas_ppal.svg", alt="Imagen de hoja colorida").primaryLeaf
+            .story__container 
+                h2.story__container-title Nuestra historia 
+                p.story__container-parraph Mailin Distribuciones SAS, es una distribuidora de productos 
+                                        |para el cuidado personal, cuenta con 
+                                        |una gran variedad de lineas, enfocadas a un segmento especial de clientes entre ellos: droguerías, tiendas naturistas, Tiendas medicas, tiendas del peluquero, gimnasios, spa, entre otros. Nace en el mes de Marzo de 2016 fruto de un sueño de una pareja de soñadores que querían hacer de sus conocimientos y sus ganas, un proyecto que los llevara a tener una visión diferente del mundo 
+                                        |empresarial, esta vez no como empleados,  esta vez desde el lado que todo emprendedor sueña.
+
+                                        |Nuestros productos son elaborados por un reconocido laboratorio Colombiano ubicado en la ciudad de Barranquilla llamado Ross D Elen, con mas de 45 años de experiencia en el mercado, especializado en productos exclusivos para el cuidado personal, industria netamente Colombiana que aporta al empleo y crecimiento de la economia de nuestro pais.
+            img(src="images/hojas_ppal.svg", alt="Imagen de hoja colorida").primaryLeaf
+        section#location
+            .location__container
+                iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.224218499738!2d-75.5934487!3d6.2233155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xda4af2b768a93380!2sMAILIN%20DISTRIBUCIONES%20SAS!5e0!3m2!1ses!2sco!4v1613496657520!5m2!1ses!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0").mailin_map
+                .location__container-info
+                    h3 Encuentranos en:
+                    h4 Cl. 20 ##71-29 PISO 2
+                    h6  Medellín, Antioquia
+        footer.footer 
+            .footer__button 
+                h3.footer__button-title Conviértete en un distribuidor
+                img(src="", alt="").foter__button-arrow 
+                span.footer__button-description Has parte de esta maravillosa empresa y contribuirás 
+                                               |a la economía de este país
+            .footer__button 
+                h3.footer__button-title Comprar al por mayor
+                img(src="", alt="").foter__button-arrow 
+                span.footer__button-description Has parte de esta maravillosa empresa y contribuirás 
+                                               |a la economía de este país
+            .contact 
+                h2.contact__title Contacto 
+                h6.contact__info Ana Catalina Restrepo Acevedo
+                h6.contact__info +57 320 8762984
+                h6.contact__info mailindistribuciones@gmail.com
+            .social_media 
+                h2.social__media-title Síguenos 
+                .social_media-container
+                    a(href="https://www.instagram.com/__greazy__/?hl=es-la") 
+                        i.fab.fa-instagram 
+                    a(href="https://api.whatsapp.com/send?phone=573226330880&text=Hola%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20interesa%20conocer%20m%C3%A1s%20de%20ustedes") 
+                        i.fab.fa-whatsapp
+                    a(href="https://www.facebook.com/Greazy-streetwear-101671948261008") 
+                        i.fab.fa-facebook-f
+                    a(href="https://www.facebook.com/Greazy-streetwear-101671948261008") 
+                        i.fab.fa-google
+            span.rights © Mailin Distribuciones
+        script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
+        script(src="js/glider.js") 
+
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css")
+        link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')
+            
