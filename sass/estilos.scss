@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Colores*/
+
+$Color-blanco:  #ffffff;
+$Color-blanco-variacion:  #F1FBF3;
+$Color-rojo-intenso:  #B82C2C;
+$Color-rojo:  #ec5248;
+$Color-negro:  #000603;
+$Color-verde:  #10312A;
+$Color-verde-claro:  #35B82C;
+$Color-gris:  #707070;
+
+
+/*Fuentes*/
+
+
+$fuente1: 'Lora','sans-serif';
+$fuente2: 'Rubik','sans-serif';
+
+
+/*Tamaños*/
+
+$break-mobile-M: 375px;
+$break-mobile-L: 425px;
+$break-mobile-tablet: 597px;
+$break-tablet: 768px;
+$break-laptop: 1024px;
+$break-laptop-S: 1144px;
+$break-laptop-M: 1280px;
+$break-laptop-L: 1440px;
+
+/*Provicionales*/
+
+img,iframe{
+    width: 100px;
+}
+
+
+/*Generales*/
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,li{
+    font-family: $fuente2;
+}
+h1{
+    font-size: 2.5em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.8em;
+}
+h4{
+    font-size: 1.7em;
+}
+h5{
+    font-size: 1.6em;
+}
+h6{
+    font-size: 1.3em;
+}
+
+/*Estilos header*/
+
+.header{
+    position: relative;
+    top: 0;
+    .hamburguer_menu{
+        z-index: 2;
+        position: fixed;
+        top: 3em;
+        left: 1.5em;
+        width: 5em;
+        height : 5em;
+        
+    }
+    .general_menu{
+        .desktop_menu{
+            display: none;
+        }
+        .mobile_menu{
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            list-style: none;
+            overflow-y: auto;
+            li{
+                width: 80%;
+                margin: .3em 0;
+                font-size: 3em;
+                text-align:center;
+                color: $Color-negro;
+                a{
+                    display: block;
+                    width: 100%;
+                    color: $Color-negro;
+                    text-decoration: none;
+                }
+                .line_menu{
+                    display: none;
+                    list-style: none;
+                    width: 100%;
+                    li{
+                        width: 100%;
+                        padding-bottom: .5em;
+                        text-align: start;
+                        font-size: .7em;
+                        border-bottom: 1px solid $Color-negro;
+                    }
+                }
+            }
+        }
+    }
+    .logo{
+        z-index: 2;
+        position: absolute;
+        top: 2em;
+        right: 1.5em;
+        width: 10em;
+    }
+}
+.hero{
+    width:100%;
+    height: 100vh;
+    background-image: url("../images/paisaje.jpg");
+    background-size: cover;
+    background-position: 50% 0%;
+    background-attachment: fixed;
+}
+
+
+#sales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 3em;
+    height: 100vh;
+    background-color: $Color-blanco-variacion;
+    .sales__container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-top: 1px solid $Color-gris;
+        border-bottom: 1px solid $Color-gris;
+        .glider{
+            &__container{
+                .glider__left,.glider__right{
+                    z-index: 3;
+                    position: absolute;
+                    top: 50%;
+                    background: none;
+                    border: none;
+
+                }
+                .glider__left{
+                    left: -1em; //?????
+
+
+                    
+                }
+                .glider__right{
+                    right: 0;
+
+
+                }
+                .glider__list{
+                    .offer{
+                        position: relative;
+                        width: 100%;
+                        &__discount{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: fit-content;
+                            padding: .7em;
+                            font-size:1.3em;
+                            background-color: $Color-rojo-intenso;
+                            color: $Color-blanco;
+                        }
+                        &__image{
+                            width: 100%;
+                            height: 30em;
+                        }
+                        &__name{
+                            font-family: $fuente1;
+                        }
+                        &__prices{
+                            display: flex;
+                            h6{
+                                font-weight: 500;
+                            }
+                            &-before{
+                                color: $Color-rojo;
+                            }
+                            &-new{
+                                margin-left: 1em;
+                                color: $Color-verde-claro;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

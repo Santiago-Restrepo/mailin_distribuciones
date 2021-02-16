@@ -1,0 +1,8 @@
+<svg id="Componente_17_2" data-name="Componente 17 – 2" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <circle id="Elipse_1" data-name="Elipse 1" cx="27" cy="27" r="27" fill="#fff"/>
+  <g id="menu" transform="translate(12.805 14.481)">
+    <path id="Trazado_346" data-name="Trazado 346" d="M26.523,0H1.56A1.563,1.563,0,0,0,0,1.56v3.12a1.563,1.563,0,0,0,1.56,1.56H26.523a1.563,1.563,0,0,0,1.56-1.56V1.56A1.563,1.563,0,0,0,26.523,0Zm0,0" transform="translate(0)"/>
+    <path id="Trazado_347" data-name="Trazado 347" d="M26.523,128H1.56A1.563,1.563,0,0,0,0,129.56v3.12a1.563,1.563,0,0,0,1.56,1.56H26.523a1.563,1.563,0,0,0,1.56-1.56v-3.12A1.563,1.563,0,0,0,26.523,128Zm0,0" transform="translate(0 -118.639)"/>
+    <path id="Trazado_348" data-name="Trazado 348" d="M26.523,256H1.56A1.563,1.563,0,0,0,0,257.56v3.12a1.563,1.563,0,0,0,1.56,1.56H26.523a1.563,1.563,0,0,0,1.56-1.56v-3.12A1.563,1.563,0,0,0,26.523,256Zm0,0" transform="translate(0 -237.278)"/>
+  </g>
+</svg>

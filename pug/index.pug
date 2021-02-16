@@ -1,11 +1,11 @@
 mixin offer(descuento, imgUrl, nombre, precioAnterior, precioNuevo)
-    .product
-        span.product__discount #{descuento}      
-        img(src=""+imgUrl, alt="Imagen del producto "+nombre).product__image
-        h5.product__name #{nombre}
-        .product__prices
-            h6.product__prices-before #{precioAnterior}
-            h6.product__prices-new #{precioNuevo}
+    .offer
+        span.offer__discount #{descuento}      
+        img(src=""+imgUrl, alt="Imagen del producto "+nombre).offer__image
+        h4.offer__name #{nombre}
+        .offer__prices
+            h6.offer__prices-before <strike>#{precioAnterior}</strike>
+            h6.offer__prices-new #{precioNuevo}
 
 mixin line(imgUrl, nombre, lineaUrl)
     .line 
@@ -19,11 +19,11 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/estilos.css")
         title Home
     body
-        header 
-            span.hamburguer_menu
-                img(src="images/hamburguer_menu.png", alt="Menú de hamburguesa")
+        header.header
+            img(src="images/hamburguer_menu.svg", alt="Menú de hamburguesa").hamburguer_menu
             .general_menu
                 ul.desktop_menu
                     li
@@ -39,48 +39,48 @@ html(lang="en")
                     li
                         a(href="index.html#location" alt="Dirigirse a ubicación") ubicación
                 ul.mobile_menu
+                    li líneas
+                        ul.line_menu
+                            li
+                                a(href="html/bebe.html" alt="Dirigirse a línea bebé") bebé   
+                            li
+                                a(href="html/capilar.html" alt="Dirigirse a línea capilar") capilar   
+                            li
+                                a(href="html/cuidado-corporal.html" alt="Dirigirse a línea cuidado corporal") cuidado corporal   
+                            li
+                                a(href="html/cosmetica.html" alt="Dirigirse a línea cosmética") cosmética
+                            li
+                                a(href="html/quema-grasa.html" alt="Dirigirse a línea quema grasa") quema grasa   
+                            li
+                                a(href="html/estuches.html" alt="Dirigirse a línea estuches") estuches                
                     li
                         a(href="index.html" alt="Dirigirse a home") home    
                     li
                         a(href="index.html#contact" alt="Dirigirse a contacto ") contacto   
                     li
                         a(href="index.html#sales" alt="Dirigirse a ofertas") ofertas   
-                    li líneas
-                        ul.desktop_menu
-                            li
-                                a(href="index.html" alt="Dirigirse a línea bebé") bebé   
-                            li
-                                a(href="index.html#contact" alt="Dirigirse a línea capilar") capilar   
-                            li
-                                a(href="index.html#sales" alt="Dirigirse a línea cuidado corporal") cuidado corporal   
-                            li
-                                a(href="index.html#lines" alt="Dirigirse a línea cosmética") cosmética
-                            li
-                                a(href="index.html#story" alt="Dirigirse a línea quema grasa") quema grasa   
-                            li
-                                a(href="index.html#location" alt="Dirigirse a línea estuches") estuches                  
+                     
                     li
                         a(href="index.html#story" alt="Dirigirse a historia") historia   
                     li
                         a(href="index.html#location" alt="Dirigirse a ubicación") ubicación
-
-            span.logo
-                img(src="images/logo.png", alt="Logo de Mailin distribuciones")
+            img(src="images/logo.png", alt="Logo de Mailin distribuciones").logo
         section.hero
         section#sales
-            .glider
-                .glider__container
-                    button.glider__left
-                        img(src="", alt="")
-                    .glider__list
-                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                        +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                    button.glider__right
-                        img(src="", alt="")
-                    .glider__dots(role="tablist")
+            .sales__container
+                .glider
+                    .glider__container
+                        button.glider__left
+                            i.fas.fa-arrow-left
+                        .glider__list
+                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                        button.glider__right
+                            i.fas.fa-arrow-right
+                        .glider__dots(role="tablist")
         section#lines 
             h2.lines__title Descubre nuestros productos 
             span.lines__label líneas
@@ -119,7 +119,7 @@ html(lang="en")
                 h3.footer__button-title Comprar al por mayor
                 img(src="", alt="").foter__button-arrow 
                 span.footer__button-description Has parte de esta maravillosa empresa y contribuirás 
-                                               |a la economía de este país
+                                               |a la economía de este país    
             .contact 
                 h2.contact__title Contacto 
                 h6.contact__info Ana Catalina Restrepo Acevedo

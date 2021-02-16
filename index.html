@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Home</title>
   </head>
   <body>
-    <header> <span class="hamburguer_menu"><img src="images/hamburguer_menu.png" alt="Menú de hamburguesa"></span>
+    <header class="header"><img class="hamburguer_menu" src="images/hamburguer_menu.svg" alt="Menú de hamburguesa">
       <div class="general_menu">
         <ul class="desktop_menu">
           <li><a href="index.html" alt="Dirigirse a home">home   </a></li>
@@ -18,68 +19,70 @@
           <li><a href="index.html#location" alt="Dirigirse a ubicación">ubicación</a></li>
         </ul>
         <ul class="mobile_menu">
+          <li>líneas
+            <ul class="line_menu">
+              <li><a href="html/bebe.html" alt="Dirigirse a línea bebé">bebé   </a></li>
+              <li><a href="html/capilar.html" alt="Dirigirse a línea capilar">capilar   </a></li>
+              <li><a href="html/cuidado-corporal.html" alt="Dirigirse a línea cuidado corporal">cuidado corporal   </a></li>
+              <li><a href="html/cosmetica.html" alt="Dirigirse a línea cosmética">cosmética</a></li>
+              <li><a href="html/quema-grasa.html" alt="Dirigirse a línea quema grasa">quema grasa   </a></li>
+              <li><a href="html/estuches.html" alt="Dirigirse a línea estuches">estuches                </a></li>
+            </ul>
+          </li>
           <li><a href="index.html" alt="Dirigirse a home">home    </a></li>
           <li><a href="index.html#contact" alt="Dirigirse a contacto ">contacto   </a></li>
           <li><a href="index.html#sales" alt="Dirigirse a ofertas">ofertas   </a></li>
-          <li>líneas
-            <ul class="desktop_menu">
-              <li><a href="index.html" alt="Dirigirse a línea bebé">bebé   </a></li>
-              <li><a href="index.html#contact" alt="Dirigirse a línea capilar">capilar   </a></li>
-              <li><a href="index.html#sales" alt="Dirigirse a línea cuidado corporal">cuidado corporal   </a></li>
-              <li><a href="index.html#lines" alt="Dirigirse a línea cosmética">cosmética</a></li>
-              <li><a href="index.html#story" alt="Dirigirse a línea quema grasa">quema grasa   </a></li>
-              <li><a href="index.html#location" alt="Dirigirse a línea estuches">estuches                  </a></li>
-            </ul>
-          </li>
           <li><a href="index.html#story" alt="Dirigirse a historia">historia   </a></li>
           <li><a href="index.html#location" alt="Dirigirse a ubicación">ubicación</a></li>
         </ul>
-      </div><span class="logo"><img src="images/logo.png" alt="Logo de Mailin distribuciones"></span>
+      </div><img class="logo" src="images/logo.png" alt="Logo de Mailin distribuciones">
     </header>
     <section class="hero"></section>
     <section id="sales">
-      <div class="glider">
-        <div class="glider__container">
-          <button class="glider__left"><img src="" alt=""></button>
-          <div class="glider__list">
-            <div class="product"><span class="product__discount">50%      </span><img class="product__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
-              <h5 class="product__name">Stop sweet</h5>
-              <div class="product__prices">
-                <h6 class="product__prices-before">25.000</h6>
-                <h6 class="product__prices-new">50.000</h6>
+      <div class="sales__container">
+        <div class="glider">
+          <div class="glider__container">
+            <button class="glider__left"><i class="fas fa-arrow-left"></i></button>
+            <div class="glider__list">
+              <div class="offer"><span class="offer__discount">50%      </span><img class="offer__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
+                <h4 class="offer__name">Stop sweet</h4>
+                <div class="offer__prices">
+                  <h6 class="offer__prices-before"><strike>25.000</strike></h6>
+                  <h6 class="offer__prices-new">50.000</h6>
+                </div>
+              </div>
+              <div class="offer"><span class="offer__discount">50%      </span><img class="offer__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
+                <h4 class="offer__name">Stop sweet</h4>
+                <div class="offer__prices">
+                  <h6 class="offer__prices-before"><strike>25.000</strike></h6>
+                  <h6 class="offer__prices-new">50.000</h6>
+                </div>
+              </div>
+              <div class="offer"><span class="offer__discount">50%      </span><img class="offer__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
+                <h4 class="offer__name">Stop sweet</h4>
+                <div class="offer__prices">
+                  <h6 class="offer__prices-before"><strike>25.000</strike></h6>
+                  <h6 class="offer__prices-new">50.000</h6>
+                </div>
+              </div>
+              <div class="offer"><span class="offer__discount">50%      </span><img class="offer__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
+                <h4 class="offer__name">Stop sweet</h4>
+                <div class="offer__prices">
+                  <h6 class="offer__prices-before"><strike>25.000</strike></h6>
+                  <h6 class="offer__prices-new">50.000</h6>
+                </div>
+              </div>
+              <div class="offer"><span class="offer__discount">50%      </span><img class="offer__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
+                <h4 class="offer__name">Stop sweet</h4>
+                <div class="offer__prices">
+                  <h6 class="offer__prices-before"><strike>25.000</strike></h6>
+                  <h6 class="offer__prices-new">50.000</h6>
+                </div>
               </div>
             </div>
-            <div class="product"><span class="product__discount">50%      </span><img class="product__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
-              <h5 class="product__name">Stop sweet</h5>
-              <div class="product__prices">
-                <h6 class="product__prices-before">25.000</h6>
-                <h6 class="product__prices-new">50.000</h6>
-              </div>
-            </div>
-            <div class="product"><span class="product__discount">50%      </span><img class="product__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
-              <h5 class="product__name">Stop sweet</h5>
-              <div class="product__prices">
-                <h6 class="product__prices-before">25.000</h6>
-                <h6 class="product__prices-new">50.000</h6>
-              </div>
-            </div>
-            <div class="product"><span class="product__discount">50%      </span><img class="product__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
-              <h5 class="product__name">Stop sweet</h5>
-              <div class="product__prices">
-                <h6 class="product__prices-before">25.000</h6>
-                <h6 class="product__prices-new">50.000</h6>
-              </div>
-            </div>
-            <div class="product"><span class="product__discount">50%      </span><img class="product__image" src="images/EJEMPLO.png" alt="Imagen del producto Stop sweet"/>
-              <h5 class="product__name">Stop sweet</h5>
-              <div class="product__prices">
-                <h6 class="product__prices-before">25.000</h6>
-                <h6 class="product__prices-new">50.000</h6>
-              </div>
-            </div>
+            <button class="glider__right"><i class="fas fa-arrow-right"></i></button>
+            <div class="glider__dots" role="tablist"></div>
           </div>
-          <button class="glider__right"><img src="" alt=""></button>
-          <div class="glider__dots" role="tablist"></div>
         </div>
       </div>
     </section>
@@ -146,7 +149,7 @@
       </div>
       <div class="footer__button"> 
         <h3 class="footer__button-title">Comprar al por mayor</h3><img class="foter__button-arrow" src="" alt=""><span class="footer__button-description">
-          Has parte de esta maravillosa empresa y contribuirás a la economía de este país</span>
+          Has parte de esta maravillosa empresa y contribuirás a la economía de este país    </span>
       </div>
       <div class="contact"> 
         <h2 class="contact__title">Contacto </h2>
