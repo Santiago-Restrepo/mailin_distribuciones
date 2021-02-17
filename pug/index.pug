@@ -10,8 +10,8 @@ mixin offer(descuento, imgUrl, nombre, precioAnterior, precioNuevo)
 
 mixin line(imgUrl, nombre, lineaUrl)
     .line 
-        img(src=""+imgUrl, alt="Imagen de la línea"+nombre)
-        .line__container 
+        img(src=""+imgUrl, alt="Imagen de la línea"+nombre).line__image
+        a(href=""+lineaUrl).line__container 
             h3.line__container-name #{nombre}
             a(href=""+lineaUrl).line__container-button ver catálogo 
 doctype html
@@ -68,6 +68,7 @@ html(lang="en")
             img(src="images/logo.png", alt="Logo de Mailin distribuciones").logo
         section.hero
         section#sales
+            span.lines__label ofertas
             .glider
                 button.glider__left
                     i.fas.fa-arrow-left
@@ -83,13 +84,15 @@ html(lang="en")
         section#lines 
             h2.lines__title Descubre nuestros productos 
             span.lines__label líneas
+            img(src="images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
             .catalog
-                +line("images/EJEMPLO.PNG", "bebé", "html/bebe.html")
-                +line("images/EJEMPLO.PNG", "cosmética", "html/cosmetica.html")
-                +line("images/EJEMPLO.PNG", "cuidado corporal", "html/cuidado-corporal.html")
-                +line("images/EJEMPLO.PNG", "capilar", "html/capilar.html")
-                +line("images/EJEMPLO.PNG", "quema grasa", "html/quema-grasa.html")
-                +line("images/EJEMPLO.PNG", "estuches", "html/estuches.html")
+                +line("images/EJEMPLO.PNG", "Bebé", "html/bebe.html")
+                +line("images/EJEMPLO.PNG", "Cosmética", "html/cosmetica.html")
+                +line("images/EJEMPLO.PNG", "Cuidado corporal", "html/cuidado-corporal.html")
+                +line("images/EJEMPLO.PNG", "Capilar", "html/capilar.html")
+                +line("images/EJEMPLO.PNG", "Quema grasa", "html/quema-grasa.html")
+                +line("images/EJEMPLO.PNG", "Estuches", "html/estuches.html")
+            img(src="images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
         section#story 
             img(src="images/hojas_ppal.svg", alt="Imagen de hoja colorida").primaryLeaf
             .story__container 
