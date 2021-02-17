@@ -50,6 +50,7 @@ html{
     font-size: 62.5%;
 }
 
+
 h1,h2,h3,h4,h5,h6,p,span,li,a{
     font-family: $fuente2;
 }
@@ -387,8 +388,11 @@ h6{
         border: 2px solid $Color-morado-claro;
         border-radius: 1em;
         text-align: center;
+        &-title{
+            margin-bottom: .5em;
+        }
         &-parraph{
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-weight: 300;
         }
     }
@@ -396,8 +400,9 @@ h6{
 
 #location{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     padding: 6em 3em;
     .location__container{
         width: 100%;
@@ -406,6 +411,7 @@ h6{
         .mailin_map{
             margin: 0 auto;
             width: 100%;
+            height: 20em;
         }
         &-info{
             display: flex;
@@ -430,5 +436,99 @@ h6{
                 font: 300;
             }
         }
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    &__button{
+        display: grid;
+        grid-template-areas: "title arrow"
+                    "description description";
+        width: 90%;
+        max-width: 30em;
+        padding: 1.5em;
+        margin-bottom: 1em;
+        color: $Color-blanco;
+        background-color: $Color-negro;
+        text-align: start;
+        border: none;
+        &-title{
+            grid-area: title;
+            margin-bottom: 1em;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        &-arrow{
+            grid-area: arrow;
+            justify-self: center;
+            align-self: flex-start;
+        }
+        &-description{
+            grid-area: description;
+            font-size: .8em;
+            font-weight: 300;
+        }
+        
+    }
+    &__container{
+        position: relative;
+        margin-top: 3em;
+        width: 90%;
+        padding: 0 1em;
+        background-image: url("../images/hojas_ppal.svg");
+        background-repeat: no-repeat;
+        background-size: 15em;
+        background-position-x: 120%;
+        background-position-y: 110%;
+
+        .contact{
+            color: $Color-negro;
+            &__title{
+                font-weight: 600;
+                margin-bottom: .8em;
+            }
+            &__info{
+                font-weight: 300;
+                margin-bottom: .2em;
+            }
+        }
+        .social_media{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3em;
+            &-title{
+                margin-bottom: 1em;
+                padding-bottom: .5em;
+                border-bottom: 2px solid $Color-gris;
+            }
+            &-container{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1.5em;
+                width: 50%;
+                a{
+                    color: $Color-negro;
+                    i{
+                        font-size: 3em;
+                    }
+                }
+            }
+        }
+        .rights{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 1em;
+            color: $Color-negro;
+            font-size: 1.3em;
+            font-weight: 500;
+            text-align: center;
+        }
+
     }
 }
