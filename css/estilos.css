@@ -125,27 +125,38 @@ h6 {
 #sales {
   display: flex;
   align-items: center;
-  padding: 3em 0;
+  padding: 2em 0;
   height: 100vh;
   background-color: #F1FBF3;
-  border-top: 1px solid #707070;
-  border-bottom: 1px solid #707070;
 }
 #sales .glider {
   position: relative;
 }
 #sales .glider .glider__left, #sales .glider .glider__right {
+  z-index: 1;
   position: absolute;
   top: 50%;
   background: none;
   border: none;
   font-size: 2.5em;
+  color: #000603;
 }
 #sales .glider .glider__left {
   left: 0.2em;
 }
 #sales .glider .glider__right {
   right: 0.2em;
+}
+#sales .glider-dots {
+  margin-top: 1em;
+}
+#sales .glider-dot {
+  height: 0.5em;
+  border-radius: 0;
+  background-color: #707070;
+}
+#sales .glider-dot.active {
+  background-color: #000603;
 }
 #sales .glider .glider__list {
   /*Perspectiva*/
@@ -154,8 +165,24 @@ h6 {
 #sales .glider .glider__list .left-1, #sales .glider .glider__list .left-2, #sales .glider .glider__list .left-3, #sales .glider .glider__list .left-4, #sales .glider .glider__list .right-1, #sales .glider .glider__list .right-2, #sales .glider .glider__list .right-3, #sales .glider .glider__list .right-4 {
   opacity: 0.9;
 }
+#sales .glider .glider__list .left-1 {
+  transform: translateX(25%) scale(0.8);
+}
+#sales .glider .glider__list .right-1 {
+  transform: translateX(-25%) scale(0.8);
+}
+#sales .glider .glider__list .left-2, #sales .glider .glider__list .right-2 {
+  transform: scale(0.75);
+}
+#sales .glider .glider__list .left-3, #sales .glider .glider__list .right-3 {
+  transform: scale(0.6);
+}
+#sales .glider .glider__list .left-4, #sales .glider .glider__list .right-4 {
+  transform: scale(0.5);
+}
 #sales .glider .glider__list .offer {
   width: 100%;
+  transition: 0.3s ease;
 }
 #sales .glider .glider__list .offer__image {
   position: relative;
@@ -188,7 +215,7 @@ h6 {
 }
 #sales .glider .glider__list .offer__image .offer__prices {
   display: flex;
-  margin-top: 0.5em;
+  margin: 0.5em 0 1em;
 }
 #sales .glider .glider__list .offer__image .offer__prices h6 {
   font-weight: 500;

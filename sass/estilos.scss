@@ -153,19 +153,19 @@ h6{
 #sales{
     display: flex;
     align-items: center;
-    padding: 3em 0;
+    padding: 2em 0;
     height: 100vh;
     background-color: $Color-blanco-variacion;
-    border-top: 1px solid $Color-gris;
-    border-bottom: 1px solid $Color-gris;
     .glider{
         position: relative;
         .glider__left,.glider__right{
+            z-index: 1;
             position: absolute;
             top: 50%;
             background: none;
             border: none;
             font-size: 2.5em;
+            color: $Color-negro;
 
         }
         .glider__left{
@@ -176,14 +176,45 @@ h6{
             right: .2em;
 
         }
+        &-dots{
+            margin-top: 1em;
+        }
+        &-dot{
+            height: 0.5em;
+            border-radius: 0;
+            background-color: $Color-gris;
+        }
+        &-dot.active{
+            background-color: $Color-negro;
+        }
         .glider__list{
             /*Perspectiva*/
             .left-1,.left-2,.left-3,.left-4,.right-1,.right-2,.right-3,.right-4{
                 opacity: .9;
             }
+            .left-1{
+                transform: translateX(25%) scale(.8);
+            }
+            .right-1{
+                transform: translateX(-25%) scale(.8);
+
+            }
+            // .left-1,.right-1{
+            //     transform: scale(.9);
+            // }
+            .left-2,.right-2{
+                transform: scale(.75);
+            }
+            .left-3,.right-3{
+                transform: scale(.6);
+            }
+            .left-4,.right-4{
+                transform: scale(.5);
+            }
             /*Fin perspectiva*/
             .offer{
                 width: 100%;
+                transition: .3s ease;
                 &__image{
                     position: relative;
                     width: 80%;    
@@ -213,7 +244,7 @@ h6{
                     }
                     .offer__prices{
                         display: flex;
-                        margin-top: .5em;
+                        margin: .5em 0 1em;
                         h6{
                             font-weight: 500;
                         }
