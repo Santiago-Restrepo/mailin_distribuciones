@@ -1,3 +1,6 @@
+const gliderElements = document.querySelectorAll('.offer');
+
+
 window.addEventListener('load', function(){
 	new Glider(document.querySelector('.glider__list'), {
 		slidesToShow: 1,
@@ -29,3 +32,23 @@ window.addEventListener('load', function(){
 		]
 	});
 });
+
+gliderElements.forEach(element => {
+	element.addEventListener('mouseover',stopScroll)
+});
+gliderElements.forEach(element => {
+	element.addEventListener('mouseout',stopScroll)
+});
+
+function stopScroll (){
+	clearInterval(intervalScroll);
+}
+// function playScroll (){
+// 	intervalScroll = window.setInterval(scrollSlide,2500);
+// }
+
+var intervalScroll = window.setInterval(scrollSlide,2500);
+function scrollSlide(){
+	document.querySelector(".glider__right").click();
+}
+
