@@ -124,65 +124,79 @@ h6 {
 
 #sales {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  padding: 3em;
+  align-items: center;
+  padding: 3em 0;
   height: 100vh;
   background-color: #F1FBF3;
-}
-#sales .sales__container {
-  display: flex;
-  align-items: center;
-  height: 100%;
   border-top: 1px solid #707070;
   border-bottom: 1px solid #707070;
 }
-#sales .sales__container .glider__container .glider__left, #sales .sales__container .glider__container .glider__right {
-  z-index: 3;
+#sales .glider {
+  position: relative;
+}
+#sales .glider .glider__left, #sales .glider .glider__right {
   position: absolute;
   top: 50%;
   background: none;
   border: none;
+  font-size: 2.5em;
 }
-#sales .sales__container .glider__container .glider__left {
-  left: -1em;
+#sales .glider .glider__left {
+  left: 0.2em;
 }
-#sales .sales__container .glider__container .glider__right {
-  right: 0;
+#sales .glider .glider__right {
+  right: 0.2em;
 }
-#sales .sales__container .glider__container .glider__list .offer {
-  position: relative;
+#sales .glider .glider__list {
+  /*Perspectiva*/
+  /*Fin perspectiva*/
+}
+#sales .glider .glider__list .left-1, #sales .glider .glider__list .left-2, #sales .glider .glider__list .left-3, #sales .glider .glider__list .left-4, #sales .glider .glider__list .right-1, #sales .glider .glider__list .right-2, #sales .glider .glider__list .right-3, #sales .glider .glider__list .right-4 {
+  opacity: 0.9;
+}
+#sales .glider .glider__list .offer {
   width: 100%;
 }
-#sales .sales__container .glider__container .glider__list .offer__discount {
+#sales .glider .glider__list .offer__image {
+  position: relative;
+  width: 80%;
+  max-width: 30em;
+  height: auto;
+  margin: 0 auto;
+}
+#sales .glider .glider__list .offer__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#sales .glider .glider__list .offer__image .offer__discount {
   position: absolute;
   top: 0;
   left: 0;
   width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0.7em;
   font-size: 1.3em;
   background-color: #B82C2C;
   color: #ffffff;
 }
-#sales .sales__container .glider__container .glider__list .offer__image {
-  width: 100%;
-  height: 30em;
-}
-#sales .sales__container .glider__container .glider__list .offer__name {
+#sales .glider .glider__list .offer__image .offer__name {
+  margin-top: 0.8em;
   font-family: "Lora", "sans-serif";
-}
-#sales .sales__container .glider__container .glider__list .offer__prices {
-  display: flex;
-}
-#sales .sales__container .glider__container .glider__list .offer__prices h6 {
   font-weight: 500;
 }
-#sales .sales__container .glider__container .glider__list .offer__prices-before {
+#sales .glider .glider__list .offer__image .offer__prices {
+  display: flex;
+  margin-top: 0.5em;
+}
+#sales .glider .glider__list .offer__image .offer__prices h6 {
+  font-weight: 500;
+}
+#sales .glider .glider__list .offer__image .offer__prices-before {
   color: #ec5248;
 }
-#sales .sales__container .glider__container .glider__list .offer__prices-new {
+#sales .glider .glider__list .offer__image .offer__prices-new {
   margin-left: 1em;
   color: #35B82C;
 }

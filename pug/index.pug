@@ -1,11 +1,12 @@
 mixin offer(descuento, imgUrl, nombre, precioAnterior, precioNuevo)
     .offer
-        span.offer__discount #{descuento}      
-        img(src=""+imgUrl, alt="Imagen del producto "+nombre).offer__image
-        h4.offer__name #{nombre}
-        .offer__prices
-            h6.offer__prices-before <strike>#{precioAnterior}</strike>
-            h6.offer__prices-new #{precioNuevo}
+        .offer__image
+            span.offer__discount #{descuento}      
+            img(src=""+imgUrl, alt="Imagen del producto "+nombre)
+            h4.offer__name #{nombre}
+            .offer__prices
+                h5.offer__prices-before <strike>#{precioAnterior}</strike>
+                h5.offer__prices-new #{precioNuevo}
 
 mixin line(imgUrl, nombre, lineaUrl)
     .line 
@@ -67,20 +68,18 @@ html(lang="en")
             img(src="images/logo.png", alt="Logo de Mailin distribuciones").logo
         section.hero
         section#sales
-            .sales__container
-                .glider
-                    .glider__container
-                        button.glider__left
-                            i.fas.fa-arrow-left
-                        .glider__list
-                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                            +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
-                        button.glider__right
-                            i.fas.fa-arrow-right
-                        .glider__dots(role="tablist")
+            .glider
+                button.glider__left
+                    i.fas.fa-arrow-left
+                .glider__list
+                    +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                    +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                    +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                    +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                    +offer("50%","images/EJEMPLO.png","Stop sweet", "25.000", "50.000")
+                button.glider__right
+                    i.fas.fa-arrow-right
+                .glider__dots(role="tablist")
         section#lines 
             h2.lines__title Descubre nuestros productos 
             span.lines__label líneas

@@ -152,77 +152,86 @@ h6{
 
 #sales{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 3em;
+    align-items: center;
+    padding: 3em 0;
     height: 100vh;
     background-color: $Color-blanco-variacion;
-    .sales__container{
-        display: flex;
-        align-items: center;
-        height: 100%;
-        border-top: 1px solid $Color-gris;
-        border-bottom: 1px solid $Color-gris;
-        .glider{
-            &__container{
-                .glider__left,.glider__right{
-                    z-index: 3;
-                    position: absolute;
-                    top: 50%;
-                    background: none;
-                    border: none;
+    border-top: 1px solid $Color-gris;
+    border-bottom: 1px solid $Color-gris;
+    .glider{
+        position: relative;
+        .glider__left,.glider__right{
+            position: absolute;
+            top: 50%;
+            background: none;
+            border: none;
+            font-size: 2.5em;
 
-                }
-                .glider__left{
-                    left: -1em; //?????
+        }
+        .glider__left{
+            left: .2em;
 
+        }
+        .glider__right{
+            right: .2em;
 
-                    
-                }
-                .glider__right{
-                    right: 0;
-
-
-                }
-                .glider__list{
-                    .offer{
-                        position: relative;
+        }
+        .glider__list{
+            /*Perspectiva*/
+            .left-1,.left-2,.left-3,.left-4,.right-1,.right-2,.right-3,.right-4{
+                opacity: .9;
+            }
+            /*Fin perspectiva*/
+            .offer{
+                width: 100%;
+                &__image{
+                    position: relative;
+                    width: 80%;    
+                    max-width: 30em;
+                    height: auto;
+                    margin: 0 auto;
+                    img{
+                        object-fit: cover;
                         width: 100%;
-                        &__discount{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: fit-content;
-                            padding: .7em;
-                            font-size:1.3em;
-                            background-color: $Color-rojo-intenso;
-                            color: $Color-blanco;
-                        }
-                        &__image{
-                            width: 100%;
-                            height: 30em;
-                        }
-                        &__name{
-                            font-family: $fuente1;
-                        }
-                        &__prices{
-                            display: flex;
-                            h6{
-                                font-weight: 500;
-                            }
-                            &-before{
-                                color: $Color-rojo;
-                            }
-                            &-new{
-                                margin-left: 1em;
-                                color: $Color-verde-claro;
-                            }
-                        }
-                        
+                        height: 100%;
                     }
+                    .offer__discount{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: fit-content;
+                        padding: .7em;
+                        font-size:1.3em;
+                        background-color: $Color-rojo-intenso;
+                        color: $Color-blanco;
+                    }
+                    .offer__name{
+                        margin-top: .8em;
+                        font-family: $fuente1;
+                        font-weight: 500;
+    
+                    }
+                    .offer__prices{
+                        display: flex;
+                        margin-top: .5em;
+                        h6{
+                            font-weight: 500;
+                        }
+                        &-before{
+                            color: $Color-rojo;
+                        }
+                        &-new{
+                            margin-left: 1em;
+                            color: $Color-verde-claro;
+                        }
+                    }
+
                 }
+                
+                
+                
             }
         }
+    
     }
 }
