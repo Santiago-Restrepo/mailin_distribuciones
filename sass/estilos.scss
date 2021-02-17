@@ -36,10 +36,6 @@ $break-laptop-L: 1440px;
 
 /*Provicionales*/
 
-img,iframe{
-    width: 100px;
-}
-
 
 /*Generales*/
 
@@ -357,6 +353,7 @@ h6{
                     bottom: 10%;
                     padding: 1em;
                     font-size: 1.3em;
+                    font-weight: 500;
                     background-color: $Color-verde;
                     color: $Color-verde-claro;
                     text-decoration: none;
@@ -393,6 +390,45 @@ h6{
         &-parraph{
             font-size: 1.5em;
             font-weight: 300;
+        }
+    }
+}
+
+#location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6em 3em;
+    .location__container{
+        width: 100%;
+        max-width: 50em;
+        background-color: $Color-morado;
+        .mailin_map{
+            margin: 0 auto;
+            width: 100%;
+        }
+        &-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            height: fit-content;  
+            margin: 1em auto;
+            padding: 1em;
+            color: $Color-blanco;
+            border: 1px solid $Color-blanco;    
+            h3{
+                font-weight: 500;
+                margin-bottom: .5em;
+            }
+            h6{
+                font-weight: 300;
+                margin-bottom: .5em;
+            }
+            span{
+                font: 300;
+            }
         }
     }
 }

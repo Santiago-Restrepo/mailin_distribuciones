@@ -5,10 +5,6 @@
 /*Fuentes*/
 /*Tamaños*/
 /*Provicionales*/
-img, iframe {
-  width: 100px;
-}
-
 /*Generales*/
 * {
   padding: 0;
@@ -317,6 +313,7 @@ h6 {
   bottom: 10%;
   padding: 1em;
   font-size: 1.3em;
+  font-weight: 500;
   background-color: #10312A;
   color: #72EF8B;
   text-decoration: none;
@@ -351,4 +348,45 @@ h6 {
 #story .story__container-parraph {
   font-size: 1.5em;
   font-weight: 300;
+}
+
+#location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em 3em;
+}
+#location .location__container {
+  width: 100%;
+  max-width: 50em;
+  background-color: #312B40;
+}
+#location .location__container .mailin_map {
+  margin: 0 auto;
+  width: 100%;
+}
+#location .location__container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1em auto;
+  padding: 1em;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+#location .location__container-info h3 {
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+#location .location__container-info h6 {
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+#location .location__container-info span {
+  font: 300;
 }
