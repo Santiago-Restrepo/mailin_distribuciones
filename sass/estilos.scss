@@ -12,6 +12,8 @@ $Color-verde:  #10312A;
 $Color-verde-intenso:  #35B82C;
 $Color-verde-claro:  #72EF8B;
 $Color-gris:  #707070;
+$Color-morado-claro:  #583760;
+$Color-morado:  #312B40;
 
 
 /*Fuentes*/
@@ -57,7 +59,7 @@ h1,h2,h3,h4,h5,h6,p,span,li,a{
 }
 
 h1{
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 h2{
     font-size: 2em;
@@ -307,6 +309,7 @@ h6{
         margin-bottom: .5em;
         color: $Color-negro;
         font-weight: 500;
+        text-align: center;
     }
     .catalog{
         display: flex;
@@ -359,6 +362,37 @@ h6{
                     text-decoration: none;
                 }
             }
+        }
+    }
+}
+
+#story{
+    position: relative;
+    background-color: $Color-negro;
+    padding: 6em 3em;
+    .primaryLeaf{
+        position: absolute;
+        width: 18em;
+    }
+    .primaryLeaf:nth-last-of-type(1){
+        top: -5%;
+        right: -5%;
+        transform: rotateX(180deg);
+    }
+    .primaryLeaf:nth-last-of-type(2){
+        bottom: -7%;
+        left: -5%;
+        transform: rotateY(180deg);
+    }
+    .story__container{
+        padding: 1em;
+        color: $Color-blanco;
+        border: 2px solid $Color-morado-claro;
+        border-radius: 1em;
+        text-align: center;
+        &-parraph{
+            font-size: 1.5em;
+            font-weight: 300;
         }
     }
 }

@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
 
 h2 {
@@ -267,6 +267,7 @@ h6 {
   margin-bottom: 0.5em;
   color: #000603;
   font-weight: 500;
+  text-align: center;
 }
 #lines .catalog {
   display: flex;
@@ -319,4 +320,35 @@ h6 {
   background-color: #10312A;
   color: #72EF8B;
   text-decoration: none;
+}
+
+#story {
+  position: relative;
+  background-color: #000603;
+  padding: 6em 3em;
+}
+#story .primaryLeaf {
+  position: absolute;
+  width: 18em;
+}
+#story .primaryLeaf:nth-last-of-type(1) {
+  top: -5%;
+  right: -5%;
+  transform: rotateX(180deg);
+}
+#story .primaryLeaf:nth-last-of-type(2) {
+  bottom: -7%;
+  left: -5%;
+  transform: rotateY(180deg);
+}
+#story .story__container {
+  padding: 1em;
+  color: #ffffff;
+  border: 2px solid #583760;
+  border-radius: 1em;
+  text-align: center;
+}
+#story .story__container-parraph {
+  font-size: 1.5em;
+  font-weight: 300;
 }
