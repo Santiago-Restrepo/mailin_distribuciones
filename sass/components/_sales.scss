@@ -14,11 +14,11 @@
 
         }
         .glider__left{
-            left: .2em;
+            left: 5%;
 
         }
         .glider__right{
-            right: .2em;
+            right: 5%;
 
         }
         &-dots{
@@ -42,19 +42,6 @@
             }
             .right-1{
                 transform: translateX(-25%) scale(.8);
-
-            }
-            // .left-1,.right-1{
-            //     transform: scale(.9);
-            // }
-            .left-2,.right-2{
-                transform: scale(.75);
-            }
-            .left-3,.right-3{
-                transform: scale(.6);
-            }
-            .left-4,.right-4{
-                transform: scale(.5);
             }
             /*Fin perspectiva*/
             .offer{
@@ -130,6 +117,8 @@
     #sales{
         .glider{
             .glider__list{
+                .offer{
+                }
                 .left-1{
                     transform: translateX(40%) scale(.8);
                 }
@@ -160,6 +149,9 @@
     #sales{
         .glider{
             .glider__list{
+                .offer{
+                    transition: .5s ease;
+                }
                 .left-1{
                     transform: translateX(50%) scale(.8);
                 }
@@ -175,6 +167,10 @@
     #sales{
         .glider{
             .glider__list{
+                
+                .offer{
+                    transition: .6s ease;
+                }
                 .left-1{
                     transform: translateX(60%) scale(.8);
                 }
@@ -189,19 +185,62 @@
 @media screen and (min-width: $break-tablet) {
     #sales{
         .glider{
+            width: 100%;
+            max-width: 100em;
             .glider__list{
-                .left-1{
-                    transform: translateX(70%) scale(.7);
-                }
-                .right-1{
-                    transform: translateX(-70%) scale(.7);
-    
-                }
                 .offer{
                     .offer__image{
                         width: 25em;
                     }
                 }
+                .left-1{
+                    transform: translateX(70%) scale(.7);
+                }
+                .right-1{
+                    transform: translateX(-70%) scale(.7);
+                }
+                .left-2{
+                    transform: translateX(149%) scale(.5);
+                }
+                .right-2{
+                    transform: translateX(-149%) scale(.5);
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 850px) {
+    #sales{
+        .glider{
+            .glider__list{
+                .left-1{
+                    transform: translateX(73%) scale(.7);
+                }
+                .right-1{
+                    transform: translateX(-73%) scale(.7);
+                }
+                .left-2{
+                    transform: translateX(153.5%) scale(.5);
+                }
+                .right-2{
+                    transform: translateX(-153.5%) scale(.5);
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $break-laptop) {
+    #sales{
+        padding: 5em 0;
+        .glider{
+            max-width: 100em;
+            .glider__list{
+                .offer{
+                    .offer__image{
+                        width: 30em;
+                    }
+                }
+                
             }
         }
     }
