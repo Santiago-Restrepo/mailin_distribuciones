@@ -34,7 +34,7 @@ window.addEventListener('load', function(){
 });
 
 gliderElements.forEach(element => {
-	element.addEventListener('mouseover',stopScroll);
+	element.addEventListener('click',stopScroll);
 });
 gliderArrowLeft.addEventListener('mouseover',stopScroll);
 gliderArrowRight.addEventListener('mouseover',stopScroll);

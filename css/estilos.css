@@ -321,6 +321,21 @@ h6 {
   #sales .glider .glider__list .offer .offer__image {
     width: 30em;
   }
+  #sales .glider .glider__list .left-2 {
+    transform: translateX(153.6%) scale(0.5);
+  }
+  #sales .glider .glider__list .right-2 {
+    transform: translateX(-153.6%) scale(0.5);
+  }
+}
+@media screen and (min-width: 1280px) {
+  #sales .glider {
+    max-width: 150em;
+  }
+  #sales .glider .glider__list .offer .offer__image {
+    width: 50%;
+    max-width: 40em;
+  }
 }
 #lines {
   position: relative;

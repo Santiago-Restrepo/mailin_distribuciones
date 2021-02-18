@@ -240,6 +240,28 @@
                         width: 30em;
                     }
                 }
+                .left-2{
+                    transform: translateX(153.6%) scale(.5);
+                }
+                .right-2{
+                    transform: translateX(-153.6%) scale(.5);
+                }
+                
+            }
+        }
+    }
+}
+@media screen and (min-width: $break-laptop-M) {
+    #sales{
+        .glider{
+            max-width: 150em;
+            .glider__list{
+                .offer{
+                    .offer__image{
+                        width: 50%;
+                        max-width: 40em;
+                    }
+                }
                 
             }
         }
