@@ -1,0 +1,81 @@
+#lines{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 0;
+    .lines__image{
+        position: absolute;
+        width: 6em;
+
+    }
+    .lines__image:nth-last-of-type(1){
+        top: -1%;
+        left: 0;
+    }
+    .lines__image:nth-last-of-type(2){
+        transform: rotateY(180deg);
+        top: 50%;
+        right: 0;
+    }
+    .lines__title{
+        margin-bottom: .5em;
+        color: $Color-negro;
+        font-weight: 500;
+        text-align: center;
+    }
+    .catalog{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .line{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            max-width: 30em;
+            height: 28em;
+            margin-bottom: 3.5em;
+            padding: 1.5em;
+            background-color: #000603a9;
+            text-decoration: none;
+
+            &__image{
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &__container{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                border: 1px solid $Color-blanco;
+                text-decoration: none;
+                &-name{
+                    font-weight: 500;
+                    color: $Color-blanco;
+                    font-family: $fuente1;
+                }
+                &-button{
+                    position: absolute;
+                    bottom: 10%;
+                    padding: 1em;
+                    font-size: 1.3em;
+                    font-weight: 500;
+                    background-color: $Color-verde;
+                    color: $Color-verde-claro;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

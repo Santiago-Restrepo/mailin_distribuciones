@@ -1,0 +1,208 @@
+#sales{
+    padding: 2em 0;
+    background-color: $Color-blanco-variacion;
+    .glider{
+        position: relative;
+        .glider__left,.glider__right{
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            background: none;
+            border: none;
+            font-size: 2.5em;
+            color: $Color-negro;
+
+        }
+        .glider__left{
+            left: .2em;
+
+        }
+        .glider__right{
+            right: .2em;
+
+        }
+        &-dots{
+            margin-top: 1em;
+        }
+        &-dot{
+            height: 0.5em;
+            border-radius: 0;
+            background-color: $Color-gris;
+        }
+        &-dot.active{
+            background-color: $Color-negro;
+        }
+        .glider__list{
+            /*Perspectiva*/
+            .left-1,.left-2,.left-3,.left-4,.right-1,.right-2,.right-3,.right-4{
+                opacity: .9;
+            }
+            .left-1{
+                transform: translateX(25%) scale(.8);
+            }
+            .right-1{
+                transform: translateX(-25%) scale(.8);
+
+            }
+            // .left-1,.right-1{
+            //     transform: scale(.9);
+            // }
+            .left-2,.right-2{
+                transform: scale(.75);
+            }
+            .left-3,.right-3{
+                transform: scale(.6);
+            }
+            .left-4,.right-4{
+                transform: scale(.5);
+            }
+            /*Fin perspectiva*/
+            .offer{
+                width: 100%;
+                transition: .3s ease;
+                &__image{
+                    position: relative;
+                    width: 80%;    
+                    max-width: 30em;
+                    height: auto;
+                    margin: 0 auto;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .offer__discount{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: fit-content;
+                        padding: .7em;
+                        font-size:1.3em;
+                        background-color: $Color-rojo-intenso;
+                        color: $Color-blanco;
+                    }
+                    .offer__name{
+                        margin-top: .8em;
+                        font-family: $fuente1;
+                        font-weight: 500;
+    
+                    }
+                    .offer__prices{
+                        display: flex;
+                        margin: .5em 0 1em;
+                        h6{
+                            font-weight: 500;
+                        }
+                        &-before{
+                            color: $Color-rojo;
+                        }
+                        &-new{
+                            margin-left: 1em;
+                            color: $Color-verde-intenso;
+                        }
+                    }
+
+                }
+                
+                
+                
+            }
+        }
+    
+    }
+}
+@media screen and (min-width: $break-mobile-L) {
+    #sales{
+        .glider{
+            .glider__list{
+                .left-1{
+                    transform: translateX(30%) scale(.8);
+                }
+                .right-1{
+                    transform: translateX(-30%) scale(.8);
+    
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 472px) {
+    #sales{
+        .glider{
+            .glider__list{
+                .left-1{
+                    transform: translateX(40%) scale(.8);
+                }
+                .right-1{
+                    transform: translateX(-40%) scale(.8);
+                    
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 550px) {
+    #sales{
+        .glider{
+            .glider__list{
+                .left-1{
+                    transform: translateX(45%) scale(.8);
+                }
+                .right-1{
+                    transform: translateX(-45%) scale(.8);
+                    
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $break-mobile-tablet) {
+    #sales{
+        .glider{
+            .glider__list{
+                .left-1{
+                    transform: translateX(50%) scale(.8);
+                }
+                .right-1{
+                    transform: translateX(-50%) scale(.8);
+    
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 720px) {
+    #sales{
+        .glider{
+            .glider__list{
+                .left-1{
+                    transform: translateX(60%) scale(.8);
+                }
+                .right-1{
+                    transform: translateX(-60%) scale(.8);
+    
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $break-tablet) {
+    #sales{
+        .glider{
+            .glider__list{
+                .left-1{
+                    transform: translateX(70%) scale(.7);
+                }
+                .right-1{
+                    transform: translateX(-70%) scale(.7);
+    
+                }
+                .offer{
+                    .offer__image{
+                        width: 25em;
+                    }
+                }
+            }
+        }
+    }
+}

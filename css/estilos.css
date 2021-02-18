@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Variables*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*Colores*/
@@ -15,6 +16,11 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p, span, li, a {
@@ -42,10 +48,22 @@ h5 {
 }
 
 h6 {
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 
-/*Estilos header*/
+.lines__label {
+  display: block;
+  font-size: 1.3em;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2em 0.5em;
+  margin-bottom: 2.5em;
+  color: #ffffff;
+  background-color: #000603;
+}
+
 .header {
   position: relative;
   top: 0;
@@ -72,7 +90,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #ffffffd5;
   list-style: none;
   overflow-y: auto;
 }
@@ -120,7 +138,6 @@ h6 {
 
 #sales {
   padding: 2em 0;
-  height: 100vh;
   background-color: #F1FBF3;
 }
 #sales .glider {
@@ -222,23 +239,58 @@ h6 {
   color: #35B82C;
 }
 
-/*etiquetas generales*/
-.lines__label {
-  display: block;
-  font-size: 1.3em;
-  margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.2em 0.5em;
-  margin-bottom: 2.5em;
-  color: #ffffff;
-  background-color: #000603;
+@media screen and (min-width: 425px) {
+  #sales .glider .glider__list .left-1 {
+    transform: translateX(30%) scale(0.8);
+  }
+  #sales .glider .glider__list .right-1 {
+    transform: translateX(-30%) scale(0.8);
+  }
 }
-
-/*etiquetas generales*/
+@media screen and (min-width: 472px) {
+  #sales .glider .glider__list .left-1 {
+    transform: translateX(40%) scale(0.8);
+  }
+  #sales .glider .glider__list .right-1 {
+    transform: translateX(-40%) scale(0.8);
+  }
+}
+@media screen and (min-width: 550px) {
+  #sales .glider .glider__list .left-1 {
+    transform: translateX(45%) scale(0.8);
+  }
+  #sales .glider .glider__list .right-1 {
+    transform: translateX(-45%) scale(0.8);
+  }
+}
+@media screen and (min-width: 597px) {
+  #sales .glider .glider__list .left-1 {
+    transform: translateX(50%) scale(0.8);
+  }
+  #sales .glider .glider__list .right-1 {
+    transform: translateX(-50%) scale(0.8);
+  }
+}
+@media screen and (min-width: 720px) {
+  #sales .glider .glider__list .left-1 {
+    transform: translateX(60%) scale(0.8);
+  }
+  #sales .glider .glider__list .right-1 {
+    transform: translateX(-60%) scale(0.8);
+  }
+}
+@media screen and (min-width: 768px) {
+  #sales .glider .glider__list .left-1 {
+    transform: translateX(70%) scale(0.7);
+  }
+  #sales .glider .glider__list .right-1 {
+    transform: translateX(-70%) scale(0.7);
+  }
+  #sales .glider .glider__list .offer .offer__image {
+    width: 25em;
+  }
+}
 #lines {
-  z-index: 1;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -246,7 +298,6 @@ h6 {
   padding: 3em 0;
 }
 #lines .lines__image {
-  z-index: -2;
   position: absolute;
   width: 6em;
 }
@@ -440,13 +491,13 @@ h6 {
 .footer__container {
   position: relative;
   margin-top: 3em;
-  width: 90%;
-  padding: 0 1em;
+  width: 100%;
+  padding: 0 2em;
   background-image: url("../images/hojas_ppal.svg");
   background-repeat: no-repeat;
   background-size: 15em;
   background-position-x: 120%;
-  background-position-y: 110%;
+  background-position-y: 120%;
 }
 .footer__container .contact {
   color: #000603;

@@ -1,3 +1,5 @@
+/*Variables*/
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -34,6 +36,7 @@ $break-laptop-S: 1144px;
 $break-laptop-M: 1280px;
 $break-laptop-L: 1440px;
 
+
 /*Provicionales*/
 
 
@@ -48,6 +51,11 @@ $break-laptop-L: 1440px;
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 
@@ -71,202 +79,8 @@ h5{
     font-size: 1.6em;
 }
 h6{
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
-
-/*Estilos header*/
-
-.header{
-    position: relative;
-    top: 0;
-    .hamburguer_menu{
-        z-index: 2;
-        position: fixed;
-        top: 3em;
-        left: 1.5em;
-        width: 5em;
-        height : 5em;
-        
-    }
-    .general_menu{
-        .desktop_menu{
-            display: none;
-        }
-        .mobile_menu{
-            z-index: 1;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #ffffff;
-            list-style: none;
-            overflow-y: auto;
-            li{
-                width: 80%;
-                margin: .3em 0;
-                font-size: 3em;
-                text-align:center;
-                color: $Color-negro;
-                a{
-                    display: block;
-                    width: 100%;
-                    color: $Color-negro;
-                    text-decoration: none;
-                }
-                .line_menu{
-                    display: none;
-                    list-style: none;
-                    width: 100%;
-                    li{
-                        width: 100%;
-                        padding-bottom: .5em;
-                        text-align: start;
-                        font-size: .7em;
-                        border-bottom: 1px solid $Color-negro;
-                    }
-                }
-            }
-        }
-    }
-    .logo{
-        z-index: 2;
-        position: absolute;
-        top: 2em;
-        right: 1.5em;
-        width: 10em;
-    }
-}
-.hero{
-    width:100%;
-    height: 100vh;
-    background-image: url("../images/paisaje.jpg");
-    background-size: cover;
-    background-position: 50% 0%;
-    background-attachment: fixed;
-}
-
-
-#sales{
-    padding: 2em 0;
-    height: 100vh;
-    background-color: $Color-blanco-variacion;
-    .glider{
-        position: relative;
-        .glider__left,.glider__right{
-            z-index: 1;
-            position: absolute;
-            top: 50%;
-            background: none;
-            border: none;
-            font-size: 2.5em;
-            color: $Color-negro;
-
-        }
-        .glider__left{
-            left: .2em;
-
-        }
-        .glider__right{
-            right: .2em;
-
-        }
-        &-dots{
-            margin-top: 1em;
-        }
-        &-dot{
-            height: 0.5em;
-            border-radius: 0;
-            background-color: $Color-gris;
-        }
-        &-dot.active{
-            background-color: $Color-negro;
-        }
-        .glider__list{
-            /*Perspectiva*/
-            .left-1,.left-2,.left-3,.left-4,.right-1,.right-2,.right-3,.right-4{
-                opacity: .9;
-            }
-            .left-1{
-                transform: translateX(25%) scale(.8);
-            }
-            .right-1{
-                transform: translateX(-25%) scale(.8);
-
-            }
-            // .left-1,.right-1{
-            //     transform: scale(.9);
-            // }
-            .left-2,.right-2{
-                transform: scale(.75);
-            }
-            .left-3,.right-3{
-                transform: scale(.6);
-            }
-            .left-4,.right-4{
-                transform: scale(.5);
-            }
-            /*Fin perspectiva*/
-            .offer{
-                width: 100%;
-                transition: .3s ease;
-                &__image{
-                    position: relative;
-                    width: 80%;    
-                    max-width: 30em;
-                    height: auto;
-                    margin: 0 auto;
-                    img{
-                        object-fit: cover;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    .offer__discount{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: fit-content;
-                        padding: .7em;
-                        font-size:1.3em;
-                        background-color: $Color-rojo-intenso;
-                        color: $Color-blanco;
-                    }
-                    .offer__name{
-                        margin-top: .8em;
-                        font-family: $fuente1;
-                        font-weight: 500;
-    
-                    }
-                    .offer__prices{
-                        display: flex;
-                        margin: .5em 0 1em;
-                        h6{
-                            font-weight: 500;
-                        }
-                        &-before{
-                            color: $Color-rojo;
-                        }
-                        &-new{
-                            margin-left: 1em;
-                            color: $Color-verde-intenso;
-                        }
-                    }
-
-                }
-                
-                
-                
-            }
-        }
-    
-    }
-}
-
-/*etiquetas generales*/
 
 .lines__label{
     display: block;
@@ -278,257 +92,21 @@ h6{
     color: $Color-blanco;
     background-color: $Color-negro;
 }
-/*etiquetas generales*/
 
-#lines{
-    z-index: 1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3em 0;
-    .lines__image{
-        z-index: -2;
-        position: absolute;
-        width: 6em;
+//Importación de componentes
 
-    }
-    .lines__image:nth-last-of-type(1){
-        top: -1%;
-        left: 0;
-    }
-    .lines__image:nth-last-of-type(2){
-        transform: rotateY(180deg);
-        top: 50%;
-        right: 0;
-    }
-    .lines__title{
-        margin-bottom: .5em;
-        color: $Color-negro;
-        font-weight: 500;
-        text-align: center;
-    }
-    .catalog{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        .line{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 70%;
-            max-width: 30em;
-            height: 28em;
-            margin-bottom: 3.5em;
-            padding: 1.5em;
-            background-color: #000603a9;
-            text-decoration: none;
+@import "components/header";
+@import "components/hero";
+@import "components/sales";
+@import "components/lines";
+@import "components/story";
+@import "components/location";
+@import "components/footer";
 
-            &__image{
-                z-index: -1;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            &__container{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                border: 1px solid $Color-blanco;
-                text-decoration: none;
-                &-name{
-                    font-weight: 500;
-                    color: $Color-blanco;
-                    font-family: $fuente1;
-                }
-                &-button{
-                    position: absolute;
-                    bottom: 10%;
-                    padding: 1em;
-                    font-size: 1.3em;
-                    font-weight: 500;
-                    background-color: $Color-verde;
-                    color: $Color-verde-claro;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-}
 
-#story{
-    position: relative;
-    background-color: $Color-negro;
-    padding: 6em 3em;
-    .primaryLeaf{
-        position: absolute;
-        width: 18em;
-    }
-    .primaryLeaf:nth-last-of-type(1){
-        top: -5%;
-        right: -5%;
-        transform: rotateX(180deg);
-    }
-    .primaryLeaf:nth-last-of-type(2){
-        bottom: -7%;
-        left: -5%;
-        transform: rotateY(180deg);
-    }
-    .story__container{
-        padding: 1em;
-        color: $Color-blanco;
-        border: 2px solid $Color-morado-claro;
-        border-radius: 1em;
-        text-align: center;
-        &-title{
-            margin-bottom: .5em;
-        }
-        &-parraph{
-            font-size: 1.4em;
-            font-weight: 300;
-        }
-    }
-}
 
-#location{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    padding: 6em 3em;
-    .location__container{
-        width: 100%;
-        max-width: 50em;
-        background-color: $Color-morado;
-        .mailin_map{
-            margin: 0 auto;
-            width: 100%;
-            height: 20em;
-        }
-        &-info{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            height: fit-content;  
-            margin: 1em auto;
-            padding: 1em;
-            color: $Color-blanco;
-            border: 1px solid $Color-blanco;    
-            h3{
-                font-weight: 500;
-                margin-bottom: .5em;
-            }
-            h6{
-                font-weight: 300;
-                margin-bottom: .5em;
-            }
-            span{
-                font: 300;
-            }
-        }
-    }
-}
 
-.footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1em;
-    &__button{
-        display: grid;
-        grid-template-areas: "title arrow"
-                    "description description";
-        width: 90%;
-        max-width: 30em;
-        padding: 1.5em;
-        margin-bottom: 1em;
-        color: $Color-blanco;
-        background-color: $Color-negro;
-        text-align: start;
-        border: none;
-        &-title{
-            grid-area: title;
-            margin-bottom: 1em;
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-        &-arrow{
-            grid-area: arrow;
-            justify-self: center;
-            align-self: flex-start;
-        }
-        &-description{
-            grid-area: description;
-            font-size: .8em;
-            font-weight: 300;
-        }
-        
-    }
-    &__container{
-        position: relative;
-        margin-top: 3em;
-        width: 90%;
-        padding: 0 1em;
-        background-image: url("../images/hojas_ppal.svg");
-        background-repeat: no-repeat;
-        background-size: 15em;
-        background-position-x: 120%;
-        background-position-y: 110%;
 
-        .contact{
-            color: $Color-negro;
-            &__title{
-                font-weight: 600;
-                margin-bottom: .8em;
-            }
-            &__info{
-                font-weight: 300;
-                margin-bottom: .2em;
-            }
-        }
-        .social_media{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 3em;
-            &-title{
-                margin-bottom: 1em;
-                padding-bottom: .5em;
-                border-bottom: 2px solid $Color-gris;
-            }
-            &-container{
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 1.5em;
-                width: 50%;
-                a{
-                    color: $Color-negro;
-                    i{
-                        font-size: 3em;
-                    }
-                }
-            }
-        }
-        .rights{
-            display: inline-block;
-            width: 100%;
-            margin-bottom: 1em;
-            color: $Color-negro;
-            font-size: 1.3em;
-            font-weight: 500;
-            text-align: center;
-        }
 
-    }
-}
+
+
