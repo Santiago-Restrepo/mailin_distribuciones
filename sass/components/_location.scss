@@ -8,6 +8,7 @@
         width: 100%;
         max-width: 50em;
         background-color: $Color-morado;
+        box-shadow: 5px 5px 15px 5px #0000009a;
         .mailin_map{
             margin: 0 auto;
             width: 100%;
@@ -37,4 +38,21 @@
             }
         }
     }
+}
+@media screen and (min-width: $break-laptop) {
+    #location{
+        .location__container{
+            display: flex;
+            max-width: 80em;
+            .mailin_map{
+                width: 65%;
+                height: 25em;
+                margin: 0;
+            }
+            .location__container-info{
+                width: 30%;
+                height: 23em;
+            }
+        }
+    }   
 }

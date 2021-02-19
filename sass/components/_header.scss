@@ -15,7 +15,7 @@
     .mobile_menu{
         z-index: 1;
         position: fixed;
-        top: -100%;
+        top: -110%;
         left: 0;
         right: 0;
         display: flex;
@@ -121,6 +121,7 @@
     .header{
         .logo{
             max-width: 15em;
+            right: 8em;
         }
         .mobile_menu{
             top: 5em;

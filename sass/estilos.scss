@@ -94,10 +94,33 @@ h6{
     background-color: $Color-negro;
 }
 
-@media screen and (min-width: $break-tablet) {
+@media screen and (min-width: $break-mobile-M) {
+    html{
+        font-size: 64%;
+    }
     .lines__label{
         display: none
     }   
+}
+@media screen and (min-width: $break-mobile-L) {
+    html{
+        font-size: 65%;
+    }
+}
+@media screen and (min-width: $break-mobile-tablet) {
+    html{
+        font-size: 66%;
+    }
+}
+@media screen and (min-width: $break-tablet) {
+    html{
+        font-size: 70%;
+    }
+}
+@media screen and (min-width: $break-laptop) {
+    html{
+        font-size: 75%;
+    }
 }
 
 //Importación de componentes
