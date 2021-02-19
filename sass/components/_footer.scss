@@ -3,46 +3,56 @@
     flex-direction: column;
     align-items: center;
     padding-top: 1em;
-    &__button{
-        display: grid;
-        grid-template-areas: "title arrow"
-                    "description description";
-        width: 90%;
-        max-width: 30em;
-        padding: 1.5em;
-        margin-bottom: 1em;
-        color: $Color-blanco;
-        background-color: $Color-negro;
-        text-align: start;
-        border: none;
-        &-title{
-            grid-area: title;
+    background-image: url("../images/hojas_ppal.svg");
+    background-repeat: no-repeat;
+    background-size: 15em;
+    background-position-x: 110%;
+    background-position-y: 105%;
+
+    .buttons__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+
+        .footer__button{
+            display: grid;
+            grid-template-areas: "title arrow"
+                        "description description";
+            width: 90%;
+            max-width: 30em;
+            padding: 1.5em;
             margin-bottom: 1em;
-            font-size: 1.1em;
-            font-weight: 500;
+            color: $Color-blanco;
+            background-color: $Color-negro;
+            text-align: start;
+            border: none;
+            &-title{
+                grid-area: title;
+                margin-bottom: 1em;
+                font-size: 1.1em;
+                font-weight: 500;
+            }
+            &-arrow{
+                grid-area: arrow;
+                justify-self: center;
+                align-self: flex-start;
+            }
+            &-description{
+                grid-area: description;
+                font-size: .8em;
+                font-weight: 300;
+            }
+            
         }
-        &-arrow{
-            grid-area: arrow;
-            justify-self: center;
-            align-self: flex-start;
-        }
-        &-description{
-            grid-area: description;
-            font-size: .8em;
-            font-weight: 300;
-        }
-        
     }
-    &__container{
+    .footer__container{
         position: relative;
         margin-top: 3em;
         width: 100%;
         padding: 0 2em;
-        background-image: url("../images/hojas_ppal.svg");
-        background-repeat: no-repeat;
-        background-size: 15em;
-        background-position-x: 120%;
-        background-position-y: 120%;
 
         .contact{
             color: $Color-negro;
@@ -79,15 +89,54 @@
                 }
             }
         }
-        .rights{
-            display: inline-block;
-            width: 100%;
-            margin-bottom: 1em;
-            color: $Color-negro;
-            font-size: 1.3em;
-            font-weight: 500;
-            text-align: center;
-        }
+        
+    }
+    .rights{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 1em;
+        color: $Color-negro;
+        font-size: 1.3em;
+        font-weight: 500;
+        text-align: center;
+    }
+}
 
+@media screen and (min-width: $break-tablet) {
+    .footer{
+        .buttons__container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-items: center;
+            column-gap: .1em;
+            width: fit-content;
+            .footer__button{
+                width: 100%;
+                max-width: 20em;
+            }
+        }
+        .footer__container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            width: 60em;
+            .social_media{
+                width: 13em;
+                justify-self: flex-end;
+                .social_media-container{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $break-laptop) {
+    .footer{
+        .buttons__container{
+            .footer__button{
+                max-width: 30em;
+                height: 10em;
+            }
+        }
     }
 }

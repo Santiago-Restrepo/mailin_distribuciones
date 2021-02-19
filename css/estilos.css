@@ -170,13 +170,13 @@ h6 {
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 10em;
-    width: 70%;
+    top: 2em;
+    width: 80%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     max-width: 60em;
-    margin-left: 1em;
+    margin: 0 auto;
     justify-content: space-between;
     list-style: none;
     transition: 0.5s ease;
@@ -213,14 +213,10 @@ h6 {
     max-width: 15em;
     right: 8em;
   }
-  .header .mobile_menu {
-    top: 5em;
-    margin: 0 auto;
-  }
   .header .mobile_menu li a {
     font-size: 1.8em;
   }
-  .header .mobile_menu .line_li {
+  .header .mobile_menu s .line_li {
     font-size: 1.8em;
   }
 }
@@ -680,8 +676,20 @@ h6 {
   flex-direction: column;
   align-items: center;
   padding-top: 1em;
+  background-image: url("../images/hojas_ppal.svg");
+  background-repeat: no-repeat;
+  background-size: 15em;
+  background-position-x: 110%;
+  background-position-y: 105%;
 }
-.footer__button {
+.footer .buttons__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.footer .buttons__container .footer__button {
   display: grid;
   grid-template-areas: "title arrow" "description description";
   width: 90%;
@@ -693,7 +701,7 @@ h6 {
   text-align: start;
   border: none;
 }
-.footer__button-title {
+.footer .buttons__container .footer__button-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: title;
@@ -701,14 +709,14 @@ h6 {
   font-size: 1.1em;
   font-weight: 500;
 }
-.footer__button-arrow {
+.footer .buttons__container .footer__button-arrow {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: arrow;
   justify-self: center;
   align-self: flex-start;
 }
-.footer__button-description {
+.footer .buttons__container .footer__button-description {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -716,53 +724,48 @@ h6 {
   font-size: 0.8em;
   font-weight: 300;
 }
-.footer__container {
+.footer .footer__container {
   position: relative;
   margin-top: 3em;
   width: 100%;
   padding: 0 2em;
-  background-image: url("../images/hojas_ppal.svg");
-  background-repeat: no-repeat;
-  background-size: 15em;
-  background-position-x: 120%;
-  background-position-y: 120%;
 }
-.footer__container .contact {
+.footer .footer__container .contact {
   color: #000603;
 }
-.footer__container .contact__title {
+.footer .footer__container .contact__title {
   font-weight: 600;
   margin-bottom: 0.8em;
 }
-.footer__container .contact__info {
+.footer .footer__container .contact__info {
   font-weight: 300;
   margin-bottom: 0.2em;
 }
-.footer__container .social_media {
+.footer .footer__container .social_media {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 3em;
 }
-.footer__container .social_media-title {
+.footer .footer__container .social_media-title {
   margin-bottom: 1em;
   padding-bottom: 0.5em;
   border-bottom: 2px solid #707070;
 }
-.footer__container .social_media-container {
+.footer .footer__container .social_media-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5em;
   width: 50%;
 }
-.footer__container .social_media-container a {
+.footer .footer__container .social_media-container a {
   color: #000603;
 }
-.footer__container .social_media-container a i {
+.footer .footer__container .social_media-container a i {
   font-size: 3em;
 }
-.footer__container .rights {
+.footer .rights {
   display: inline-block;
   width: 100%;
   margin-bottom: 1em;
@@ -770,4 +773,38 @@ h6 {
   font-size: 1.3em;
   font-weight: 500;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .buttons__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    column-gap: 0.1em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .footer .buttons__container .footer__button {
+    width: 100%;
+    max-width: 20em;
+  }
+  .footer .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60em;
+  }
+  .footer .footer__container .social_media {
+    width: 13em;
+    justify-self: flex-end;
+  }
+  .footer .footer__container .social_media .social_media-container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer .buttons__container .footer__button {
+    max-width: 30em;
+    height: 10em;
+  }
 }

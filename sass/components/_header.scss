@@ -80,11 +80,11 @@
             display: flex;
             flex-direction: row;
             position: fixed;
-            top: 10em;
-            width: 70%;
+            top: 2em;
+            width: 80%;
             height: fit-content;
             max-width: 60em;
-            margin-left: 1em;
+            margin: 0 auto;
             justify-content: space-between;
             list-style: none;
             transition: .5s ease;
@@ -124,13 +124,11 @@
             right: 8em;
         }
         .mobile_menu{
-            top: 5em;
-            margin: 0 auto;
             li{
                 a{
                     font-size: 1.8em;
                 }
-            }
+            }s
             .line_li{
                 font-size: 1.8em;
             }
