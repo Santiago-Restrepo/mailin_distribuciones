@@ -6,12 +6,12 @@ const lines = document.querySelector('#lines');
 const story = document.querySelector('#story');
 const location_section = document.querySelector('#location');
 const contact = document.querySelector('.footer');
-const home_button = document.querySelector(".desktop_menu > li:nth-of-type(1)");
-const contact_button = document.querySelector(".desktop_menu > li:nth-of-type(2)");
-const sales_button = document.querySelector(".desktop_menu > li:nth-of-type(3)");
-const lines_button = document.querySelector(".desktop_menu > li:nth-of-type(4)");
-const story_button = document.querySelector(".desktop_menu > li:nth-of-type(5)");
-const location_button = document.querySelector(".desktop_menu > li:nth-of-type(6)");
+const home_button = document.querySelector(".mobile_menu > li:nth-of-type(1)");
+const contact_button = document.querySelector(".mobile_menu > li:nth-of-type(2)");
+const sales_button = document.querySelector(".mobile_menu > li:nth-of-type(3)");
+const lines_button = document.querySelector(".mobile_menu > li:nth-of-type(4)");
+const story_button = document.querySelector(".mobile_menu > li:nth-of-type(5)");
+const location_button = document.querySelector(".mobile_menu > li:nth-of-type(6)");
 const sections = [home_button,contact_button,lines_button,story_button,location_button,sales_button];
 
 

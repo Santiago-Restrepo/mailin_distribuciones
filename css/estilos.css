@@ -83,42 +83,11 @@ h6 {
   max-width: 15em;
   transition: 1s ease;
 }
-.header .general_menu .desktop_menu {
-  z-index: 3;
-  display: none;
-  position: fixed;
-  top: 10em;
-  width: 70%;
-  max-width: 60em;
-  margin-left: 1em;
-  justify-content: space-between;
-  list-style: none;
-  transition: 0.5s ease;
-}
-.header .general_menu .desktop_menu li {
-  transition: 0.5s ease;
-  padding: 0.1em 1.5em;
-}
-.header .general_menu .desktop_menu li a {
-  width: 100%;
-  height: 100%;
-  color: #000603;
-  text-decoration: none;
-  font-size: 1.6em;
-  font-weight: 400;
-}
-.header .general_menu .desktop_menu .active {
-  background: #000603;
-}
-.header .general_menu .desktop_menu .active a {
-  color: #ffffff;
-}
-.header .general_menu .mobile_menu {
+.header .mobile_menu {
   z-index: 1;
   position: fixed;
   top: -100%;
   left: 0;
-  bottom: 0;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -130,32 +99,32 @@ h6 {
   overflow-y: auto;
   transition: 1s ease;
 }
-.header .general_menu .mobile_menu li {
+.header .mobile_menu li {
   width: 80%;
   margin: 0.3em 0;
   font-size: 3em;
   text-align: center;
   color: #000603;
 }
-.header .general_menu .mobile_menu li a {
+.header .mobile_menu li a {
   display: block;
   width: 100%;
   color: #000603;
   text-decoration: none;
 }
-.header .general_menu .mobile_menu li .line_menu {
+.header .mobile_menu li .line_menu {
   display: none;
   list-style: none;
   width: 100%;
 }
-.header .general_menu .mobile_menu li .line_menu li {
+.header .mobile_menu li .line_menu li {
   width: 100%;
   padding-bottom: 0.5em;
   text-align: start;
   font-size: 0.7em;
   border-bottom: 1px solid #000603;
 }
-.header .general_menu .show {
+.header .show {
   top: 0;
 }
 .header .logo {
@@ -172,25 +141,61 @@ h6 {
   .header .hamburguer_button {
     display: none;
   }
-  .header .general_menu .desktop_menu {
+  .header .mobile_menu {
+    z-index: 3;
     display: flex;
-    background-color: #ffffffd5;
+    flex-direction: row;
+    position: fixed;
+    top: 10em;
+    width: 70%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 60em;
+    margin-left: 1em;
+    justify-content: space-between;
+    list-style: none;
+    transition: 0.5s ease;
+  }
+  .header .mobile_menu li {
+    transition: 0.5s ease;
+    padding: 0.1em 1.5em;
+    margin: 0;
+    font-size: 1em;
+  }
+  .header .mobile_menu li a {
+    width: 100%;
+    height: 100%;
+    color: #000603;
+    text-decoration: none;
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+  .header .mobile_menu .line_li {
+    font-size: 1.6em;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .header .mobile_menu .active {
+    background: #000603;
+    color: #ffffff;
+  }
+  .header .mobile_menu .active a {
+    color: #ffffff;
   }
 }
 @media screen and (min-width: 1024px) {
   .header .logo {
     max-width: 15em;
   }
-  .header .general_menu {
-    display: flex;
-    justify-content: center;
-  }
-  .header .general_menu .desktop_menu {
+  .header .mobile_menu {
     top: 5em;
-    max-width: 65%;
-    margin-left: 0;
+    margin: 0 auto;
   }
-  .header .general_menu .desktop_menu li a {
+  .header .mobile_menu li a {
+    font-size: 1.8em;
+  }
+  .header .mobile_menu .line_li {
     font-size: 1.8em;
   }
 }

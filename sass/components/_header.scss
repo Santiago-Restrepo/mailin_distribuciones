@@ -12,97 +12,53 @@
         transition: 1s ease;
         
     }
-    .general_menu{
+    .mobile_menu{
+        z-index: 1;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffffffd5;
+        list-style: none;
+        overflow-y: auto;
+        transition: 1s ease;
         
-        .desktop_menu{
-            z-index: 3;
-            display: none;
-            position: fixed;
-            top: 10em;
-            width: 70%;
-            max-width: 60em;
-            margin-left: 1em;
-            justify-content: space-between;
-            list-style: none;
-            transition: .5s ease;
-
-            li{
-                transition: .5s ease;
-                padding: 0.1em 1.5em;
-                a{
-                    width: 100%;
-                    height: 100%;
-                    color: $Color-negro;
-                    text-decoration: none;
-                    font-size: 1.6em;
-                    font-weight: 400;
-                }
-            }
-            // li:hover{
-            //     background-color: $Color-verde;
-            //     a{
-            //         color: $Color-blanco;
-
-            //     }
-
-
-            // }
-            .active{
-                background: $Color-negro;
-                a{
-                    color: $Color-blanco;
-                }
-            }
-
-        }
-        .mobile_menu{
-            z-index: 1;
-            position: fixed;
-            top: -100%;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #ffffffd5;
-            list-style: none;
-            overflow-y: auto;
-            transition: 1s ease;
-            
-            li{
-                width: 80%;
-                margin: .3em 0;
-                font-size: 3em;
-                text-align:center;
+        li{
+            width: 80%;
+            margin: .3em 0;
+            font-size: 3em;
+            text-align:center;
+            color: $Color-negro;
+            a{
+                display: block;
+                width: 100%;
                 color: $Color-negro;
-                a{
-                    display: block;
+                text-decoration: none;
+            }
+            .line_menu{
+                display: none;
+                list-style: none;
+                width: 100%;
+                li{
                     width: 100%;
-                    color: $Color-negro;
-                    text-decoration: none;
-                }
-                .line_menu{
-                    display: none;
-                    list-style: none;
-                    width: 100%;
-                    li{
-                        width: 100%;
-                        padding-bottom: .5em;
-                        text-align: start;
-                        font-size: .7em;
-                        border-bottom: 1px solid $Color-negro;
-                    }
+                    padding-bottom: .5em;
+                    text-align: start;
+                    font-size: .7em;
+                    border-bottom: 1px solid $Color-negro;
                 }
             }
-        }
-        
-        .show{
-            top: 0;
         }
     }
+    
+    .show{
+        top: 0;
+    }
+
     .logo{
         z-index: 2;
         position: absolute;
@@ -119,10 +75,44 @@
         .hamburguer_button{
             display: none;
         }
-        .general_menu{
-            .desktop_menu{
-                display: flex;
-                background-color: #ffffffd5;
+        .mobile_menu{
+            z-index: 3;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            top: 10em;
+            width: 70%;
+            height: fit-content;
+            max-width: 60em;
+            margin-left: 1em;
+            justify-content: space-between;
+            list-style: none;
+            transition: .5s ease;
+            li{
+                transition: .5s ease;
+                padding: 0.1em 1.5em;
+                margin: 0;
+                font-size: 1em;
+                a{
+                    width: 100%;
+                    height: 100%;
+                    color: $Color-negro;
+                    text-decoration: none;
+                    font-size: 1.6em;
+                    font-weight: 400;
+                }
+            }
+            .line_li{
+                font-size: 1.6em;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .active{
+                background: $Color-negro;
+                color: $Color-blanco;
+                a{
+                    color: $Color-blanco;
+                }
             }
         }
     }
@@ -132,20 +122,18 @@
         .logo{
             max-width: 15em;
         }
-        .general_menu{
-            display: flex;
-            justify-content: center;
-            .desktop_menu{
-                top: 5em;
-                max-width: 65%;
-                margin-left: 0;
-                li{
-                    a{
-                        font-size: 1.8em;
-                    }
+        .mobile_menu{
+            top: 5em;
+            margin: 0 auto;
+            li{
+                a{
+                    font-size: 1.8em;
                 }
-
             }
+            .line_li{
+                font-size: 1.8em;
+            }
+
         }
     }
 }
