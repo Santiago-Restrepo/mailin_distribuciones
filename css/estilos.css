@@ -68,13 +68,14 @@ h6 {
   position: relative;
   top: 0;
 }
-.header .hamburguer_menu {
+.header .hamburguer_button {
   z-index: 2;
   position: fixed;
   top: 3em;
   left: 1.5em;
   width: 5em;
   height: 5em;
+  transition: 1s ease;
 }
 .header .general_menu .desktop_menu {
   display: none;
@@ -82,17 +83,19 @@ h6 {
 .header .general_menu .mobile_menu {
   z-index: 1;
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
   bottom: 0;
   right: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   background-color: #ffffffd5;
   list-style: none;
   overflow-y: auto;
+  transition: 1s ease;
 }
 .header .general_menu .mobile_menu li {
   width: 80%;
@@ -118,6 +121,9 @@ h6 {
   text-align: start;
   font-size: 0.7em;
   border-bottom: 1px solid #000603;
+}
+.header .general_menu .show {
+  top: 0;
 }
 .header .logo {
   z-index: 2;
@@ -151,6 +157,7 @@ h6 {
   border: none;
   font-size: 2.5em;
   color: #000603;
+  cursor: pointer;
 }
 #sales .glider .glider__left {
   left: 5%;
@@ -186,19 +193,19 @@ h6 {
   width: 100%;
   transition: 0.3s ease;
 }
-#sales .glider .glider__list .offer__image {
+#sales .glider .glider__list .offer .offer__image {
   position: relative;
   width: 80%;
   max-width: 30em;
   height: auto;
   margin: 0 auto;
 }
-#sales .glider .glider__list .offer__image img {
+#sales .glider .glider__list .offer .offer__image img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-#sales .glider .glider__list .offer__image .offer__discount {
+#sales .glider .glider__list .offer .offer__image .offer__discount {
   position: absolute;
   top: 0;
   left: 0;
@@ -210,22 +217,22 @@ h6 {
   background-color: #B82C2C;
   color: #ffffff;
 }
-#sales .glider .glider__list .offer__image .offer__name {
+#sales .glider .glider__list .offer .offer__image .offer__name {
   margin-top: 0.8em;
   font-family: "Lora", "sans-serif";
   font-weight: 500;
 }
-#sales .glider .glider__list .offer__image .offer__prices {
+#sales .glider .glider__list .offer .offer__image .offer__prices {
   display: flex;
   margin: 0.5em 0 1em;
 }
-#sales .glider .glider__list .offer__image .offer__prices h6 {
+#sales .glider .glider__list .offer .offer__image .offer__prices h6 {
   font-weight: 500;
 }
-#sales .glider .glider__list .offer__image .offer__prices-before {
+#sales .glider .glider__list .offer .offer__image .offer__prices-before {
   color: #ec5248;
 }
-#sales .glider .glider__list .offer__image .offer__prices-new {
+#sales .glider .glider__list .offer .offer__image .offer__prices-new {
   margin-left: 1em;
   color: #35B82C;
 }
@@ -247,11 +254,20 @@ h6 {
   }
 }
 @media screen and (min-width: 550px) {
+  #sales .glider {
+    max-width: 76.8em;
+  }
   #sales .glider .glider__list .left-1 {
-    transform: translateX(45%) scale(0.8);
+    transform: translateX(48%) scale(0.8);
   }
   #sales .glider .glider__list .right-1 {
-    transform: translateX(-45%) scale(0.8);
+    transform: translateX(-48%) scale(0.8);
+  }
+  #sales .glider .glider__list .left-2 {
+    transform: translateX(100%) scale(0.7);
+  }
+  #sales .glider .glider__list .right-2 {
+    transform: translateX(-100%) scale(0.7);
   }
 }
 @media screen and (min-width: 597px) {
@@ -259,13 +275,28 @@ h6 {
     transition: 0.5s ease;
   }
   #sales .glider .glider__list .left-1 {
-    transform: translateX(50%) scale(0.8);
+    transform: translateX(53%) scale(0.8);
   }
   #sales .glider .glider__list .right-1 {
-    transform: translateX(-50%) scale(0.8);
+    transform: translateX(-53%) scale(0.8);
+  }
+  #sales .glider .glider__list .left-2 {
+    transform: translateX(112%) scale(0.7);
+  }
+  #sales .glider .glider__list .right-2 {
+    transform: translateX(-112%) scale(0.7);
+  }
+  #sales .glider .glider__list .left-3 {
+    transform: translateX(130%) scale(0.6);
+  }
+  #sales .glider .glider__list .right-3 {
+    transform: translateX(-130%) scale(0.6);
   }
 }
 @media screen and (min-width: 720px) {
+  #sales {
+    padding: 7em 0;
+  }
   #sales .glider .glider__list .offer {
     transition: 0.6s ease;
   }
@@ -275,66 +306,31 @@ h6 {
   #sales .glider .glider__list .right-1 {
     transform: translateX(-60%) scale(0.8);
   }
-}
-@media screen and (min-width: 768px) {
-  #sales .glider {
-    width: 100%;
-    max-width: 100em;
-  }
-  #sales .glider .glider__list .offer .offer__image {
-    width: 25em;
-  }
-  #sales .glider .glider__list .left-1 {
-    transform: translateX(70%) scale(0.7);
-  }
-  #sales .glider .glider__list .right-1 {
-    transform: translateX(-70%) scale(0.7);
-  }
   #sales .glider .glider__list .left-2 {
-    transform: translateX(149%) scale(0.5);
+    transform: translateX(126%) scale(0.7);
   }
   #sales .glider .glider__list .right-2 {
-    transform: translateX(-149%) scale(0.5);
+    transform: translateX(-126%) scale(0.7);
   }
-}
-@media screen and (min-width: 850px) {
-  #sales .glider .glider__list .left-1 {
-    transform: translateX(73%) scale(0.7);
+  #sales .glider .glider__list .left-3 {
+    transform: translateX(195%) scale(0.6);
   }
-  #sales .glider .glider__list .right-1 {
-    transform: translateX(-73%) scale(0.7);
+  #sales .glider .glider__list .right-3 {
+    transform: translateX(-195%) scale(0.6);
   }
-  #sales .glider .glider__list .left-2 {
-    transform: translateX(153.5%) scale(0.5);
+  #sales .glider .glider__list .left-4 {
+    transform: translateX(225%) scale(0.5);
   }
-  #sales .glider .glider__list .right-2 {
-    transform: translateX(-153.5%) scale(0.5);
+  #sales .glider .glider__list .right-4 {
+    transform: translateX(-225%) scale(0.5);
   }
 }
 @media screen and (min-width: 1024px) {
   #sales {
     padding: 5em 0;
   }
-  #sales .glider {
-    max-width: 100em;
-  }
   #sales .glider .glider__list .offer .offer__image {
-    width: 30em;
-  }
-  #sales .glider .glider__list .left-2 {
-    transform: translateX(153.6%) scale(0.5);
-  }
-  #sales .glider .glider__list .right-2 {
-    transform: translateX(-153.6%) scale(0.5);
-  }
-}
-@media screen and (min-width: 1280px) {
-  #sales .glider {
-    max-width: 150em;
-  }
-  #sales .glider .glider__list .offer .offer__image {
-    width: 50%;
-    max-width: 40em;
+    max-width: 33em;
   }
 }
 #lines {

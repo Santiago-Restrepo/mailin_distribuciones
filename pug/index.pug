@@ -24,7 +24,7 @@ html(lang="en")
         title Home
     body
         header.header
-            img(src="images/hamburguer_menu.svg", alt="Menú de hamburguesa").hamburguer_menu
+            img(src="images/hamburguer_menu.svg", alt="Menú de hamburguesa").hamburguer_button
             .general_menu
                 ul.desktop_menu
                     li
@@ -40,6 +40,7 @@ html(lang="en")
                     li
                         a(href="index.html#location" alt="Dirigirse a ubicación") ubicación
                 ul.mobile_menu
+
                     li líneas
                         ul.line_menu
                             li
@@ -76,6 +77,14 @@ html(lang="en")
                     +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
                     +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
                     +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
+                    //- .offer.center
+                    //-     .offer__image
+                    //-         span.offer__discount 50%      
+                    //-         img(src="images/EJEMPLO.PNG" alt="Imagen del producto Stop Sweet"loading="lazy")
+                    //-         h4.offer__name Stop Sweet
+                    //-         .offer__prices
+                    //-             h5.offer__prices-before <strike>25.000</strike>
+                    //-             h5.offer__prices-new 50.000
                     +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
                     +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
                 button.glider__right
@@ -145,6 +154,7 @@ html(lang="en")
 
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(src="js/glider.js") 
+        script(src="js/menu.js") 
 
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')

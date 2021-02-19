@@ -1,13 +1,14 @@
 .header{
     position: relative;
     top: 0;
-    .hamburguer_menu{
+    .hamburguer_button{
         z-index: 2;
         position: fixed;
         top: 3em;
         left: 1.5em;
         width: 5em;
         height : 5em;
+        transition: 1s ease;
         
     }
     .general_menu{
@@ -17,17 +18,20 @@
         .mobile_menu{
             z-index: 1;
             position: fixed;
-            top: 0;
+            top: -100%;
             left: 0;
             bottom: 0;
             right: 0;
-            display: none;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             background-color: #ffffffd5;
             list-style: none;
             overflow-y: auto;
+            transition: 1s ease;
+            
             li{
                 width: 80%;
                 margin: .3em 0;
@@ -53,6 +57,10 @@
                     }
                 }
             }
+        }
+        
+        .show{
+            top: 0;
         }
     }
     .logo{

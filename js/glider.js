@@ -10,6 +10,7 @@ window.addEventListener('load', function(){
 		draggable: false,
 		duration:2,
 		dots: '.glider__dots',
+		dragVelocity:1,
 		rewind: true,
 		arrows: {
 			prev: '.glider__left',
