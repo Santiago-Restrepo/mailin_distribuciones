@@ -52,6 +52,7 @@ $break-laptop-L: 1440px;
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    // scroll-behavior: smooth;
 }
 
 body{
@@ -93,7 +94,11 @@ h6{
     background-color: $Color-negro;
 }
 
-
+@media screen and (min-width: $break-tablet) {
+    .lines__label{
+        display: none
+    }   
+}
 
 //Importación de componentes
 

@@ -64,6 +64,11 @@ h6 {
   background-color: #000603;
 }
 
+@media screen and (min-width: 768px) {
+  .lines__label {
+    display: none;
+  }
+}
 .header {
   position: relative;
   top: 0;
@@ -73,12 +78,40 @@ h6 {
   position: fixed;
   top: 3em;
   left: 1.5em;
-  width: 5em;
-  height: 5em;
+  min-width: 5em;
+  width: 10%;
+  max-width: 15em;
   transition: 1s ease;
 }
 .header .general_menu .desktop_menu {
+  z-index: 3;
   display: none;
+  position: fixed;
+  top: 10em;
+  width: 70%;
+  max-width: 60em;
+  margin-left: 1em;
+  justify-content: space-between;
+  list-style: none;
+  transition: 0.5s ease;
+}
+.header .general_menu .desktop_menu li {
+  transition: 0.5s ease;
+  padding: 0.1em 1.5em;
+}
+.header .general_menu .desktop_menu li a {
+  width: 100%;
+  height: 100%;
+  color: #000603;
+  text-decoration: none;
+  font-size: 1.6em;
+  font-weight: 400;
+}
+.header .general_menu .desktop_menu .active {
+  background: #000603;
+}
+.header .general_menu .desktop_menu .active a {
+  color: #ffffff;
 }
 .header .general_menu .mobile_menu {
   z-index: 1;
@@ -130,10 +163,38 @@ h6 {
   position: absolute;
   top: 2em;
   right: 1.5em;
-  width: 10em;
+  width: 30%;
+  min-width: 10em;
+  max-width: 20em;
 }
 
-.hero {
+@media screen and (min-width: 768px) {
+  .header .hamburguer_button {
+    display: none;
+  }
+  .header .general_menu .desktop_menu {
+    display: flex;
+    background-color: #ffffffd5;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header .logo {
+    max-width: 15em;
+  }
+  .header .general_menu {
+    display: flex;
+    justify-content: center;
+  }
+  .header .general_menu .desktop_menu {
+    top: 5em;
+    max-width: 65%;
+    margin-left: 0;
+  }
+  .header .general_menu .desktop_menu li a {
+    font-size: 1.8em;
+  }
+}
+#hero {
   width: 100%;
   height: 100vh;
   background-image: url("../images/paisaje.jpg");
@@ -142,6 +203,11 @@ h6 {
   background-attachment: fixed;
 }
 
+@media screen and (min-width: 1024px) {
+  #hero {
+    background-position-y: -25em;
+  }
+}
 #sales {
   padding: 2em 0;
   background-color: #F1FBF3;
@@ -327,7 +393,9 @@ h6 {
 }
 @media screen and (min-width: 1024px) {
   #sales {
-    padding: 5em 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
   }
   #sales .glider .glider__list .offer .offer__image {
     max-width: 33em;

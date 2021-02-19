@@ -11,12 +11,12 @@
     <header class="header"><img class="hamburguer_button" src="images/hamburguer_menu.svg" alt="Menú de hamburguesa">
       <div class="general_menu">
         <ul class="desktop_menu">
-          <li><a href="index.html" alt="Dirigirse a home">home   </a></li>
-          <li><a href="index.html#contact" alt="Dirigirse a contacto ">contacto   </a></li>
+          <li class="active"><a href="index.html#hero" alt="Dirigirse a home">home   </a></li>
           <li><a href="index.html#sales" alt="Dirigirse a ofertas">ofertas   </a></li>
           <li><a href="index.html#lines" alt="Dirigirse a líneas">líneas</a></li>
           <li><a href="index.html#story" alt="Dirigirse a historia">historia   </a></li>
           <li><a href="index.html#location" alt="Dirigirse a ubicación">ubicación</a></li>
+          <li><a href="index.html#contact" alt="Dirigirse a contacto ">contacto   </a></li>
         </ul>
         <ul class="mobile_menu">
           <li>líneas
@@ -29,7 +29,7 @@
               <li><a href="html/estuches.html" alt="Dirigirse a línea estuches">estuches                </a></li>
             </ul>
           </li>
-          <li><a href="index.html" alt="Dirigirse a home">home    </a></li>
+          <li><a href="index.html#hero" alt="Dirigirse a home">home    </a></li>
           <li><a href="index.html#contact" alt="Dirigirse a contacto ">contacto   </a></li>
           <li><a href="index.html#sales" alt="Dirigirse a ofertas">ofertas   </a></li>
           <li><a href="index.html#story" alt="Dirigirse a historia">historia   </a></li>
@@ -37,7 +37,7 @@
         </ul>
       </div><img class="logo" src="images/logo.png" alt="Logo de Mailin distribuciones">
     </header>
-    <section class="hero"></section>
+    <section id="hero"></section>
     <section id="sales"><span class="lines__label">Ofertas</span>
       <div class="glider">
         <button class="glider__left"><i class="fas fa-arrow-left"></i></button>
@@ -129,7 +129,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer"> 
+    <footer class="footer" id="contact"> 
       <button class="footer__button"> 
         <h3 class="footer__button-title">Conviértete en un distribuidor</h3><i class="fas fa-arrow-right footer__button-arrow"> </i><span class="footer__button-description">
           Has parte de esta maravillosa empresa y contribuirás a la economía de este país</span>

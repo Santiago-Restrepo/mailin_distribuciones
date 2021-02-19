@@ -27,10 +27,8 @@ html(lang="en")
             img(src="images/hamburguer_menu.svg", alt="Menú de hamburguesa").hamburguer_button
             .general_menu
                 ul.desktop_menu
-                    li
-                        a(href="index.html" alt="Dirigirse a home") home   
-                    li
-                        a(href="index.html#contact" alt="Dirigirse a contacto ") contacto   
+                    li.active
+                        a(href="index.html#hero" alt="Dirigirse a home") home   
                     li
                         a(href="index.html#sales" alt="Dirigirse a ofertas") ofertas   
                     li
@@ -39,8 +37,9 @@ html(lang="en")
                         a(href="index.html#story" alt="Dirigirse a historia") historia   
                     li
                         a(href="index.html#location" alt="Dirigirse a ubicación") ubicación
+                    li
+                        a(href="index.html#contact" alt="Dirigirse a contacto ") contacto   
                 ul.mobile_menu
-
                     li líneas
                         ul.line_menu
                             li
@@ -56,18 +55,17 @@ html(lang="en")
                             li
                                 a(href="html/estuches.html" alt="Dirigirse a línea estuches") estuches                
                     li
-                        a(href="index.html" alt="Dirigirse a home") home    
+                        a(href="index.html#hero" alt="Dirigirse a home") home    
                     li
                         a(href="index.html#contact" alt="Dirigirse a contacto ") contacto   
                     li
                         a(href="index.html#sales" alt="Dirigirse a ofertas") ofertas   
-                     
                     li
                         a(href="index.html#story" alt="Dirigirse a historia") historia   
                     li
                         a(href="index.html#location" alt="Dirigirse a ubicación") ubicación
             img(src="images/logo.png", alt="Logo de Mailin distribuciones").logo
-        section.hero
+        section#hero
         section#sales
             span.lines__label Ofertas
             .glider
@@ -121,7 +119,7 @@ html(lang="en")
                     h3 Encuentranos en:
                     h6 Cl. 20 #71-29 PISO 2
                     span  Medellín, Antioquia
-        footer.footer 
+        footer.footer#contact 
             button.footer__button 
                 h3.footer__button-title Conviértete en un distribuidor
                 i.fas.fa-arrow-right.footer__button-arrow 

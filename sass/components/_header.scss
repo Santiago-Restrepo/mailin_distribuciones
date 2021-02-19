@@ -6,14 +6,54 @@
         position: fixed;
         top: 3em;
         left: 1.5em;
-        width: 5em;
-        height : 5em;
+        min-width: 5em;
+        width: 10%;
+        max-width: 15em;
         transition: 1s ease;
         
     }
     .general_menu{
+        
         .desktop_menu{
+            z-index: 3;
             display: none;
+            position: fixed;
+            top: 10em;
+            width: 70%;
+            max-width: 60em;
+            margin-left: 1em;
+            justify-content: space-between;
+            list-style: none;
+            transition: .5s ease;
+
+            li{
+                transition: .5s ease;
+                padding: 0.1em 1.5em;
+                a{
+                    width: 100%;
+                    height: 100%;
+                    color: $Color-negro;
+                    text-decoration: none;
+                    font-size: 1.6em;
+                    font-weight: 400;
+                }
+            }
+            // li:hover{
+            //     background-color: $Color-verde;
+            //     a{
+            //         color: $Color-blanco;
+
+            //     }
+
+
+            // }
+            .active{
+                background: $Color-negro;
+                a{
+                    color: $Color-blanco;
+                }
+            }
+
         }
         .mobile_menu{
             z-index: 1;
@@ -68,6 +108,44 @@
         position: absolute;
         top: 2em;
         right: 1.5em;
-        width: 10em;
+        width: 30%;
+        min-width: 10em;
+        max-width: 20em;
+    }
+}
+
+@media screen and (min-width: $break-tablet) {
+    .header{
+        .hamburguer_button{
+            display: none;
+        }
+        .general_menu{
+            .desktop_menu{
+                display: flex;
+                background-color: #ffffffd5;
+            }
+        }
+    }
+}
+@media screen and (min-width: $break-laptop) {
+    .header{
+        .logo{
+            max-width: 15em;
+        }
+        .general_menu{
+            display: flex;
+            justify-content: center;
+            .desktop_menu{
+                top: 5em;
+                max-width: 65%;
+                margin-left: 0;
+                li{
+                    a{
+                        font-size: 1.8em;
+                    }
+                }
+
+            }
+        }
     }
 }
