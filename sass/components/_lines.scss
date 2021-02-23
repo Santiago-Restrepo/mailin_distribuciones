@@ -63,6 +63,7 @@
                 &-name{
                     font-weight: 500;
                     color: $Color-blanco;
+                    font-style: italic;
                     font-family: $fuente1;
                 }
                 &-button{
@@ -82,6 +83,7 @@
 
 @media screen and (min-width: $break-tablet) {
     #lines{
+        padding-top: 5em;
         .lines__image:nth-last-of-type(1){
             top: -10%;
         }

@@ -1,0 +1,62 @@
+mixin product(nombre, imgUrl, precio, enlace_wpp, descripcion)
+    .product
+        .product__image 
+            img(src=""+imgUrl, alt="Imagen del producto "+nombre)
+            button.view_more Ver más
+        .product__info 
+            span.product__info-name #{nombre}
+            span.product__info-price #{precio}
+            p.product__info-description #{descripcion}
+            a(href=""+enlace_wpp).product__info-link
+
+mixin offer(nombre, imgUrl, enlace_wpp, descripcion, precioAnterior, precioNuevo, descuento)
+    .offer
+        .offer__image
+            span.offer__discount #{descuento}
+            img(src=""+imgUrl, alt="Imagen de la oferta "+nombre)
+            button.view_more Ver más
+        .offer__info 
+            span.offer__info-name #{nombre}
+            .offer__prices
+                h5.offer__prices-before <strike>#{precioAnterior}</strike>
+                h5.offer__prices-new #{precioNuevo}
+            p.offer__info-description #{descripcion}
+            a(href=""+enlace_wpp).offer__info-link 
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../css/estilos_linea.css")
+        title Línea Bebé
+    body
+        section#notice
+            span.notice__text Envíos gratis por compras superiores a 100.000 pesos
+        include componentes/_header.pug
+        section#line
+            h1.line__title Línea bebé
+            nav.line__menu
+                a(href="bebe.html").line__menu-element bebe
+                a(href="cosmetica.html").line__menu-element cosmética
+                a(href="cuidado-corporal.html").line__menu-element cuidado corporal
+                a(href="capilar.html").line__menu-element capilar
+                a(href="quema-grasa.html").line__menu-element quema grasa
+                a(href="estuches.html").line__menu-element estuches
+        main.catalog
+            img(src="../images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
+            .catalog__container 
+                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
+                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
+                +offer("Gel green", "https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg", ".", ".", "50.000", "25.000", "50%")
+                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
+                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
+                +offer("Gel green", "https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg", ".", ".", "50.000", "25.000", "50%")
+                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
+                +offer("Gel green", "https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg", ".", ".", "50.000", "25.000", "50%")
+
+            img(src="../images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
+        include componentes/_footer.pug
+        script(src="../js/menu.js")

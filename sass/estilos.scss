@@ -60,7 +60,7 @@ body{
 }
 
 
-h1,h2,h3,h4,h5,h6,p,span,li,a{
+h1,h2,h3,h4,h5,h6,p,span,li,a,strike{
     font-family: $fuente2;
 }
 
@@ -122,6 +122,17 @@ h6{
         font-size: 75%;
     }
 }
+// @media screen and (min-width: $break-laptop-M) {
+//     html{
+//         font-size: 80%;
+//     }
+// }
+@media screen and (min-width: $break-laptop-L) {
+    html{
+        font-size: 80%;
+    }
+}
+
 
 //Importación de componentes
 

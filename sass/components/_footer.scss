@@ -102,8 +102,16 @@
     }
 }
 
+@media screen and (min-width: $break-mobile-L) {
+    .footer{
+        background-size: 18em;
+        background-position: 105% 110%;
+    }
+}
+
 @media screen and (min-width: $break-tablet) {
     .footer{
+        background-position: 105% 120%;
         .buttons__container{
             display: grid;
             grid-template-columns: repeat(2,1fr);
@@ -113,6 +121,7 @@
             .footer__button{
                 width: 100%;
                 max-width: 20em;
+                height: 8em;
             }
         }
         .footer__container{
@@ -121,6 +130,7 @@
             width: 60em;
             .social_media{
                 width: 13em;
+                margin: 0;
                 justify-self: flex-end;
                 .social_media-container{
                     width: 100%;
@@ -132,11 +142,22 @@
 
 @media screen and (min-width: $break-laptop) {
     .footer{
+        background-size: 25em;
+        background-position-y: 132%;
         .buttons__container{
             .footer__button{
-                max-width: 30em;
-                height: 10em;
+                max-width: 35em;
+                height: 12em;
+                &-title{
+                    font-size: 1.2em;
+                }
+                &-description{
+                    font-size: 1.2em;
+                }
             }
+        }
+        .rights{
+            margin-top: 1em;
         }
     }
 }
