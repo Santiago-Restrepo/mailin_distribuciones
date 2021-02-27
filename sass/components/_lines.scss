@@ -110,8 +110,17 @@
             grid-template-columns: repeat(3, 1fr);
             max-width: 80em;
             .line{
+                overflow: hidden;
                 width: 21em;
                 height: 26em;
+                .line__image{
+                    transition: transform .8s ease;
+                }
+            }
+            .line:hover{
+                .line__image{
+                    transform: scale(1.05);
+                }
             }
         }
     }

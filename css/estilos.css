@@ -542,8 +542,15 @@ h6 {
     max-width: 80em;
   }
   #lines .catalog .line {
+    overflow: hidden;
     width: 21em;
     height: 26em;
+  }
+  #lines .catalog .line .line__image {
+    transition: transform 0.8s ease;
+  }
+  #lines .catalog .line:hover .line__image {
+    transform: scale(1.05);
   }
 }
 #story {
