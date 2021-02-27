@@ -783,10 +783,27 @@ h6 {
   text-align: center;
 }
 
+@media screen and (min-width: 375px) {
+  .footer .footer__container {
+    padding: 0 4em;
+  }
+}
 @media screen and (min-width: 425px) {
   .footer {
     background-size: 18em;
     background-position: 105% 110%;
+  }
+}
+@media screen and (min-width: 597px) {
+  .footer {
+    background-size: 18em;
+    background-position: 105% 110%;
+  }
+  .footer .footer__container {
+    padding: 0 9.3em;
+  }
+  .footer .footer__container .social_media .social_media-container {
+    max-width: 15em;
   }
 }
 @media screen and (min-width: 768px) {
@@ -811,6 +828,7 @@ h6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 60em;
+    padding: 0 2em;
   }
   .footer .footer__container .social_media {
     width: 13em;

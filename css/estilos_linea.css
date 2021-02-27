@@ -229,10 +229,9 @@ h6 {
   justify-content: center;
 }
 .header .logo {
+  top: 0;
   z-index: 0;
-  right: 0;
   position: relative;
-  margin: 0 auto;
 }
 
 #notice {
@@ -249,9 +248,17 @@ h6 {
 #line {
   width: 100%;
 }
-#line .line__title {
-  margin: 2em 0 2em;
-  text-align: center;
+#line .line_title {
+  display: block;
+  font-size: 1.3em;
+  margin: 2em auto 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2em 0.5em;
+  margin-bottom: 2.5em;
+  color: #ffffff;
+  background-color: #000603;
 }
 #line .line__menu {
   display: none;
@@ -270,10 +277,10 @@ h6 {
 }
 .catalog__container .product, .catalog__container .offer {
   width: 80%;
-  max-width: 25em;
-  height: 30em;
+  max-width: 20em;
+  height: 23em;
   margin-bottom: 3em;
-  box-shadow: 0px 2px 10px #0000009a;
+  box-shadow: 0px 2px 5px #0000009a;
 }
 .catalog__container .product__image, .catalog__container .offer__image {
   position: relative;
@@ -286,6 +293,7 @@ h6 {
   object-fit: cover;
 }
 .catalog__container .product__image .view_more, .catalog__container .offer__image .view_more {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -293,18 +301,20 @@ h6 {
   height: 15%;
   font-size: 1.4em;
   font-weight: 500;
-  background-color: #000603b7;
+  background-color: #000603e7;
   color: #ffffff;
   border: none;
-  transition: 0.1s ease;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
 .catalog__container .product__info, .catalog__container .offer__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 2em 1.5em 1em;
+  justify-content: space-evenly;
+  padding-left: 1.5em;
   width: 100%;
   height: 30%;
+  background-color: #ffffff;
 }
 .catalog__container .product__info-description, .catalog__container .product__info-link, .catalog__container .offer__info-description, .catalog__container .offer__info-link {
   display: none;
@@ -314,11 +324,13 @@ h6 {
   font-size: 1.6em;
 }
 .catalog__container .product__info-price, .catalog__container .offer__info-price {
+  margin-top: 0.5em;
   font-size: 1.6em;
   font-weight: 600;
   color: #35B82C;
 }
 .catalog__container .product__info-price {
+  font-family: "Lora", "sans-serif";
   font-size: 1.6em;
   font-weight: 600;
   color: #35B82C;
@@ -334,14 +346,18 @@ h6 {
 }
 .catalog__container .offer__info .offer__prices {
   display: flex;
+  margin-top: 0.5em;
 }
 .catalog__container .offer__info .offer__prices-before {
   font-size: 1.6em;
   font-weight: 600;
-  font-family: "Lora", "sans-serif";
   color: #ec5248;
 }
+.catalog__container .offer__info .offer__prices-before strike {
+  font-family: "Lora", "sans-serif";
+}
 .catalog__container .offer__info .offer__prices-new {
+  font-family: "Lora", "sans-serif";
   margin-left: 1em;
   font-size: 1.6em;
   font-weight: 600;
@@ -452,10 +468,27 @@ h6 {
   text-align: center;
 }
 
+@media screen and (min-width: 375px) {
+  .footer .footer__container {
+    padding: 0 4em;
+  }
+}
 @media screen and (min-width: 425px) {
   .footer {
     background-size: 18em;
     background-position: 105% 110%;
+  }
+}
+@media screen and (min-width: 597px) {
+  .footer {
+    background-size: 18em;
+    background-position: 105% 110%;
+  }
+  .footer .footer__container {
+    padding: 0 9.3em;
+  }
+  .footer .footer__container .social_media .social_media-container {
+    max-width: 15em;
   }
 }
 @media screen and (min-width: 768px) {
@@ -480,6 +513,7 @@ h6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 60em;
+    padding: 0 2em;
   }
   .footer .footer__container .social_media {
     width: 13em;
@@ -509,14 +543,35 @@ h6 {
     margin-top: 1em;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 597px) {
   .catalog__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    width: 100%;
+    max-width: 55em;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header .mobile_menu {
+    top: 4em;
+  }
+  .header .logo {
+    position: absolute;
+    max-width: 10em;
+    top: 3.5em;
+    right: 2.2em;
+  }
+
+  #line .line_title {
+    margin-top: 7em;
+  }
+
+  .catalog__container {
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     max-width: 70em;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
   }
   .catalog__container .offer {
     align-self: flex-start;
@@ -530,6 +585,10 @@ h6 {
   }
 }
 @media screen and (min-width: 1024px) {
+  .header .logo {
+    max-width: 13em;
+  }
+
   .catalog__container {
     max-width: 100em;
     grid-template-columns: repeat(5, 1fr);
@@ -539,14 +598,13 @@ h6 {
     height: 18em;
   }
   .catalog__container .product__image .view_more, .catalog__container .offer__image .view_more {
+    opacity: 0;
+    display: block;
     height: 20%;
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .catalog__container .product__info, .catalog__container .offer__info {
     z-index: 2;
-  }
-  .catalog__container .product:hover__image .view_more, .catalog__container .offer:hover__image .view_more {
-    bottom: 0;
   }
   .catalog__container .product__info {
     padding: 1em;
@@ -557,6 +615,9 @@ h6 {
   .catalog__container .product__info-price {
     font-size: 1.3em;
   }
+  .catalog__container .offer__image .offer__discount {
+    font-size: 1em;
+  }
   .catalog__container .offer__info {
     padding: 1em;
   }
@@ -565,5 +626,11 @@ h6 {
   }
   .catalog__container .offer__info .offer__prices-before, .catalog__container .offer__info .offer__prices-new {
     font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .catalog .offer__image .offer__discount {
+    font-size: 1.1em;
+    padding: 0.5em;
   }
 }
