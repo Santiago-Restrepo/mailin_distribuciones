@@ -29,6 +29,8 @@
             background-color: $Color-negro;
             text-align: start;
             border: none;
+            cursor: pointer;
+            transition: background .5s ease;
             &-title{
                 grid-area: title;
                 margin-bottom: 1em;
@@ -39,6 +41,7 @@
                 grid-area: arrow;
                 justify-self: center;
                 align-self: flex-start;
+                font-size: 1.5em;
             }
             &-description{
                 grid-area: description;
@@ -46,6 +49,12 @@
                 font-weight: 300;
             }
             
+        }
+        .footer__button:nth-of-type(1):hover{
+            background-color: #00140a;
+        }
+        .footer__button:nth-of-type(2):hover{
+            background-color: #0a0116;
         }
     }
     .footer__container{
@@ -137,7 +146,7 @@
             display: grid;
             grid-template-columns: repeat(2,1fr);
             justify-items: center;
-            column-gap: .1em;
+            column-gap: 0.1em;
             width: fit-content;
             .footer__button{
                 width: 100%;

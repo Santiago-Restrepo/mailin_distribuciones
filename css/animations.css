@@ -1,6 +1,6 @@
 .fadeWidth {
   animation-duration: 1.5s;
-  animation-fill-mode: none;
+  animation-fill-mode: both;
   animation-name: fadeWidth;
 }
 
