@@ -24,6 +24,7 @@ html(lang="en")
         link(rel="stylesheet", href="css/animations.css")
         title Home
     body
+                    
         header.header
             img(src="images/hamburguer_menu.svg", alt="Menú de hamburguesa").hamburguer_button 
             ul.mobile_menu                
@@ -40,6 +41,26 @@ html(lang="en")
                 li
                     a(href="index.html#contact" alt="Dirigirse a contacto ") contacto   
             img(src="images/logo.png", alt="Logo de Mailin distribuciones").logo
+        .modal
+            .offerModal
+                img(src="images/close_button.svg", alt="Menú de hamburguesa").close_button 
+                img(src="images/EJEMPLO.PNG", alt="").offerModal__image
+                .offerModal__info 
+                    h1.offerModal__info-name Stop sweet desodorante
+                    p.offerModal__info-description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus iaculis nulla, vel ullamcorper tellus ultrices nec. Pellentesque id tortor mi. Nunc pretium condimentum imperdiet. Nunc a ultrices justo, id venenatis nunc. Nunc id risus pulvinar, interdum tellus nec, dignissim arcu. Vestibulum mattis lobortis mauris, id dictum purus venenatis eget. Vivamus consectetur quis sapien sit amet vestibulum. Ut et neque sit amet leo ultricies tristique vitae vitae sapien. Donec ante elit, viverra sed convallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam  suscipit velit pretium lobortis.
+                    .offerModal__info-prices
+                        h2.price-before <strike>50.000</strike>
+                        h2.price-now 25.000 
+                    .offerModal__info-buy 
+                        span Comprar:
+                        .social_media
+                            a(href="https://www.instagram.com/mailin_distribuciones/") 
+                                i.fab.fa-instagram 
+                            a(href="https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w") 
+                                i.fab.fa-whatsapp
+                            a(href="https://www.facebook.com/Mailin-Distribuciones-110829377246916") 
+                                i.fab.fa-facebook-f
+        
         section#hero
         section#sales
             span.lines__label Ofertas

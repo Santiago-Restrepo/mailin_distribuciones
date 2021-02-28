@@ -20,6 +20,7 @@ html {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -62,6 +63,81 @@ h6 {
   margin-bottom: 2.5em;
   color: #ffffff;
   background-color: #000603;
+}
+
+.modal {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  padding: 1em 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000603de;
+  overflow-y: scroll;
+}
+.modal .offerModal {
+  z-index: 6;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #ffffff;
+}
+.modal .offerModal .close_button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.modal .offerModal__image {
+  width: 100%;
+}
+.modal .offerModal__info {
+  width: 100%;
+  padding: 1.5em;
+}
+.modal .offerModal__info-name {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+.modal .offerModal__info-description {
+  font-size: 1.6em;
+  font-weight: 300;
+}
+.modal .offerModal__info-prices {
+  display: flex;
+  margin-top: 2em;
+}
+.modal .offerModal__info-prices .price-before {
+  margin-right: 1em;
+  color: #B82C2C;
+}
+.modal .offerModal__info-prices .price-now {
+  color: #35B82C;
+}
+.modal .offerModal__info-buy {
+  display: flex;
+  margin-top: 2em;
+}
+.modal .offerModal__info-buy span {
+  margin-right: 1em;
+  font-size: 2em;
+}
+.modal .offerModal__info-buy .social_media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10em;
+}
+.modal .offerModal__info-buy .social_media a {
+  color: #000603;
+}
+.modal .offerModal__info-buy .social_media a i {
+  font-size: 3em;
 }
 
 @media screen and (min-width: 375px) {
@@ -558,7 +634,7 @@ h6 {
     transition: transform 0.8s ease;
   }
   #lines .catalog .line:hover .line__image {
-    transform: scale(1.05);
+    transform: scale(1.15);
   }
 }
 #story {
