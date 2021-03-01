@@ -48,16 +48,13 @@
         .primaryLeaf{
             max-width: 25em;
         }
-        .story__container{
-            
-        }
     }   
 }
 @media screen and (min-width: $break-laptop) {
     #story{
         height: 100vh;
         .primaryLeaf{
-            max-width: 40em;
+            max-width: 32em;
         }
         .primaryLeaf:nth-last-of-type(1){
             top: -10%;
@@ -74,5 +71,27 @@
            padding: 2em;
         }
     }   
+}
+
+@media screen and (min-width: $break-laptop-S) {
+    #story{
+        .primaryLeaf{
+            max-width: 45em;
+        }
+    }
+}
+@media screen and (min-width: $break-laptop-M) {
+    #story{
+        .primaryLeaf{
+            max-width: 50em;
+        }
+    }
+}
+@media screen and (min-width: $break-laptop-L) {
+    #story{
+        .primaryLeaf{
+            max-width: 55em;
+        }
+    }
 }
 

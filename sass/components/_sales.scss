@@ -9,10 +9,18 @@
             top: 50%;
             background: none;
             border: none;
-            font-size: 2.5em;
-            color: $Color-negro;
+            font-size: 2em;
+            padding: .2em;
+            border-radius: .3em;
+            color: $Color-blanco;
+            background-color: #000603da;
+            
             cursor: pointer;
-
+            transition: background .5s ease;
+            
+        }
+        .glider__left:hover,.glider__right:hover{
+            background-color: #000603;
         }
         .glider__left{
             left: 5%;

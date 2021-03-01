@@ -133,6 +133,7 @@ h6{
 .header{
     display: flex;
     justify-content: center;
+    
     .logo{
         top: 0;
         z-index: 0;
@@ -299,6 +300,7 @@ h6{
 @media screen and (min-width: $break-tablet) {
     .header{
         .mobile_menu{
+            position: absolute;
             top: 4em;
         }
         .logo{

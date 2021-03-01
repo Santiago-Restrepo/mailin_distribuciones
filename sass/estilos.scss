@@ -52,7 +52,6 @@ $break-laptop-L: 1440px;
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    // scroll-behavior: smooth;
 }
 
 body{
@@ -101,7 +100,7 @@ h6{
     top: 0;
     left: 0;
     right: 0;
-    display: none;
+    display: block;
     padding: 1em 0;
     width: 100%;
     height: 100vh;
@@ -147,6 +146,7 @@ h6{
             }
             &-buy{
                 display: flex;
+                align-items: center;
                 margin-top: 2em;
                 span{
                     margin-right: 1em;
