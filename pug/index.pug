@@ -1,12 +1,15 @@
-mixin offer(descuento, imgUrl, nombre, precioAnterior, precioNuevo)
+mixin offer(descuento, imgUrl, nombre, precioAnterior, precioNuevo, descripcion, enlaceWpp)
     .offer
         .offer__image
-            span.offer__discount #{descuento}      
             img(src=""+imgUrl, alt="Imagen del producto "+nombre loading="lazy")
+            span.offer__discount #{descuento}      
             h4.offer__name #{nombre}
             .offer__prices
                 h5.offer__prices-before <strike>#{precioAnterior}</strike>
                 h5.offer__prices-new #{precioNuevo}
+        .offer__info 
+            p #{descripcion}
+            a(href=""+enlaceWpp) 
 
 mixin line(imgUrl, nombre, lineaUrl)
     .line 
@@ -44,22 +47,19 @@ html(lang="en")
         .modal
             .offerModal
                 img(src="images/close_button.svg", alt="Menú de hamburguesa").close_button 
-                img(src="images/EJEMPLO.PNG", alt="").offerModal__image
+                .offerModal__image
+                    img(src="images/loading.gif", alt="Imagen del producto")
                 .offerModal__info 
-                    h1.offerModal__info-name Stop sweet desodorante
-                    p.offerModal__info-description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus iaculis nulla, vel ullamcorper tellus ultrices nec. Pellentesque id tortor mi. Nunc pretium condimentum imperdiet. Nunc a ultrices justo, id venenatis nunc. Nunc id risus pulvinar, interdum tellus nec, dignissim arcu. Vestibulum mattis lobortis mauris, id dictum purus venenatis eget. Vivamus consectetur quis sapien sit amet vestibulum. Ut et neque sit amet leo ultricies tristique vitae vitae sapien. Donec ante elit, viverra sed convallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam miconvallis interdum, rutrum malesuada ligula. Cras aliquam  suscipit velit pretium lobortis.
+                    h1.offerModal__info-name Cargando...
+                    p.offerModal__info-description Cargando...
                     .offerModal__info-prices
-                        h2.price-before <strike>50.000</strike>
-                        h2.price-now 25.000 
+                        h2.price-before <strike>Cargando...</strike>
+                        h2.price-now Cargando... 
                     .offerModal__info-buy 
                         span Comprar:
                         .social_media
-                            a(href="https://www.instagram.com/mailin_distribuciones/") 
-                                i.fab.fa-instagram 
                             a(href="https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w") 
                                 i.fab.fa-whatsapp
-                            a(href="https://www.facebook.com/Mailin-Distribuciones-110829377246916") 
-                                i.fab.fa-facebook-f
         
         section#hero
         section#sales
@@ -68,19 +68,14 @@ html(lang="en")
                 button.glider__left
                     i.fas.fa-arrow-left
                 .glider__list
-                    +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
-                    +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
-                    +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
-                    //- .offer.center
-                    //-     .offer__image
-                    //-         span.offer__discount 50%      
-                    //-         img(src="images/EJEMPLO.PNG" alt="Imagen del producto Stop Sweet"loading="lazy")
-                    //-         h4.offer__name Stop Sweet
-                    //-         .offer__prices
-                    //-             h5.offer__prices-before <strike>25.000</strike>
-                    //-             h5.offer__prices-new 50.000
-                    +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
-                    +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000")
+                    +offer("50%","images/gelGreen.jpg","Gel green", "50.000", "25.000","Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes","https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w")
+                    
+                    +offer("50%","images/stopSweet.jpg","Stop sweet", "50.000", "25.000","Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.","https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w")
+                    
+                    +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000","sdjfañlsdjfañsdlfjasdñlfjcencasefhaseñofacnaewlñcjnasñlejfñaselcjewñlkcjacjañlehsgbcnweñlcjawñelkcjewñlcjewñlkcjaseñ","https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w")
+                    +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000","sdjfañlsdjfañsdlfjasdñlfjcencasefhaseñofacnaewlñcjnasñlejfñaselcjewñlkcjacjañlehsgbcnweñlcjawñelkcjewñlcjewñlkcjaseñ","https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w")
+                    +offer("50%","images/EJEMPLO.PNG","Stop sweet", "25.000", "50.000","sdjfañlsdjfañsdlfjasdñlfjcencasefhaseñofacnaewlñcjnasñlejfñaselcjewñlkcjacjañlehsgbcnweñlcjawñelkcjewñlcjewñlkcjaseñ","https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w")
+                    
                 button.glider__right
                     i.fas.fa-arrow-right
                 .glider__dots(role="tablist")
@@ -151,6 +146,7 @@ html(lang="en")
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(src="js/glider.js") 
         script(src="js/index_animations.js") 
+        script(src="js/modalOffer_index.js") 
         script. 
             const hamburguer_button = document.querySelector('.hamburguer_button');
             const mobile_menu = document.querySelector('.mobile_menu');
