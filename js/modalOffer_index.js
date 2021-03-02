@@ -30,15 +30,16 @@ const openOfferModal = (e)=>{
     
     //Hacer aparecer ventana modal
     HTML_ELEMENT.style.overflow="hidden";
-    if (window.matchMedia("(min-width: 768px)").matches) {
-        /* La pantalla tiene al menos 768 píxeles de ancho */
+    MODAL_BACKGROUND.style.display="flex";
+    // if (window.matchMedia("(min-width: 768px)").matches) {
+    //     /* La pantalla tiene al menos 768 píxeles de ancho */
 
-        MODAL_BACKGROUND.style.display="flex";
-    } else {
-        /* La pantalla tiene menos de 768 píxeles de ancho */
-        OFFER_MODAL.style.opacity="1";
-        MODAL_BACKGROUND.style.display="block";
-      }
+    //     MODAL_BACKGROUND.style.display="flex";
+    // } else {
+    //     /* La pantalla tiene menos de 768 píxeles de ancho */
+    //     OFFER_MODAL.style.opacity="1";
+    //     MODAL_BACKGROUND.style.display="block";
+    //   }
 }
 
 

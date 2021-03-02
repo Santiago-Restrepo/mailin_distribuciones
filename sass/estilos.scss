@@ -99,12 +99,13 @@ h6{
     z-index: 5;
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     display: none;
     justify-content: center;
-    align-items: center;
+    flex-direction: row;      
+    align-items: center; 
     padding: 1em 0;
     width: 100%;
     background-color: #000603de;
@@ -113,7 +114,7 @@ h6{
     .offerModal{
         z-index: 6;
         position: relative;
-        margin: 0 auto;
+        margin: auto;
         width: 90%;
         max-width: 35em;
         height: fit-content;
@@ -201,10 +202,8 @@ h6{
     html{
         font-size: 70%;
     }
-    .modal{        
+    .modal{ 
         .offerModal{
-            position: absolute;
-            top: 0;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             align-items: center;
