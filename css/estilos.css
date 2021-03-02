@@ -72,31 +72,38 @@ h6 {
   right: 0;
   bottom: 0;
   left: 0;
-  display: none;
+  display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   padding: 1em 0;
   width: 100%;
-  background-color: #000603de;
+  background-color: #000000de;
   overflow-y: auto;
-  transition: 1s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
 }
-.modal .offerModal {
+.modal .offerModal, .modal .distributorModal, .modal .wholesaleModal {
   z-index: 6;
   position: relative;
   margin: auto;
   width: 90%;
-  max-width: 35em;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: #ffffff;
+  transform: translateY(-110%);
+  transition: transform 1s ease;
 }
-.modal .offerModal .close_button {
+.modal .offerModal .close_button, .modal .distributorModal .close_button, .modal .wholesaleModal .close_button {
   position: absolute;
   top: 1em;
   right: 1em;
+  cursor: pointer;
+}
+.modal .offerModal {
+  max-width: 35em;
+  background-color: #ffffff;
 }
 .modal .offerModal__image {
   width: 100%;
@@ -150,6 +157,74 @@ h6 {
 }
 .modal .offerModal__info-buy .social_media a i {
   font-size: 3em;
+}
+.modal .distributorModal, .modal .wholesaleModal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40em;
+  height: 100%;
+  padding: 6em 0 2em;
+}
+.modal .distributorModal .close_button, .modal .wholesaleModal .close_button {
+  z-index: 2;
+}
+.modal .distributorModal .form__image, .modal .wholesaleModal .form__image {
+  position: absolute;
+  width: 20%;
+}
+.modal .distributorModal__title, .modal .wholesaleModal__title {
+  z-index: 1;
+  width: 90%;
+  margin-bottom: 1em;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+}
+.modal .distributorModal iframe, .modal .wholesaleModal iframe {
+  z-index: 1;
+  width: 90%;
+  height: 100%;
+  max-width: 30em;
+}
+.modal .distributorModal iframe html, .modal .wholesaleModal iframe html {
+  overflow: hidden;
+}
+.modal .distributorModal {
+  background-color: #202A26;
+}
+.modal .distributorModal img:nth-of-type(2) {
+  top: 0;
+  left: 0;
+}
+.modal .distributorModal img:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+  transform: rotatex(180deg) rotateY(180deg);
+}
+.modal .wholesaleModal {
+  background-color: #312B40;
+}
+.modal .wholesaleModal .form__image {
+  width: 50%;
+}
+.modal .wholesaleModal img:nth-of-type(2) {
+  top: -3em;
+  left: -3em;
+  transform: rotatex(180deg) rotateY(180deg);
+}
+.modal .wholesaleModal img:nth-of-type(3) {
+  bottom: -3em;
+  right: -3em;
+}
+.modal .modal-visible {
+  transform: translateY(0);
+}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media screen and (min-width: 375px) {
@@ -223,12 +298,11 @@ h6 {
     font-size: 75%;
   }
 
-  .modal .offerModal .close_button {
-    cursor: pointer;
+  .modal .offerModal .close_button, .modal .distributorModal .close_button, .modal .wholesaleModal .close_button {
     opacity: 0.8;
     transition: opacity 0.5s ease;
   }
-  .modal .offerModal .close_button:hover {
+  .modal .offerModal .close_button:hover, .modal .distributorModal .close_button:hover, .modal .wholesaleModal .close_button:hover {
     opacity: 1;
   }
 }

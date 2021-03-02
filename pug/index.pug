@@ -116,6 +116,22 @@ html(lang="en")#html
                     h3 Encuentranos en:
                     h6 Cl. 20 #71-29 PISO 2
                     span  Medellín, Antioquia
+        .modal
+            .distributorModal
+                img(src="images/close_button.svg", alt="Menú de hamburguesa").close_button 
+                img(src="images/hoja_sencilla.svg", alt="Imagen de hoja sencilla").form__image
+                h1.distributorModal__title Regálanos tus datos y pronto nos pondremos en contacto contigo
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOtaUtxRweXQMUqnLia9gtU6sZfetwFUnb-JoduV4OBMiHbg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                img(src="images/hoja_sencilla.svg", alt="Imagen de hoja sencilla").form__image
+
+
+        .modal 
+            .wholesaleModal
+                img(src="images/close_button.svg", alt="Menú de hamburguesa").close_button 
+                img(src="images/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
+                h1.distributorModal__title Regálanos tus datos y pronto nos pondremos en contacto contigo
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1puLzSvehJP_yky7VS1LicPtRsnWOdbtCKzSCrqyi7QWiwA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                img(src="images/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
         footer.footer#contact
             span.lines__label Contacto
             .buttons__container 
@@ -152,7 +168,7 @@ html(lang="en")#html
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(src="js/glider.js") 
         script(src="js/index_animations.js") 
-        script(src="js/modalOffer_index.js") 
+        script(src="js/modal_index.js") 
         script. 
             const hamburguer_button = document.querySelector('.hamburguer_button');
             const mobile_menu = document.querySelector('.mobile_menu');

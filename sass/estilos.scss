@@ -11,6 +11,7 @@ $Color-rojo-intenso:  #B82C2C;
 $Color-rojo:  #ec5248;
 $Color-negro:  #000603;
 $Color-verde:  #10312A;
+$Color-verde-oscuro:  #202A26;
 $Color-verde-intenso:  #35B82C;
 $Color-verde-claro:  #72EF8B;
 $Color-gris:  #707070;
@@ -102,29 +103,35 @@ h6{
     right: 0;
     bottom: 0;
     left: 0;
-    display: none;
+    display: flex;
     justify-content: center;
     flex-direction: row;      
     align-items: center; 
     padding: 1em 0;
     width: 100%;
-    background-color: #000603de;
+    background-color: #000000de;
     overflow-y: auto;
-    transition: 1s ease-in-out;
-    .offerModal{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+    .offerModal,.distributorModal,.wholesaleModal{
         z-index: 6;
         position: relative;
         margin: auto;
         width: 90%;
-        max-width: 35em;
         height: fit-content;
-        background-color: $Color-blanco;
+        transform: translateY(-110%);
+        transition: transform 1s ease;
         .close_button{
             position: absolute;
             top: 1em;
             right: 1em;
+            cursor: pointer;
         }
-        
+    }
+    .offerModal{
+        max-width: 35em;
+        background-color: $Color-blanco;
         &__image{
             width: 100%;
             height: fit-content;
@@ -178,7 +185,79 @@ h6{
             }
         }
     }
+    .distributorModal,.wholesaleModal{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 40em;
+        height: 100%;
+        padding: 6em 0 2em;
+        .close_button{
+            z-index: 2;
+        }
+        .form__image{
+            position: absolute;
+            width: 20%;
+        }
+        &__title{
+            z-index: 1;
+            width: 90%;
+            margin-bottom: 1em;
+            color: $Color-blanco;
+            font-weight: 500;
+            text-align: center;
+        }
+        iframe{
+            z-index: 1;
+            width: 90%;
+            height: 100%;
+            max-width: 30em;
+            html{
+                overflow: hidden;
+            }
+            
+        }
+        
+    }
+    .distributorModal{
+        background-color: $Color-verde-oscuro;
+        img:nth-of-type(2){
+            top: 0;    
+            left: 0;
+            
+        }
+        img:nth-of-type(3){
+            bottom: 0;
+            right: 0;
+            transform: rotatex(180deg) rotateY(180deg);
+        }
+    }
+    .wholesaleModal{
+        background-color: $Color-morado;
+        .form__image{
+            width: 50%;
+        }
+        img:nth-of-type(2){
+            top: -3em;    
+            left: -3em;
+            transform: rotatex(180deg) rotateY(180deg);
+            
+        }
+        img:nth-of-type(3){
+            bottom: -3em;
+            right: -3em;
+        }
+    }
+    .modal-visible{
+        transform: translateY(0);
+    }
 }
+.is-visible{
+    visibility: visible;
+    opacity: 1;
+}
+
 
 @media screen and (min-width: $break-mobile-M) {
     html{
@@ -249,9 +328,8 @@ h6{
         font-size: 75%;
     }
     .modal{
-        .offerModal{
+        .offerModal,.distributorModal,.wholesaleModal{
             .close_button{
-                cursor: pointer;
                 opacity: .8;
                 transition: opacity .5s ease;             
             }
@@ -261,11 +339,6 @@ h6{
         }
     }
 }
-// @media screen and (min-width: $break-laptop-M) {
-//     html{
-//         font-size: 80%;
-//     }
-// }
 @media screen and (min-width: $break-laptop-L) {
     html{
         font-size: 80%;
