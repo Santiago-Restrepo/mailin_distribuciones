@@ -1,6 +1,7 @@
 const OFFERS_ARRAY= document.querySelectorAll(".offer");
 var MODAL_BACKGROUND= document.querySelector(".modal");
 var OFFER_MODAL= document.querySelector(".offerModal");
+const HTML_ELEMENT = document.querySelector("#html"); 
 
 
 const openOfferModal = (e)=>{
@@ -28,12 +29,14 @@ const openOfferModal = (e)=>{
     OFFER_MODAL.childNodes[4].childNodes[7].lastElementChild.firstElementChild.setAttribute("href",offer_link);
     
     //Hacer aparecer ventana modal
-
+    HTML_ELEMENT.style.overflow="hidden";
     if (window.matchMedia("(min-width: 768px)").matches) {
         /* La pantalla tiene al menos 768 píxeles de ancho */
+
         MODAL_BACKGROUND.style.display="flex";
     } else {
         /* La pantalla tiene menos de 768 píxeles de ancho */
+        OFFER_MODAL.style.opacity="1";
         MODAL_BACKGROUND.style.display="block";
       }
 }
@@ -42,6 +45,7 @@ const openOfferModal = (e)=>{
 
 const closeModal= ()=>{
     MODAL_BACKGROUND.style.display="none";
+    HTML_ELEMENT.style.overflow="auto";
 }
 
 OFFER_MODAL.firstElementChild.addEventListener("click",closeModal);
