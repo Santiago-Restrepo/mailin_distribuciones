@@ -1,12 +1,5 @@
 const OFFERS_ARRAY= document.querySelectorAll(".offer");
-var MODAL_BACKGROUND= document.querySelectorAll(".modal");
 var OFFER_MODAL= document.querySelector(".offerModal");
-var DISTRIBUTOR_MODAL= document.querySelector(".distributorModal");
-var DISTRIBUTOR_BUTTON= document.querySelector(".buttons__container > .footer__button:nth-of-type(1)");
-var WHOLESALE_MODAL= document.querySelector(".wholesaleModal");
-var WHOLESALE_BUTTON= document.querySelector(".buttons__container > .footer__button:nth-of-type(2)");
-const HTML_ELEMENT = document.querySelector("#html"); 
-
 
 const openOfferModal = (e)=>{
     //Guardamos la oferta que fue seleccionada accediendo al abuelo de la imagen clickeada
@@ -61,34 +54,10 @@ const closeOfferModal= ()=>{
     MODAL_BACKGROUND[0].classList.remove("is-visible")
     HTML_ELEMENT.style.overflow="auto";
 }
-const openDistributorModal =()=>{
-    HTML_ELEMENT.style.overflow="hidden";
-    MODAL_BACKGROUND[1].classList.add("is-visible");
-    DISTRIBUTOR_MODAL.classList.add("modal-visible");
 
-}
-const closeDistributorModal= ()=>{
-    DISTRIBUTOR_MODAL.classList.remove("modal-visible");
-    MODAL_BACKGROUND[1].classList.remove("is-visible");
-    HTML_ELEMENT.style.overflow="auto";
-}
-const openWholesaleModal =()=>{
-    HTML_ELEMENT.style.overflow="hidden";
-    MODAL_BACKGROUND[2].classList.add("is-visible");
-    WHOLESALE_MODAL.classList.add("modal-visible");
-}
-const closeWholeModal= ()=>{
-    WHOLESALE_MODAL.classList.remove("modal-visible");
-    MODAL_BACKGROUND[2].classList.remove("is-visible");
-    HTML_ELEMENT.style.overflow="auto";
-}
 
 OFFER_MODAL.firstElementChild.addEventListener("click",closeOfferModal);
-DISTRIBUTOR_MODAL.firstElementChild.addEventListener("click",closeDistributorModal);
-WHOLESALE_MODAL.firstElementChild.addEventListener("click",closeWholeModal);
 OFFERS_ARRAY.forEach(element => {
     //Ciclo para agregar evento a cada imagen de cada oferta
     element.firstElementChild.firstElementChild.addEventListener(("click"),openOfferModal);
 });
-DISTRIBUTOR_BUTTON.addEventListener("click",openDistributorModal);
-WHOLESALE_BUTTON.addEventListener("click",openWholesaleModal);

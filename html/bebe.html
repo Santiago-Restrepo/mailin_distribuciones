@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,7 @@
         <li><a href="../index.html#contact" alt="Dirigirse a contacto ">contacto   </a></li>
       </ul><img class="logo" src="../images/logo.png" alt="Logo de Mailin distribuciones">
     </header>
+    <div class="modal"></div>
     <section id="line"><span class="line_title">Línea bebé</span>
       <nav class="line__menu"><a class="line__menu-element" href="bebe.html">bebe</a><a class="line__menu-element" href="cosmetica.html">cosmética</a><a class="line__menu-element" href="cuidado-corporal.html">cuidado corporal</a><a class="line__menu-element" href="capilar.html">capilar</a><a class="line__menu-element" href="quema-grasa.html">quema grasa</a><a class="line__menu-element" href="estuches.html">estuches</a></nav>
     </section>
@@ -102,6 +103,16 @@
         </div>
       </div><img class="lines__image" src="../images/hojas_medio2.svg" alt="Imagen de hoja sencilla">
     </main>
+    <div class="modal">
+      <div class="distributorModal"><img class="close_button" src="../images/close_button.svg" alt="Menú de hamburguesa"><img class="form__image" src="../images/hoja_sencilla.svg" alt="Imagen de hoja sencilla">
+        <h1 class="distributorModal__title">Regálanos tus datos y pronto nos pondremos en contacto contigo</h1><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOtaUtxRweXQMUqnLia9gtU6sZfetwFUnb-JoduV4OBMiHbg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe><img class="form__image" src="../images/hoja_sencilla.svg" alt="Imagen de hoja sencilla">
+      </div>
+    </div>
+    <div class="modal"> 
+      <div class="wholesaleModal"><img class="close_button" src="../images/close_button.svg" alt="Menú de hamburguesa"><img class="form__image" src="../images/hojas_ppal.svg" alt="Imagen de hoja sencilla">
+        <h1 class="distributorModal__title">Regálanos tus datos y pronto nos pondremos en contacto contigo</h1><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1puLzSvehJP_yky7VS1LicPtRsnWOdbtCKzSCrqyi7QWiwA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe><img class="form__image" src="../images/hojas_ppal.svg" alt="Imagen de hoja sencilla">
+      </div>
+    </div>
     <footer class="footer" id="contact"><span class="lines__label">Contacto</span>
       <div class="buttons__container"> 
         <button class="footer__button"> 
@@ -115,10 +126,7 @@
       </div>
       <div class="footer__container">
         <div class="contact"> 
-          <h2 class="contact__title">Contacto </h2>
-          <h6 class="contact__info">Ana Catalina Restrepo Ramírez</h6>
-          <h6 class="contact__info">+57 320 8762984</h6>
-          <h6 class="contact__info">mailindistribuciones@gmail.com</h6>
+          <h2 class="contact__title">Contacto </h2><span class="contact__info">Ana Catalina Restrepo Ramírez</span><span class="contact__info">+57 320 8762984</span><span class="contact__info">mailindistribuciones@gmail.com</span>
         </div>
         <div class="social_media"> 
           <h2 class="social_media-title">Síguenos </h2>
@@ -126,8 +134,10 @@
         </div>
       </div><span class="rights">© Mailin Distribuciones</span>
     </footer>
-    <script src="../js/menu.js"></script>
     <script src="../js/lines_animations.js"></script>
+    <script src="../js/modal_footer.js"> </script>
+    <script src="../js/modal_lines.js"> </script>
+    <script src="../js/menu.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </body>
 </html>

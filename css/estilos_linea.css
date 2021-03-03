@@ -20,10 +20,11 @@ html {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, li, a, button, strike {
+h1, h2, h3, h4, h5, h6, p, span, li, a, strike {
   font-family: "Rubik", "sans-serif";
 }
 
@@ -64,6 +65,168 @@ h6 {
   background-color: #000603;
 }
 
+.modal {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em 0;
+  width: 100%;
+  background-color: #000000de;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+.modal .offerModal, .modal .distributorModal, .modal .wholesaleModal {
+  z-index: 6;
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: translateY(-110%);
+  transition: transform 1s ease;
+}
+.modal .offerModal .close_button, .modal .distributorModal .close_button, .modal .wholesaleModal .close_button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+.modal .offerModal {
+  max-width: 35em;
+  background-color: #ffffff;
+}
+.modal .offerModal__image {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.modal .offerModal__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.modal .offerModal__info {
+  padding: 1.5em;
+}
+.modal .offerModal__info-name {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+.modal .offerModal__info-description {
+  font-size: 1.6em;
+  font-weight: 300;
+}
+.modal .offerModal__info-prices {
+  display: flex;
+  margin-top: 2em;
+}
+.modal .offerModal__info-prices .price-before {
+  margin-right: 1em;
+  color: #B82C2C;
+}
+.modal .offerModal__info-prices .price-now {
+  color: #35B82C;
+}
+.modal .offerModal__info-buy {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+.modal .offerModal__info-buy span {
+  margin-right: 1em;
+  font-size: 2em;
+}
+.modal .offerModal__info-buy .social_media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal .offerModal__info-buy .social_media a {
+  color: #000603;
+}
+.modal .offerModal__info-buy .social_media a i {
+  font-size: 3em;
+}
+.modal .distributorModal, .modal .wholesaleModal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40em;
+  height: 100%;
+  padding: 6em 0 2em;
+}
+.modal .distributorModal .close_button, .modal .wholesaleModal .close_button {
+  z-index: 2;
+}
+.modal .distributorModal .form__image, .modal .wholesaleModal .form__image {
+  position: absolute;
+  width: 20%;
+}
+.modal .distributorModal__title, .modal .wholesaleModal__title {
+  z-index: 1;
+  width: 90%;
+  margin-bottom: 1em;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+}
+.modal .distributorModal iframe, .modal .wholesaleModal iframe {
+  z-index: 1;
+  width: 90%;
+  height: 100%;
+  max-width: 30em;
+}
+.modal .distributorModal iframe html, .modal .wholesaleModal iframe html {
+  overflow: hidden;
+}
+.modal .distributorModal {
+  background-color: #202A26;
+}
+.modal .distributorModal img:nth-of-type(2) {
+  top: 0;
+  left: 0;
+}
+.modal .distributorModal img:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+  transform: rotatex(180deg) rotateY(180deg);
+}
+.modal .wholesaleModal {
+  background-color: #312B40;
+}
+.modal .wholesaleModal .form__image {
+  width: 50%;
+}
+.modal .wholesaleModal img:nth-of-type(2) {
+  top: -3em;
+  left: -3em;
+  transform: rotatex(180deg) rotateY(180deg);
+}
+.modal .wholesaleModal img:nth-of-type(3) {
+  bottom: -3em;
+  right: -3em;
+}
+.modal .modal-visible {
+  transform: translateY(0);
+}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media screen and (min-width: 375px) {
   html {
     font-size: 64%;
@@ -87,10 +250,60 @@ h6 {
   html {
     font-size: 70%;
   }
+
+  .modal .offerModal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    max-width: 75em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: #ffffff;
+  }
+  .modal .offerModal .close_button {
+    left: 1em;
+    z-index: 1;
+  }
+  .modal .offerModal__image {
+    width: 100%;
+    height: 100%;
+  }
+  .modal .offerModal__image img {
+    width: 100%;
+    height: 100%;
+  }
+  .modal .offerModal__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+  }
+  .modal .offerModal__info-description {
+    font-size: 1.43em;
+  }
+  .modal .offerModal__info-prices {
+    justify-content: center;
+  }
+  .modal .offerModal__info-buy {
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 1024px) {
   html {
     font-size: 75%;
+  }
+
+  .modal .offerModal .close_button, .modal .distributorModal .close_button, .modal .wholesaleModal .close_button {
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+  }
+  .modal .offerModal .close_button:hover, .modal .distributorModal .close_button:hover, .modal .wholesaleModal .close_button:hover {
+    opacity: 1;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -300,12 +513,15 @@ h6 {
   width: 100%;
   height: 15%;
   font-size: 1.4em;
-  font-weight: 500;
-  background-color: #000603e7;
+  font-weight: 600;
+  background-color: #35b82ce7;
   color: #ffffff;
   border: none;
   cursor: pointer;
-  transition: 0.5s ease;
+  transition: all 0.3s ease;
+}
+.catalog__container .product__image .view_more:hover, .catalog__container .offer__image .view_more:hover {
+  background-color: #16940de7;
 }
 .catalog__container .product__info, .catalog__container .offer__info {
   display: flex;
@@ -440,6 +656,8 @@ h6 {
   margin-bottom: 0.8em;
 }
 .footer .footer__container .contact__info {
+  display: block;
+  font-size: 1.4em;
   font-weight: 300;
   margin-bottom: 0.2em;
 }
@@ -615,6 +833,9 @@ h6 {
   }
   .catalog__container .product__info, .catalog__container .offer__info {
     z-index: 2;
+  }
+  .catalog__container .product:hover .view_more, .catalog__container .offer:hover .view_more {
+    opacity: 1;
   }
   .catalog__container .product__info {
     padding: 1em;

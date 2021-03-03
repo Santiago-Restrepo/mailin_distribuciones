@@ -25,7 +25,7 @@ mixin offer(nombre, imgUrl, enlace_wpp, descripcion, precioAnterior, precioNuevo
 
 
 doctype html
-html(lang="en")
+html(lang="en")#html
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -36,6 +36,7 @@ html(lang="en")
         section#notice
             span.notice__text Envíos gratis por compras superiores a 100.000 pesos
         include componentes/_header.pug
+        .modal
         section#line
             span.line_title Línea bebé
             nav.line__menu
@@ -56,10 +57,25 @@ html(lang="en")
                 +offer("Gel green", "https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg", ".", ".", "50.000", "25.000", "50%")
                 +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
                 +offer("Gel green", "https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg", ".", ".", "50.000", "25.000", "50%")
-
             img(src="../images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
+        .modal
+            .distributorModal
+                img(src="../images/close_button.svg", alt="Menú de hamburguesa").close_button 
+                img(src="../images/hoja_sencilla.svg", alt="Imagen de hoja sencilla").form__image
+                h1.distributorModal__title Regálanos tus datos y pronto nos pondremos en contacto contigo
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOtaUtxRweXQMUqnLia9gtU6sZfetwFUnb-JoduV4OBMiHbg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                img(src="../images/hoja_sencilla.svg", alt="Imagen de hoja sencilla").form__image
+        .modal 
+            .wholesaleModal
+                img(src="../images/close_button.svg", alt="Menú de hamburguesa").close_button 
+                img(src="../images/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
+                h1.distributorModal__title Regálanos tus datos y pronto nos pondremos en contacto contigo
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1puLzSvehJP_yky7VS1LicPtRsnWOdbtCKzSCrqyi7QWiwA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                img(src="../images/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
         include componentes/_footer.pug
-        script(src="../js/menu.js")
         script(src="../js/lines_animations.js")
+        script(src="../js/modal_footer.js") 
+        script(src="../js/modal_lines.js") 
+        script(src="../js/menu.js")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')
 
