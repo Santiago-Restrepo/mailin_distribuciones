@@ -154,9 +154,10 @@ h6{
             &-prices{
                 display: flex;
                 margin-top: 2em;
+
                 .price-before{
-                    margin-right: 1em;
                     color: $Color-rojo-intenso;
+                    margin-right: 1em;
                 }
                 .price-now{
                     color: $Color-verde-intenso;

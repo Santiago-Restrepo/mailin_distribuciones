@@ -16,12 +16,14 @@ const openOfferProductModal = (e)=>{
     if (offerProduct_selected.classList.contains("product")) {
         let offerProduct_price= offerProduct_selected.lastElementChild.childNodes[2].innerHTML; //Precios del producto
         LINES_MODAL.childNodes[4].childNodes[5].lastElementChild.innerHTML=offerProduct_price;
+        LINES_MODAL.childNodes[4].childNodes[5].firstElementChild.style.display="none";
         offerProduct_description= offerProduct_selected.lastElementChild.childNodes[4].innerHTML;//Descripción de la oferta
     }else{
         let offerProduct_prices= offerProduct_selected.lastElementChild.childNodes[3]; //Precios antes y nuevo
         let offerProduct_price_before= offerProduct_prices.firstElementChild.firstElementChild.innerHTML;//Precio antes
         let offerProduct_price_new= offerProduct_prices.lastElementChild.innerHTML;//Precio nuevo
         LINES_MODAL.childNodes[4].childNodes[5].firstElementChild.firstElementChild.innerHTML=offerProduct_price_before;
+        LINES_MODAL.childNodes[4].childNodes[5].firstElementChild.style.display="block";
         LINES_MODAL.childNodes[4].childNodes[5].lastElementChild.innerHTML=offerProduct_price_new;
         offerProduct_description= offerProduct_selected.lastElementChild.childNodes[5].innerHTML;//Descripción de la oferta
     }
@@ -41,8 +43,7 @@ const openOfferProductModal = (e)=>{
         if(e.key=="Escape"){
             closeOfferModal();
         }
-    });
-
+    });    
 }
 const closeOfferModal= ()=>{
     LINES_MODAL.classList.remove("modal-visible");
