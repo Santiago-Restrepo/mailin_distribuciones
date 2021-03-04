@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,97 +11,132 @@
     <section id="notice"><span class="notice__text">Envíos gratis por compras superiores a 100.000 pesos</span></section>
     <header class="header"><img class="hamburguer_button" src="../images/hamburguer_menu.svg" alt="Menú de hamburguesa">
       <ul class="mobile_menu">               
-        <li class="active"><a href="../index.html#hero" alt="Dirigirse a home">home    </a></li>
+        <li><a href="../index.html#hero" alt="Dirigirse a home">home    </a></li>
         <li><a href="../index.html#sales" alt="Dirigirse a ofertas">ofertas   </a></li>
-        <li><a href="../index.html#lines" alt="Dirigirse a líneas">líneas    </a></li>
+        <li class="active"><a href="../index.html#lines" alt="Dirigirse a líneas">líneas    </a></li>
         <li><a href="../index.html#story" alt="Dirigirse a historia">historia   </a></li>
         <li><a href="../index.html#location" alt="Dirigirse a ubicación">ubicación</a></li>
         <li><a href="../index.html#contact" alt="Dirigirse a contacto ">contacto   </a></li>
       </ul><img class="logo" src="../images/logo.png" alt="Logo de Mailin distribuciones">
     </header>
+    <div class="modal">
+      <div class="offerModal"><img class="close_button" src="../images/close_button.svg" alt="Menú de hamburguesa">
+        <div class="offerModal__image"><img src="../images/loading.gif" alt="Imagen del producto"></div>
+        <div class="offerModal__info">
+          <h1 class="offerModal__info-name">Cargando...</h1>
+          <p class="offerModal__info-description">Cargando...</p>
+          <div class="offerModal__info-prices">
+            <h2 class="price-before"><strike>Cargando...</strike></h2>
+            <h2 class="price-now">Cargando... </h2>
+          </div>
+          <div class="offerModal__info-buy"> <span>Comprar:</span>
+            <div class="social_media"><a href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"> <i class="fab fa-whatsapp"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <section id="line"><span class="line_title">Línea quema grasa</span>
       <nav class="line__menu"><a class="line__menu-element" href="bebe.html">bebe</a><a class="line__menu-element" href="cosmetica.html">cosmética</a><a class="line__menu-element" href="cuidado-corporal.html">cuidado corporal</a><a class="line__menu-element" href="capilar.html">capilar</a><a class="line__menu-element" href="quema-grasa.html">quema grasa</a><a class="line__menu-element" href="estuches.html">estuches</a></nav>
     </section>
     <main class="catalog"><img class="lines__image" src="../images/hojas_medio2.svg" alt="Imagen de hoja sencilla">
       <div class="catalog__container"> 
-        <div class="product">
-          <div class="product__image"> <img src="../images/EJEMPLO.PNG" alt="Imagen del producto Stop sweet"/>
-            <button class="view_more">Ver más</button>
-          </div>
-          <div class="product__info"> <span class="product__info-name">Stop sweet</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">.</p><a class="product__info-link" href="."></a>
-          </div>
-        </div>
-        <div class="product">
-          <div class="product__image"> <img src="../images/EJEMPLO.PNG" alt="Imagen del producto Stop sweet"/>
-            <button class="view_more">Ver más</button>
-          </div>
-          <div class="product__info"> <span class="product__info-name">Stop sweet</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">.</p><a class="product__info-link" href="."></a>
-          </div>
-        </div>
         <div class="offer">
-          <div class="offer__image"><span class="offer__discount">50%</span><img src="https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg" alt="Imagen de la oferta Gel green"/>
+          <div class="offer__image"><img src="../images/gelGreen.jpg" alt="Imagen de la oferta Gel green"/><span class="offer__discount">50%</span>
             <button class="view_more">Ver más</button>
           </div>
           <div class="offer__info"> <span class="offer__info-name">Gel green</span>
-            <div class="offer__prices">
-              <h5 class="offer__prices-before"><strike>50.000</strike></h5>
-              <h5 class="offer__prices-new">25.000</h5>
-            </div>
-            <p class="offer__info-description">.</p><a class="offer__info-link" href="."> </a>
+            <div class="offer__prices"><span class="offer__prices-before"><strike>50.000</strike></span><span class="offer__prices-new">25.000</span></div>
+            <p class="offer__info-description">Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes</p><a class="offer__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"> </a>
           </div>
         </div>
         <div class="product">
-          <div class="product__image"> <img src="../images/EJEMPLO.PNG" alt="Imagen del producto Stop sweet"/>
+          <div class="product__image"> <img src="../images/stopSweet.jpg" alt="Imagen del producto Stop sweet"/>
             <button class="view_more">Ver más</button>
           </div>
           <div class="product__info"> <span class="product__info-name">Stop sweet</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">.</p><a class="product__info-link" href="."></a>
+            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
           </div>
         </div>
         <div class="product">
-          <div class="product__image"> <img src="../images/EJEMPLO.PNG" alt="Imagen del producto Stop sweet"/>
+          <div class="product__image"> <img src="../images/stopSweet.jpg" alt="Imagen del producto Stop sweet"/>
             <button class="view_more">Ver más</button>
           </div>
           <div class="product__info"> <span class="product__info-name">Stop sweet</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">.</p><a class="product__info-link" href="."></a>
+            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
           </div>
         </div>
         <div class="offer">
-          <div class="offer__image"><span class="offer__discount">50%</span><img src="https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg" alt="Imagen de la oferta Gel green"/>
+          <div class="offer__image"><img src="../images/gelGreen.jpg" alt="Imagen de la oferta Gel green"/><span class="offer__discount">50%</span>
             <button class="view_more">Ver más</button>
           </div>
           <div class="offer__info"> <span class="offer__info-name">Gel green</span>
-            <div class="offer__prices">
-              <h5 class="offer__prices-before"><strike>50.000</strike></h5>
-              <h5 class="offer__prices-new">25.000</h5>
-            </div>
-            <p class="offer__info-description">.</p><a class="offer__info-link" href="."> </a>
+            <div class="offer__prices"><span class="offer__prices-before"><strike>50.000</strike></span><span class="offer__prices-new">25.000</span></div>
+            <p class="offer__info-description">Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes</p><a class="offer__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"> </a>
           </div>
         </div>
         <div class="product">
-          <div class="product__image"> <img src="../images/EJEMPLO.PNG" alt="Imagen del producto Stop sweet"/>
+          <div class="product__image"> <img src="../images/stopSweet.jpg" alt="Imagen del producto Stop sweet"/>
             <button class="view_more">Ver más</button>
           </div>
           <div class="product__info"> <span class="product__info-name">Stop sweet</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">.</p><a class="product__info-link" href="."></a>
+            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
           </div>
         </div>
         <div class="offer">
-          <div class="offer__image"><span class="offer__discount">50%</span><img src="https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg" alt="Imagen de la oferta Gel green"/>
+          <div class="offer__image"><img src="../images/gelGreen.jpg" alt="Imagen de la oferta Gel green"/><span class="offer__discount">50%</span>
             <button class="view_more">Ver más</button>
           </div>
           <div class="offer__info"> <span class="offer__info-name">Gel green</span>
-            <div class="offer__prices">
-              <h5 class="offer__prices-before"><strike>50.000</strike></h5>
-              <h5 class="offer__prices-new">25.000</h5>
-            </div>
-            <p class="offer__info-description">.</p><a class="offer__info-link" href="."> </a>
+            <div class="offer__prices"><span class="offer__prices-before"><strike>50.000</strike></span><span class="offer__prices-new">25.000</span></div>
+            <p class="offer__info-description">Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes</p><a class="offer__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"> </a>
+          </div>
+        </div>
+        <div class="offer">
+          <div class="offer__image"><img src="../images/gelGreen.jpg" alt="Imagen de la oferta Gel green"/><span class="offer__discount">50%</span>
+            <button class="view_more">Ver más</button>
+          </div>
+          <div class="offer__info"> <span class="offer__info-name">Gel green</span>
+            <div class="offer__prices"><span class="offer__prices-before"><strike>50.000</strike></span><span class="offer__prices-new">25.000</span></div>
+            <p class="offer__info-description">Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes</p><a class="offer__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"> </a>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__image"> <img src="../images/stopSweet.jpg" alt="Imagen del producto Stop sweet"/>
+            <button class="view_more">Ver más</button>
+          </div>
+          <div class="product__info"> <span class="product__info-name">Stop sweet</span><span class="product__info-price">36.000</span>
+            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__image"> <img src="../images/stopSweet.jpg" alt="Imagen del producto Stop sweet"/>
+            <button class="view_more">Ver más</button>
+          </div>
+          <div class="product__info"> <span class="product__info-name">Stop sweet</span><span class="product__info-price">36.000</span>
+            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
+          </div>
+        </div>
+        <div class="offer">
+          <div class="offer__image"><img src="../images/gelGreen.jpg" alt="Imagen de la oferta Gel green"/><span class="offer__discount">50%</span>
+            <button class="view_more">Ver más</button>
+          </div>
+          <div class="offer__info"> <span class="offer__info-name">Gel green</span>
+            <div class="offer__prices"><span class="offer__prices-before"><strike>50.000</strike></span><span class="offer__prices-new">25.000</span></div>
+            <p class="offer__info-description">Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes</p><a class="offer__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"> </a>
           </div>
         </div>
       </div><img class="lines__image" src="../images/hojas_medio2.svg" alt="Imagen de hoja sencilla">
     </main>
+    <div class="modal">
+      <div class="distributorModal"><img class="close_button" src="../images/close_button.svg" alt="Menú de hamburguesa"><img class="form__image" src="../images/hoja_sencilla.svg" alt="Imagen de hoja sencilla">
+        <h1 class="distributorModal__title">Regálanos tus datos y pronto nos pondremos en contacto contigo</h1><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOtaUtxRweXQMUqnLia9gtU6sZfetwFUnb-JoduV4OBMiHbg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe><img class="form__image" src="../images/hoja_sencilla.svg" alt="Imagen de hoja sencilla">
+      </div>
+    </div>
+    <div class="modal"> 
+      <div class="wholesaleModal"><img class="close_button" src="../images/close_button.svg" alt="Menú de hamburguesa"><img class="form__image" src="../images/hojas_ppal.svg" alt="Imagen de hoja sencilla">
+        <h1 class="distributorModal__title">Regálanos tus datos y pronto nos pondremos en contacto contigo</h1><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1puLzSvehJP_yky7VS1LicPtRsnWOdbtCKzSCrqyi7QWiwA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe><img class="form__image" src="../images/hojas_ppal.svg" alt="Imagen de hoja sencilla">
+      </div>
+    </div>
     <footer class="footer" id="contact"><span class="lines__label">Contacto</span>
       <div class="buttons__container"> 
         <button class="footer__button"> 
@@ -123,8 +158,10 @@
         </div>
       </div><span class="rights">© Mailin Distribuciones</span>
     </footer>
-    <script src="../js/menu.js"></script>
     <script src="../js/lines_animations.js"></script>
+    <script src="../js/modal_footer.js"> </script>
+    <script src="../js/modal_lines.js"> </script>
+    <script src="../js/menu.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </body>
 </html>

@@ -402,10 +402,14 @@ h6{
                 position: relative;
                 width: 100%;
                 height: 70%;
+                overflow: hidden;
+
                 img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    transition: transform .8s ease;
+
                 }
                 .view_more{
                     display: none;
@@ -587,6 +591,11 @@ h6{
             .product:hover,.offer:hover{
                 .view_more{
                     opacity: 1;
+                }
+                .product__image,.offer__image{
+                    img{
+                        transform: scale(1.1);
+                    }
                 }
             }
             .product{

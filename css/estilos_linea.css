@@ -499,11 +499,13 @@ h6 {
   position: relative;
   width: 100%;
   height: 70%;
+  overflow: hidden;
 }
 .catalog__container .product__image img, .catalog__container .offer__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.8s ease;
 }
 .catalog__container .product__image .view_more, .catalog__container .offer__image .view_more {
   display: none;
@@ -841,6 +843,9 @@ h6 {
   }
   .catalog__container .product:hover .view_more, .catalog__container .offer:hover .view_more {
     opacity: 1;
+  }
+  .catalog__container .product:hover .product__image img, .catalog__container .product:hover .offer__image img, .catalog__container .offer:hover .product__image img, .catalog__container .offer:hover .offer__image img {
+    transform: scale(1.1);
   }
   .catalog__container .product__info {
     padding: 1em;
