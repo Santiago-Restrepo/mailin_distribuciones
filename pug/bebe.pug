@@ -12,14 +12,14 @@ mixin product(nombre, imgUrl, precio, enlace_wpp, descripcion)
 mixin offer(nombre, imgUrl, enlace_wpp, descripcion, precioAnterior, precioNuevo, descuento)
     .offer
         .offer__image
-            span.offer__discount #{descuento}
             img(src=""+imgUrl, alt="Imagen de la oferta "+nombre)
+            span.offer__discount #{descuento}
             button.view_more Ver más
         .offer__info 
             span.offer__info-name #{nombre}
             .offer__prices
-                h5.offer__prices-before <strike>#{precioAnterior}</strike>
-                h5.offer__prices-new #{precioNuevo}
+                span.offer__prices-before <strike>#{precioAnterior}</strike>
+                span.offer__prices-new #{precioNuevo}
             p.offer__info-description #{descripcion}
             a(href=""+enlace_wpp).offer__info-link 
 
@@ -37,6 +37,21 @@ html(lang="en")#html
             span.notice__text Envíos gratis por compras superiores a 100.000 pesos
         include componentes/_header.pug
         .modal
+            .offerModal
+                img(src="../images/close_button.svg", alt="Menú de hamburguesa").close_button 
+                .offerModal__image
+                    img(src="../images/loading.gif", alt="Imagen del producto")
+                .offerModal__info
+                    h1.offerModal__info-name Cargando...
+                    p.offerModal__info-description Cargando...
+                    .offerModal__info-prices
+                        h2.price-before <strike>Cargando...</strike>
+                        h2.price-now Cargando... 
+                    .offerModal__info-buy 
+                        span Comprar:
+                        .social_media
+                            a(href="https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w") 
+                                i.fab.fa-whatsapp
         section#line
             span.line_title Línea bebé
             nav.line__menu
@@ -49,14 +64,18 @@ html(lang="en")#html
         main.catalog
             img(src="../images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
             .catalog__container 
-                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
-                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
-                +offer("Gel green", "https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg", ".", ".", "50.000", "25.000", "50%")
-                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
-                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
-                +offer("Gel green", "https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg", ".", ".", "50.000", "25.000", "50%")
-                +product("Stop sweet", "../images/EJEMPLO.PNG", "36.000", ".", ".")
-                +offer("Gel green", "https://i.linio.com/p/0a2d0d4f017012099798a895a95a79d9-product.jpg", ".", ".", "50.000", "25.000", "50%")
+                +offer("Gel green", "../images/gelGreen.jpg", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w", "Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes", "50.000", "25.000", "50%")
+                +product("Stop sweet", "../images/stopSweet.jpg", "36.000", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w","Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.")
+                +product("Stop sweet", "../images/stopSweet.jpg", "36.000", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w","Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.")
+                +offer("Gel green", "../images/gelGreen.jpg", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w", "Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes", "50.000", "25.000", "50%")
+                +product("Stop sweet", "../images/stopSweet.jpg", "36.000", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w","Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.")
+                +offer("Gel green", "../images/gelGreen.jpg", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w", "Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes", "50.000", "25.000", "50%")
+                +offer("Gel green", "../images/gelGreen.jpg", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w", "Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes", "50.000", "25.000", "50%")
+                +product("Stop sweet", "../images/stopSweet.jpg", "36.000", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w","Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.")
+                +product("Stop sweet", "../images/stopSweet.jpg", "36.000", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w","Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.")
+                +offer("Gel green", "../images/gelGreen.jpg", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w", "Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes", "50.000", "25.000", "50%")
+                
+                
             img(src="../images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
         .modal
             .distributorModal
