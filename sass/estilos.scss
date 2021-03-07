@@ -262,9 +262,6 @@ h6{
 @media screen and (min-width: $break-mobile-M) {
     html{
         font-size: 64%;
-    }
-    .lines__label{
-        display: none
     }   
 }
 @media screen and (min-width: $break-mobile-L) {
@@ -280,6 +277,9 @@ h6{
 @media screen and (min-width: $break-tablet) {
     html{
         font-size: 70%;
+    }
+    .lines__label{
+        display: none
     }
     .modal{ 
         .offerModal{

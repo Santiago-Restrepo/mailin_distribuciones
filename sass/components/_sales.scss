@@ -317,6 +317,13 @@
                 .offer{
                     .offer__image{
                         max-width: 33em;
+                        overflow: hidden;
+                        img{
+                            transition: transform .5s ease;
+                        }
+                        img:hover{
+                            transform: scale(1.1);
+                        }
                     }
                 }
             }

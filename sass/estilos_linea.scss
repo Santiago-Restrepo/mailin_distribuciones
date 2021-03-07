@@ -534,7 +534,7 @@ h6{
         .logo{
             position: absolute;
             max-width: 10em;
-            top: 3.5em;
+            top: 5.2em;
             right: 2.2em;
         }
     }
@@ -568,6 +568,7 @@ h6{
     .header{
         .logo{
             max-width: 13em;
+            top: 4em;
         }
     }
     .catalog{
@@ -635,6 +636,11 @@ h6{
     }
 }
 @media screen and (min-width: $break-laptop-M) {
+    .header{
+        .logo{
+            top: 3.5em;
+        }
+    }
     .catalog{
         .offer{
             &__image{

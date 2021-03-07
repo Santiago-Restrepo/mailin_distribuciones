@@ -4,9 +4,13 @@
     background-image: url("../images/paisaje.jpg");
     background-size: cover;
     background-position: 50% 0%;
-    background-attachment: fixed;
 }
 
+@media screen and (min-width: $break-tablet) {
+    #hero{
+        background-attachment: fixed;
+    }
+}
 @media screen and (min-width: $break-laptop) {
     #hero{
         background-position-y: -25em;

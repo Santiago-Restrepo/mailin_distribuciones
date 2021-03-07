@@ -231,10 +231,6 @@ h6 {
   html {
     font-size: 64%;
   }
-
-  .lines__label {
-    display: none;
-  }
 }
 @media screen and (min-width: 425px) {
   html {
@@ -249,6 +245,10 @@ h6 {
 @media screen and (min-width: 768px) {
   html {
     font-size: 70%;
+  }
+
+  .lines__label {
+    display: none;
   }
 
   .modal .offerModal {
@@ -443,9 +443,13 @@ h6 {
   background-image: url("../images/paisaje.jpg");
   background-size: cover;
   background-position: 50% 0%;
-  background-attachment: fixed;
 }
 
+@media screen and (min-width: 768px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
 @media screen and (min-width: 1024px) {
   #hero {
     background-position-y: -25em;
@@ -666,6 +670,13 @@ h6 {
   }
   #sales .glider .glider__list .offer .offer__image {
     max-width: 33em;
+    overflow: hidden;
+  }
+  #sales .glider .glider__list .offer .offer__image img {
+    transition: transform 0.5s ease;
+  }
+  #sales .glider .glider__list .offer .offer__image img:hover {
+    transform: scale(1.1);
   }
 }
 #lines {
@@ -1092,8 +1103,8 @@ h6 {
   }
   .footer .buttons__container .footer__button {
     width: 100%;
-    max-width: 20em;
-    height: 8em;
+    max-width: 23em;
+    height: 9em;
   }
   .footer .footer__container {
     display: grid;

@@ -736,8 +736,8 @@ h6 {
   }
   .footer .buttons__container .footer__button {
     width: 100%;
-    max-width: 20em;
-    height: 8em;
+    max-width: 23em;
+    height: 9em;
   }
   .footer .footer__container {
     display: grid;
@@ -795,7 +795,7 @@ h6 {
   .header .logo {
     position: absolute;
     max-width: 10em;
-    top: 3.5em;
+    top: 5.2em;
     right: 2.2em;
   }
 
@@ -822,6 +822,7 @@ h6 {
 @media screen and (min-width: 1024px) {
   .header .logo {
     max-width: 13em;
+    top: 4em;
   }
 
   .catalog__container {
@@ -870,6 +871,10 @@ h6 {
   }
 }
 @media screen and (min-width: 1280px) {
+  .header .logo {
+    top: 3.5em;
+  }
+
   .catalog .offer__image .offer__discount {
     font-size: 1.1em;
     padding: 0.5em;
