@@ -553,10 +553,12 @@ h6 {
   margin-top: 0.8em;
   font-family: "Lora", "sans-serif";
   font-weight: 500;
+  margin-left: 20px;
 }
 #sales .glider .glider__list .offer .offer__image .offer__prices {
   display: flex;
   margin: 0.5em 0 1em;
+  margin-left: 20px;
 }
 #sales .glider .glider__list .offer .offer__image .offer__prices h6 {
   font-weight: 500;
