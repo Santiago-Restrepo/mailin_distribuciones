@@ -59,6 +59,8 @@ html{
 body{
     position: relative;
     overflow-x: hidden;
+    background-color: $Color-blanco-variacion;
+
 }
 
 
@@ -394,22 +396,26 @@ h6{
         flex-direction: column;
         align-items: center;
         .product,.offer{
-            width: 80%;
+            width: 85%;
             max-width: 25em;
-            height: 28em;
+            height: fit-content;
             margin-bottom: 3em;
-            box-shadow: 0px 2px 5px #0000009a;
+            background-color: $Color-blanco;
+            // box-shadow: 0px 0px 1px #0000009a;
+            border: 0.5px solid $Color-gris-claro;
+            overflow: hidden;
             &__image{
                 position: relative;
                 width: 100%;
-                height: 70%;
-                overflow: hidden;
+                height: fit-content;
 
                 img{
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
                     transition: transform .8s ease;
+                    -webkit-transition: transform .8s ease;
+                    object-fit: cover;
+                    backface-visibility: hidden;
 
                 }
                 .view_more{
@@ -418,7 +424,8 @@ h6{
                     bottom: 0;
                     left: 0;
                     width: 100%;
-                    height: 15%;
+                    height: fit-content;
+                    padding: .7em 0;
                     font-size: 1.4em;
                     font-weight: 600;
                     background-color: #35b82ce7;               
@@ -434,10 +441,10 @@ h6{
             &__info{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
-                padding-left: 1.5em ;
+                justify-content: space-between;
+                padding: 1.5em;
+                height: 10em;
                 width: 100%;
-                height: 30%;
                 background-color: $Color-blanco;
                 &-description,&-link{
                     display: none;
@@ -507,7 +514,12 @@ h6{
 
 @import "components/footer";
 
-@media screen and (min-width: $break-mobile-tablet) {
+@media screen and (min-width: $break-mobile-L) {
+    #line{
+        .line_title{
+            font-size: 1.7em;            
+        }
+    }
     .catalog{
         &__container{
             display: grid;
@@ -517,8 +529,10 @@ h6{
             max-width: 55em;
             margin: 0 auto;
             .product,.offer{
-                max-width: 20em;
-                height: 23em;
+                max-width: 30em;
+                &__info{
+                    height: 12em;
+                }
             }
             
         }
@@ -540,6 +554,7 @@ h6{
     }
     #line{
         .line_title{
+
             margin-top: 7em;
         }
     }
@@ -552,13 +567,13 @@ h6{
                 align-self: flex-start;
                 &__image{
                     .offer__discount{
-                        padding: .4em;
+                        padding: .6em;
                     }
                 }
             }
             .product,.offer{
                 max-width: 20em;
-                height: 25em;
+                
             }
         }
     }
@@ -577,16 +592,14 @@ h6{
             grid-template-columns: repeat(5,1fr);
             .product,.offer{
                 max-width: 25em;
-                height: 18em;
                 &__image{
                     .view_more{
                         opacity: 0;
                         display: block;
-                        height: 20%;
-                        font-size: 1.2em;
                     }
                 }
                 &__info{
+                    height: 8em;
                     z-index: 2;
                 }
             }
@@ -597,6 +610,7 @@ h6{
                 .product__image,.offer__image{
                     img{
                         transform: scale(1.1);
+                        -webkit-transform: scale(1.1);
                     }
                 }
             }
@@ -645,8 +659,8 @@ h6{
         .offer{
             &__image{
                 .offer__discount{
-                    font-size: 1.1em;
-                    padding: .5em;
+                    font-size: 1.2em;
+                    padding: .8em;
                 }
             }
         }
