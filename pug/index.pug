@@ -3,11 +3,12 @@ mixin offer(descuento, imgUrl, nombre, precioAnterior, precioNuevo, descripcion,
         .offer__image
             img(src=""+imgUrl, alt="Imagen del producto "+nombre loading="lazy")
             span.offer__discount #{descuento}      
+            
+        .offer__info
             h4.offer__name #{nombre}
             .offer__prices
                 h5.offer__prices-before <strike>#{precioAnterior}</strike>
-                h5.offer__prices-new #{precioNuevo}
-        .offer__info 
+                h5.offer__prices-new #{precioNuevo} 
             p #{descripcion}
             a(href=""+enlaceWpp) 
 
