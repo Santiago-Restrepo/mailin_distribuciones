@@ -156,16 +156,17 @@ $break-laptop-L: 1440px;
                     display: flex;
                     margin-top: .5em;
                     &-before{
-                        strike{
-                            font-family: $fuente1;
-                        }
+                        display: none;
+                        margin-right: 1em;
                         font-size: 1.6em;
                         font-weight: 600;
                         color: $Color-rojo;
+                        strike{
+                            font-family: $fuente1;
+                        }
                     }
                     &-new{
                         font-family: $fuente1;
-                        margin-left: 1em;
                         font-size: 1.6em;
                         font-weight: 600;
                         color: $Color-verde-intenso;
@@ -289,7 +290,7 @@ $break-laptop-L: 1440px;
                     }
                     .product__prices{
                         &-before,&-new{
-                            font-size: 1.3em;
+                            font-size: 1.5em;
                         } 
                     }
                 }
