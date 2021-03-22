@@ -1,9 +1,8 @@
-mixin offer(descuento, imgUrl, nombre, precioAnterior, precioNuevo)
+mixin offer()
     .offer&attributes(attributes)
         .offer__image
-            img(src=""+imgUrl, alt="Imagen del producto "+nombre loading="lazy")
-            span.offer__discount #{descuento}      
-            
+            img(src="" alt="Imagen del producto "+nombre loading="lazy")
+            span.offer__discount #{descuento}         
         .offer__info
             h4.offer__name #{nombre}
             .offer__prices
@@ -25,7 +24,6 @@ html(lang="en")#html
         link(rel="stylesheet", href="css/estilos.css")
         link(rel="stylesheet", href="css/animations.css")
         link(rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png")
-
         title Home
     body
                     
@@ -49,7 +47,7 @@ html(lang="en")#html
             .offerModal
                 img(src="images/close_button.svg", alt="Menú de hamburguesa").close_button 
                 .offerModal__image
-                    img(src="images/loading.gif", alt="Imagen del producto")
+                    img(src="images/loading.gif", alt="Imagen del producto" width="100px")
                 .offerModal__info
                     h1.offerModal__info-name Cargando...
                     p.offerModal__info-description Cargando...
@@ -169,6 +167,7 @@ html(lang="en")#html
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(src="js/glider.js") 
         script(src="js/index_animations.js") 
+        script(src="js/render_product.js")  
         script.
             var MODAL_BACKGROUND= document.querySelectorAll(".modal");
             var DISTRIBUTOR_MODAL= document.querySelector(".distributorModal");
