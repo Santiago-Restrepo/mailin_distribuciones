@@ -18,10 +18,10 @@ const renderProduct= async (element)=>{
             element.firstElementChild.lastElementChild.style.display="block";
             element.firstElementChild.lastElementChild.innerHTML= `${discount}%` //renderizado de descuento
             element.lastElementChild.lastElementChild.firstElementChild.style.display="block";
-            element.lastElementChild.lastElementChild.firstElementChild.innerHTML= `<strike>${product.prices.old}</strike>` //renderizado de descuento
+            element.lastElementChild.lastElementChild.firstElementChild.innerHTML= `<strike>$${product.prices.old}</strike>` //renderizado de descuento
         }
         element.lastElementChild.firstElementChild.innerHTML= product.name //renderizado de descuento
-        element.lastElementChild.lastElementChild.lastElementChild.innerHTML= product.prices.current //renderizado de descuento
+        element.lastElementChild.lastElementChild.lastElementChild.innerHTML= `$${product.prices.current}` //renderizado de descuento
         
     } catch (error) {
         

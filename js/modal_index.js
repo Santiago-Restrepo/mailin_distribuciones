@@ -11,11 +11,12 @@ const openProductModal = async (e)=>{
         PRODUCT_MODAL.childNodes[2].firstElementChild.setAttribute("src",product.images.modal);//colocación de imagen
         PRODUCT_MODAL.childNodes[4].childNodes[1].innerHTML= product.name;//colocación de nombre
         PRODUCT_MODAL.childNodes[4].childNodes[3].innerHTML= product.description;//colocación de descripción
+        PRODUCT_MODAL.childNodes[4].childNodes[5].innerHTML= `X ${product.size}`;//colocación del tamaño
         if(product.prices.old){
-            PRODUCT_MODAL.childNodes[4].childNodes[5].firstElementChild.style.display= "block";
-            PRODUCT_MODAL.childNodes[4].childNodes[5].firstElementChild.innerHTML= `<strike>${product.prices.old}</strike>`;//colocación de precio antiguo
+            PRODUCT_MODAL.childNodes[4].childNodes[7].firstElementChild.style.display= "block";
+            PRODUCT_MODAL.childNodes[4].childNodes[7].firstElementChild.innerHTML= `<strike>$${product.prices.old}</strike>`;//colocación de precio antiguo
         }
-        PRODUCT_MODAL.childNodes[4].childNodes[5].lastElementChild.innerHTML=product.prices.current;//colocación de precio actual
+        PRODUCT_MODAL.childNodes[4].childNodes[7].lastElementChild.innerHTML=`$${product.prices.current}`;//colocación de precio actual
 
         renderModal();
         
@@ -31,9 +32,10 @@ const closeProductModal= ()=>{
         PRODUCT_MODAL.childNodes[2].firstElementChild.setAttribute("src","../images/load.gif");//colocación de imagen
         PRODUCT_MODAL.childNodes[4].childNodes[1].innerHTML= "Cargando...";
         PRODUCT_MODAL.childNodes[4].childNodes[3].innerHTML= "Cargando...";
-        PRODUCT_MODAL.childNodes[4].childNodes[5].firstElementChild.firstElementChild.innerHTML= "Cargando...";
-        PRODUCT_MODAL.childNodes[4].childNodes[5].firstElementChild.style.display= "none";
-        PRODUCT_MODAL.childNodes[4].childNodes[5].lastElementChild.innerHTML= "Cargando...";
+        PRODUCT_MODAL.childNodes[4].childNodes[5].innerHTML= "Cargando...";//colocación del tamaño
+        PRODUCT_MODAL.childNodes[4].childNodes[7].firstElementChild.firstElementChild.innerHTML= "Cargando...";
+        PRODUCT_MODAL.childNodes[4].childNodes[7].firstElementChild.style.display= "none";
+        PRODUCT_MODAL.childNodes[4].childNodes[7].lastElementChild.innerHTML= "Cargando...";
     },300);
     
 }
