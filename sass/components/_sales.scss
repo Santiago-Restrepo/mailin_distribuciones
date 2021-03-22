@@ -57,20 +57,20 @@
                 transform: translateX(-25%) scale(.8);
             }
             /*Fin perspectiva*/
-            .offer{
+            .product{
                 width: 100%;
                 transition: .3s ease;
-                .offer__info{
+                .product__info{
                     padding: 1em 0;
                     width: 80%;    
                     max-width: 30em;
                     margin: 0 auto;
-                    .offer__name{
+                    .product__name{
                         margin-top: .8em;
                         font-family: $fuente1;
                         font-weight: 500;                   
                     }
-                    .offer__prices{
+                    .product__prices{
                         display: flex;
                         margin: .5em 0 1em;
                         h6{
@@ -85,7 +85,7 @@
                         }
                     }
                 }
-                .offer__image{
+                .product__image{
                     position: relative;
                     width: 80%;    
                     max-width: 30em;
@@ -97,11 +97,11 @@
                         cursor: pointer;
                     }
                     img:hover{
-                        #sales.glider.glider__list.offer-offer__image.img{
+                        #sales.glider.glider__list.product-product__image.img{
                             opacity: .5;
                         }
                     }
-                    .offer__discount{
+                    .product__discount{
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -126,8 +126,8 @@
     #sales{
         .glider{
             .glider__list{
-                .offer{
-                    .offer__image{
+                .product{
+                    .product__image{
                     }
                 }
                 .left-1{
@@ -145,8 +145,8 @@
     #sales{
         .glider{
             .glider__list{
-                .offer{
-                    .offer__image{
+                .product{
+                    .product__image{
                         
                     }
                 }
@@ -187,7 +187,7 @@
     #sales{
         .glider{
             .glider__list{
-                .offer{
+                .product{
                     transition: .5s ease;
                 }
                 .left-1{
@@ -219,7 +219,7 @@
         .glider{
             .glider__list{
                 
-                .offer{
+                .product{
                     transition: .6s ease;
                 }
                 .left-1{
@@ -256,9 +256,9 @@
         .glider{
             
             .glider__list{
-                .offer{
-                    .offer__image{
-                        .offer__discount{
+                .product{
+                    .product__image{
+                        .product__discount{
                             font-size: 1.5em;
                         }
                     }
@@ -293,9 +293,9 @@
 
         .glider{
             .glider__list{
-                .offer{
+                .product{
                     
-                    .offer__image{
+                    .product__image{
                         max-width: 25em;
                         overflow: hidden;
                         img{
@@ -304,11 +304,11 @@
                         img:hover{
                             transform: scale(1.1);
                         }
-                        .offer__discount{
+                        .product__discount{
                             font-size: 1.3em;
                         }
                     }
-                    .offer__info{
+                    .product__info{
                         max-width: 25em;
 
                     }
@@ -322,8 +322,8 @@
 //         .glider{
 //             max-width: 150em;
 //             .glider__list{
-//                 .offer{
-//                     .offer__image{
+//                 .product{
+//                     .product__image{
 //                         width: 50%;
 //                         max-width: 40em;
 //                     }

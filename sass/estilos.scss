@@ -114,7 +114,7 @@ h6{
     visibility: hidden;
     opacity: 0;
     transition: all 0.35s ease-in;
-    .offerModal,.distributorModal,.wholesaleModal{
+    .productModal,.distributorModal,.wholesaleModal{
         z-index: 6;
         position: relative;
         margin: auto;
@@ -129,7 +129,7 @@ h6{
             cursor: pointer;
         }
     }
-    .offerModal{
+    .productModal{
         max-width: 35em;
         background-color: $Color-blanco;
         &__image{
@@ -282,7 +282,7 @@ h6{
         display: none
     }
     .modal{ 
-        .offerModal{
+        .productModal{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             align-items: center;
@@ -328,7 +328,7 @@ h6{
         font-size: 75%;
     }
     .modal{
-        .offerModal,.distributorModal,.wholesaleModal{
+        .productModal,.distributorModal,.wholesaleModal{
             .close_button{
                 opacity: .8;
                 transition: opacity .5s ease;             
@@ -349,11 +349,6 @@ h6{
 //Importación de componentes
 
 @import "components/header";
-@import "components/hero";
-@import "components/sales";
-@import "components/lines";
-@import "components/story";
-@import "components/location";
 @import "components/footer";
 
 

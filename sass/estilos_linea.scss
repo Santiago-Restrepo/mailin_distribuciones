@@ -39,316 +39,6 @@ $break-laptop-M: 1280px;
 $break-laptop-L: 1440px;
 
 
-/*Provicionales*/
-
-
-/*Generales*/
-
-*{
-    padding: 0;
-    margin: 0;
-    outline: none;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-body{
-    position: relative;
-    overflow-x: hidden;
-    background-color: $Color-blanco-variacion;
-
-}
-
-
-h1,h2,h3,h4,h5,h6,p,span,li,a,strike{
-    font-family: $fuente2;
-}
-
-h1{
-    font-size: 2.3em;
-}
-h2{
-    font-size: 2em;
-}
-h3{
-    font-size: 1.8em;
-}
-h4{
-    font-size: 1.7em;
-}
-h5{
-    font-size: 1.6em;
-}
-h6{
-    font-size: 1.4em;
-}
-
-.lines__label{
-    display: block;
-    font-size: 1.3em;
-    margin: 0 auto;
-    width: fit-content;
-    padding: .2em .5em;
-    margin-bottom: 2.5em;
-    color: $Color-blanco;
-    background-color: $Color-negro;
-}
-
-.modal{
-    z-index: 5;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;      
-    align-items: center; 
-    padding: 1em 0;
-    width: 100%;
-    background-color: #000000de;
-    overflow-y: auto;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.35s ease-in;
-    .offerModal,.distributorModal,.wholesaleModal{
-        z-index: 6;
-        position: relative;
-        margin: auto;
-        width: 90%;
-        height: fit-content;
-        transform: translateY(-110%);
-        transition: transform 1s ease;
-        .close_button{
-            position: absolute;
-            top: 1em;
-            right: 1em;
-            cursor: pointer;
-        }
-    }
-    .offerModal{
-        max-width: 35em;
-        background-color: $Color-blanco;
-        &__image{
-            width: 100%;
-            height: fit-content;
-            img{
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-            }
-        }
-        &__info{
-            padding: 1.5em;
-            &-name{
-                margin-bottom: .5em;
-                font-weight: 500;
-            }
-            &-description{
-                font-size: 1.6em;
-                font-weight: 300;
-            }
-            &-prices{
-                display: flex;
-                margin-top: 2em;
-
-                .price-before{
-                    color: $Color-rojo-intenso;
-                    margin-right: 1em;
-                }
-                .price-now{
-                    color: $Color-verde-intenso;
-                }
-            }
-            &-buy{
-                display: flex;
-                align-items: center;
-                margin-top: 2em;
-                span{
-                    margin-right: 1em;
-                    font-size: 2em;
-                }
-                .social_media{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    a{
-                        color: $Color-negro;
-                        i{
-                            font-size: 3em;
-                        }
-                    }
-
-                }
-            }
-        }
-    }
-    .distributorModal,.wholesaleModal{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 40em;
-        height: 100%;
-        padding: 6em 0 2em;
-        .close_button{
-            z-index: 2;
-        }
-        .form__image{
-            position: absolute;
-            width: 20%;
-        }
-        &__title{
-            z-index: 1;
-            width: 90%;
-            margin-bottom: 1em;
-            color: $Color-blanco;
-            font-weight: 500;
-            text-align: center;
-        }
-        iframe{
-            z-index: 1;
-            width: 90%;
-            height: 100%;
-            max-width: 30em;
-            html{
-                overflow: hidden;
-            }
-            
-        }
-        
-    }
-    .distributorModal{
-        background-color: $Color-verde-oscuro;
-        img:nth-of-type(2){
-            top: 0;    
-            left: 0;
-            
-        }
-        img:nth-of-type(3){
-            bottom: 0;
-            right: 0;
-            transform: rotatex(180deg) rotateY(180deg);
-        }
-    }
-    .wholesaleModal{
-        background-color: $Color-morado;
-        .form__image{
-            width: 50%;
-        }
-        img:nth-of-type(2){
-            top: -3em;    
-            left: -3em;
-            transform: rotatex(180deg) rotateY(180deg);
-            
-        }
-        img:nth-of-type(3){
-            bottom: -3em;
-            right: -3em;
-        }
-    }
-    .modal-visible{
-        transform: translateY(0);
-    }
-}
-.is-visible{
-    visibility: visible;
-    opacity: 1;
-}
-
-
-@media screen and (min-width: $break-mobile-M) {
-    html{
-        font-size: 64%;
-    }
-    .lines__label{
-        display: none
-    }   
-}
-@media screen and (min-width: $break-mobile-L) {
-    html{
-        font-size: 65%;
-    }
-}
-@media screen and (min-width: $break-mobile-tablet) {
-    html{
-        font-size: 66%;
-    }
-}
-@media screen and (min-width: $break-tablet) {
-    html{
-        font-size: 70%;
-    }
-    .modal{ 
-        .offerModal{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            align-items: center;
-            max-width: 75em;
-            height: fit-content;
-            background-color: $Color-blanco;
-            .close_button{
-                left: 1em;
-                z-index: 1;
-            }
-            &__image{
-                width: 100%;
-                height: 100%;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-
-            }
-            &__info{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                height: fit-content;
-                text-align: center;
-                &-description{
-                    font-size: 1.43em;
-                }
-                &-prices{
-                    justify-content: center;
-                }
-                &-buy{
-                    justify-content: center;
-                    
-                }
-            }
-        }
-    }
-}
-@media screen and (min-width: $break-laptop) {
-    html{
-        font-size: 75%;
-    }
-    .modal{
-        .offerModal,.distributorModal,.wholesaleModal{
-            .close_button{
-                opacity: .8;
-                transition: opacity .5s ease;             
-            }
-            .close_button:hover{
-                opacity: 1;
-            }
-        }
-    }
-}
-@media screen and (min-width: $break-laptop-L) {
-    html{
-        font-size: 80%;
-    }
-}
-@import "components/header";
-
 .header{
     display: flex;
     justify-content: center;
@@ -395,20 +85,18 @@ h6{
         display: flex;
         flex-direction: column;
         align-items: center;
-        .product,.offer{
+        .product{
             width: 85%;
             max-width: 25em;
             height: fit-content;
             margin-bottom: 3em;
             background-color: $Color-blanco;
-            // box-shadow: 0px 0px 1px #0000009a;
             border: 0.5px solid $Color-gris-claro;
             overflow: hidden;
             &__image{
                 position: relative;
                 width: 100%;
                 height: fit-content;
-
                 img{
                     width: 100%;
                     height: 100%;
@@ -437,6 +125,17 @@ h6{
                 .view_more:hover{
                     background-color: #16940de7;
                 }
+                .product__discount{
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: .7em;
+                    font-size:1.3em;
+                    font-weight: 500;
+                    background-color: $Color-rojo-intenso;
+                    color: $Color-blanco;
+                }
             }
             &__info{
                 display: flex;
@@ -453,40 +152,7 @@ h6{
                     font-family: $fuente1;
                     font-size: 1.6em;
                 }
-                &-price{
-                    margin-top: .5em;
-                    font-size: 1.6em;
-                    font-weight: 600;
-                    color: $Color-verde-intenso;
-                }
-            }
-        }
-        
-        .product{
-            &__info{
-                &-price{
-                    font-family: $fuente1;
-                    font-size: 1.6em;
-                    font-weight: 600;
-                    color: $Color-verde-intenso;
-                }
-            }
-        }
-        .offer{
-            &__image{
-                .offer__discount{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding: .7em;
-                    font-size:1.3em;
-                    font-weight: 500;
-                    background-color: $Color-rojo-intenso;
-                    color: $Color-blanco;
-                }
-            }
-            &__info{
-                .offer__prices{
+                .product__prices{
                     display: flex;
                     margin-top: .5em;
                     &-before{
@@ -507,12 +173,8 @@ h6{
                 }
             }
         }
-        
     }
 }
-
-
-@import "components/footer";
 
 @media screen and (min-width: $break-mobile-M) {
     #line{
@@ -528,7 +190,7 @@ h6{
             width: 100%;
             max-width: 55em;
             margin: 0 auto;
-            .product,.offer{
+            .product{
                 max-width: 30em;
                 &__info{
                     height: 12em;
@@ -563,15 +225,14 @@ h6{
             grid-template-columns: repeat(3,1fr);
             width: 100%;
             max-width: 70em;
-            .offer{
-                align-self: flex-start;
+            .product{
                 &__image{
-                    .offer__discount{
+                    .product__discount{
                         padding: .6em;
                     }
                 }
             }
-            .product,.offer{
+            .product{
                 max-width: 20em;
                 
             }
@@ -590,7 +251,7 @@ h6{
         &__container{
             max-width: 100em;
             grid-template-columns: repeat(5,1fr);
-            .product,.offer{
+            .product{
                 max-width: 25em;
                 &__image{
                     .view_more{
@@ -603,11 +264,11 @@ h6{
                     z-index: 2;
                 }
             }
-            .product:hover,.offer:hover{
+            .product:hover{
                 .view_more{
                     opacity: 1;
                 }
-                .product__image,.offer__image{
+                .product__image{
                     img{
                         transform: scale(1.1);
                         -webkit-transform: scale(1.1);
@@ -615,37 +276,24 @@ h6{
                 }
             }
             .product{
+                &__image{
+                    .product__discount{
+                        font-size: 1em;
+                    }
+                }
                 &__info{
                     padding: 1em;
                     
                     &-name{
                         font-size: 1.3em;
                     }
-                    &-price{
-                        font-size: 1.3em;
-                    }
-                }
-            }
-            .offer{
-                &__image{
-                    .offer__discount{
-                        font-size: 1em;
-                    }
-                }
-                &__info{
-                    padding: 1em;
-                    &-name{
-                        font-size: 1.3em;
-                    }
-                    .offer__prices{
+                    .product__prices{
                         &-before,&-new{
                             font-size: 1.3em;
-
                         } 
                     }
                 }
             }
-
         }
     }
 }
@@ -656,9 +304,9 @@ h6{
         }
     }
     .catalog{
-        .offer{
+        .product{
             &__image{
-                .offer__discount{
+                .product__discount{
                     font-size: 1.2em;
                     padding: .8em;
                 }

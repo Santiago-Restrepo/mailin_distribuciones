@@ -1,13 +1,13 @@
-mixin offer()
-    .offer&attributes(attributes)
-        .offer__image
-            img(src="" alt="Imagen del producto "+nombre loading="lazy")
-            span.offer__discount #{descuento}         
-        .offer__info
-            h4.offer__name #{nombre}
-            .offer__prices
-                h5.offer__prices-before <strike>#{precioAnterior}</strike>
-                h5.offer__prices-new #{precioNuevo} 
+mixin product()
+    .product&attributes(attributes)
+        .product__image
+            img(src="" alt="Imagen del producto" loading="lazy")
+            span.product__discount         
+        .product__info
+            h4.product__name
+            .product__prices
+                h5.product__prices-before
+                h5.product__prices-new
 
 mixin line(imgUrl, nombre, lineaUrl)
     .line
@@ -22,6 +22,7 @@ html(lang="en")#html
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/estilos.css")
+        link(rel="stylesheet", href="css/estilos_index.css")
         link(rel="stylesheet", href="css/animations.css")
         link(rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png")
         title Home
@@ -44,17 +45,17 @@ html(lang="en")#html
                     a(href="index.html#contact" alt="Dirigirse a contacto ") contacto   
             img(src="images/logo.png", alt="Logo de Mailin distribuciones").logo
         .modal
-            .offerModal
+            .productModal
                 img(src="images/close_button.svg", alt="Menú de hamburguesa").close_button 
-                .offerModal__image
+                .productModal__image
                     img(src="images/loading.gif", alt="Imagen del producto" width="100px")
-                .offerModal__info
-                    h1.offerModal__info-name Cargando...
-                    p.offerModal__info-description Cargando...
-                    .offerModal__info-prices
+                .productModal__info
+                    h1.productModal__info-name Cargando...
+                    p.productModal__info-description Cargando...
+                    .productModal__info-prices
                         h2.price-before <strike>Cargando...</strike>
                         h2.price-now Cargando... 
-                    .offerModal__info-buy 
+                    .productModal__info-buy 
                         span Comprar:
                         .social_media
                             a(href="https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w") 
@@ -67,17 +68,17 @@ html(lang="en")#html
                 button.glider__left
                     i.fas.fa-arrow-left
                 .glider__list
-                    +offer("50%","images/gelGreen.jpg","Gel green", "50.000", "25.000")(class="1")
+                    +product()(class="1")
                     
-                    +offer("50%","images/stopSweet.jpg","Stop sweet", "50.000", "25.000")(class="7")
+                    +product()(class="7")
                     
-                    +offer("50%","images/gelGreen.jpg","Gel green", "50.000", "25.000")(class="1")
+                    +product()(class="1")
                     
-                    +offer("50%","images/stopSweet.jpg","Stop sweet", "50.000", "25.000")(class="7")
+                    +product()(class="7")
 
-                    +offer("50%","images/gelGreen.jpg","Gel green", "50.000", "25.000")(class="1")
+                    +product()(class="1")
                     
-                    +offer("50%","images/stopSweet.jpg","Stop sweet", "50.000", "25.000")(class="7")                    
+                    +product()(class="7")                    
                     
                     
                     

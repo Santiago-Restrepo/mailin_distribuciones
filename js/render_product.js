@@ -1,5 +1,5 @@
 const API= "https://mailindistribucionesapi-default-rtdb.firebaseio.com/product/";
-var PRODUCTS_ARRAY= document.querySelectorAll(".offer");
+var PRODUCTS_ARRAY= document.querySelectorAll(".product");
 
 const renderProduct= async (element)=>{
     let product_number= element.classList[1];
@@ -12,9 +12,12 @@ const renderProduct= async (element)=>{
     //renderizado de producto
 
     element.firstElementChild.firstElementChild.setAttribute("src", product.images.catalog); //renderizado de imagen
-    element.firstElementChild.lastElementChild.innerHTML= `${discount}%` //renderizado de descuento
+    if(oldPrice){
+        element.firstElementChild.lastElementChild.style.display="block";
+        element.firstElementChild.lastElementChild.innerHTML= `${discount}%` //renderizado de descuento
+        element.lastElementChild.lastElementChild.firstElementChild.innerHTML= `<strike>${product.prices.old}</strike>` //renderizado de descuento
+    }
     element.lastElementChild.firstElementChild.innerHTML= product.name //renderizado de descuento
-    element.lastElementChild.lastElementChild.firstElementChild.innerHTML= product.prices.old //renderizado de descuento
     element.lastElementChild.lastElementChild.lastElementChild.innerHTML= product.prices.current //renderizado de descuento
 
 }
