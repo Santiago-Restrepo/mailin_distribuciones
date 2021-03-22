@@ -670,7 +670,7 @@ h6 {
 }
 @media screen and (min-width: 1024px) {
   #sales .glider .glider__list .offer .offer__image {
-    max-width: 33em;
+    max-width: 25em;
     overflow: hidden;
   }
   #sales .glider .glider__list .offer .offer__image img {
@@ -678,6 +678,12 @@ h6 {
   }
   #sales .glider .glider__list .offer .offer__image img:hover {
     transform: scale(1.1);
+  }
+  #sales .glider .glider__list .offer .offer__image .offer__discount {
+    font-size: 1.3em;
+  }
+  #sales .glider .glider__list .offer .offer__info {
+    max-width: 25em;
   }
 }
 #lines {

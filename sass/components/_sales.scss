@@ -297,8 +297,9 @@
         .glider{
             .glider__list{
                 .offer{
+                    
                     .offer__image{
-                        max-width: 33em;
+                        max-width: 25em;
                         overflow: hidden;
                         img{
                             transition: transform .5s ease;
@@ -306,6 +307,13 @@
                         img:hover{
                             transform: scale(1.1);
                         }
+                        .offer__discount{
+                            font-size: 1.3em;
+                        }
+                    }
+                    .offer__info{
+                        max-width: 25em;
+
                     }
                 }
             }
