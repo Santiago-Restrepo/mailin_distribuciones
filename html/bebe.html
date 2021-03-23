@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/estilos_linea.css">
     <title>Línea Bebé</title>
   </head>
@@ -20,16 +21,17 @@
       </ul><img class="logo" src="../images/logo.png" alt="Logo de Mailin distribuciones">
     </header>
     <div class="modal">
-      <div class="offerModal"><img class="close_button" src="../images/close_button.svg" alt="Menú de hamburguesa">
-        <div class="offerModal__image"><img src="../images/loading.gif" alt="Imagen del producto"></div>
-        <div class="offerModal__info">
-          <h1 class="offerModal__info-name">Cargando...</h1>
-          <p class="offerModal__info-description">Cargando...</p>
-          <div class="offerModal__info-prices">
+      <div class="productModal"><img class="close_button" src="../images/close_button.svg" alt="Menú de hamburguesa">
+        <div class="productModal__image"><img src="../images/load.gif" alt="Imagen del producto"></div>
+        <div class="productModal__info">
+          <h1 class="productModal__info-name">Cargando...</h1>
+          <p class="productModal__info-description">Cargando...</p>
+          <h3 class="productModal__info-size">Cargando...</h3>
+          <div class="productModal__info-prices">
             <h2 class="price-before"><strike>Cargando...</strike></h2>
             <h2 class="price-now">Cargando... </h2>
           </div>
-          <div class="offerModal__info-buy"> <span>Comprar:</span>
+          <div class="productModal__info-buy"> <span>Comprar:</span>
             <div class="social_media"><a href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"> <i class="fab fa-whatsapp"></i></a></div>
           </div>
         </div>
@@ -40,61 +42,60 @@
     </section>
     <main class="catalog"><img class="lines__image" src="../images/hojas_medio2.svg" alt="Imagen de hoja sencilla">
       <div class="catalog__container"> 
-        <!--+offer("Gel green", "../images/gelGreen.jpg", "https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w", "Es un gel mentolado para masajes de rápida acción. Al ser aplicado sobre la piel proporciona una agradable sensación de alivio, frescura y bienestar sobre la zona afectada gracias a su fórmula con Mentol, Aceites de limoneno, Salcilato de metilo, Cannabis sativa, Eucalipto y Árnica. Adecuado para antes y después de los deportes", "50.000", "25.000", "50%")-->
-        <div class="product">
-          <div class="product__image"> <img src="../images/coloniabebeAmor.jpg" alt="Imagen del producto Colonia Baby Ross gotas de amor"/>
-            <button class="view_more">Ver más</button>
+        <div class="product 32">
+          <div class="product__image"> <img src="" alt="Imagen del producto"/>
+            <button class="view_more">Ver más</button><span class="product__discount"></span>
           </div>
-          <div class="product__info"> <span class="product__info-name">Colonia Baby Ross gotas de amor</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
-          </div>
-        </div>
-        <div class="product">
-          <div class="product__image"> <img src="../images/coloniabebeAmorp.jpg" alt="Imagen del producto Colonia Baby Ross gotas de amor x 60 ml"/>
-            <button class="view_more">Ver más</button>
-          </div>
-          <div class="product__info"> <span class="product__info-name">Colonia Baby Ross gotas de amor x 60 ml</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
+          <div class="product__info"> <span class="product__info-name"></span>
+            <div class="product__prices"><span class="product__prices-before"></span><span class="product__prices-new"></span></div>
           </div>
         </div>
-        <div class="product">
-          <div class="product__image"> <img src="../images/coloniabebeSueños.jpg" alt="Imagen del producto Colonia Baby Ross dulces sueños"/>
-            <button class="view_more">Ver más</button>
+        <div class="product 33">
+          <div class="product__image"> <img src="" alt="Imagen del producto"/>
+            <button class="view_more">Ver más</button><span class="product__discount"></span>
           </div>
-          <div class="product__info"> <span class="product__info-name">Colonia Baby Ross dulces sueños</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
-          </div>
-        </div>
-        <div class="product">
-          <div class="product__image"> <img src="../images/coloniabebeCaricia.jpg" alt="Imagen del producto Colonia Baby Ross dulce caricia"/>
-            <button class="view_more">Ver más</button>
-          </div>
-          <div class="product__info"> <span class="product__info-name">Colonia Baby Ross dulce caricia</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
+          <div class="product__info"> <span class="product__info-name"></span>
+            <div class="product__prices"><span class="product__prices-before"></span><span class="product__prices-new"></span></div>
           </div>
         </div>
-        <div class="product">
-          <div class="product__image"> <img src="../images/cremabebeProtectora.jpg" alt="Imagen del producto Crema protectora Baby Ross x 180G"/>
-            <button class="view_more">Ver más</button>
+        <div class="product 34">
+          <div class="product__image"> <img src="" alt="Imagen del producto"/>
+            <button class="view_more">Ver más</button><span class="product__discount"></span>
           </div>
-          <div class="product__info"> <span class="product__info-name">Crema protectora Baby Ross x 180G</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
-          </div>
-        </div>
-        <div class="product">
-          <div class="product__image"> <img src="../images/cremabebeProtectoraP.jpg" alt="Imagen del producto Crema protectora Baby Ross x 20 g"/>
-            <button class="view_more">Ver más</button>
-          </div>
-          <div class="product__info"> <span class="product__info-name">Crema protectora Baby Ross x 20 g</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
+          <div class="product__info"> <span class="product__info-name"></span>
+            <div class="product__prices"><span class="product__prices-before"></span><span class="product__prices-new"></span></div>
           </div>
         </div>
-        <div class="product">
-          <div class="product__image"> <img src="../images/cremabebeMaiz.jpg" alt="Imagen del producto Crema para bebé con fécula de maiz"/>
-            <button class="view_more">Ver más</button>
+        <div class="product 35">
+          <div class="product__image"> <img src="" alt="Imagen del producto"/>
+            <button class="view_more">Ver más</button><span class="product__discount"></span>
           </div>
-          <div class="product__info"> <span class="product__info-name">Crema para bebé con fécula de maiz</span><span class="product__info-price">36.000</span>
-            <p class="product__info-description">Para todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop SweaPara todos aquellos que sufren de sudoración, Ross D' Elen ideo el Stop Sweat, un producto formulado con activos especiales que disminuye la sudoración excesiva y evita el mal olor en manos, pies, axilas. Esta crema humecta e hidrata la piel contrarrestado la agresividad del anti-transpirante y reduce la perdida de agua trans-epidermal.</p><a class="product__info-link" href="https://api.whatsapp.com/send?phone=573208762984&amp;fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w"></a>
+          <div class="product__info"> <span class="product__info-name"></span>
+            <div class="product__prices"><span class="product__prices-before"></span><span class="product__prices-new"></span></div>
+          </div>
+        </div>
+        <div class="product 38">
+          <div class="product__image"> <img src="" alt="Imagen del producto"/>
+            <button class="view_more">Ver más</button><span class="product__discount"></span>
+          </div>
+          <div class="product__info"> <span class="product__info-name"></span>
+            <div class="product__prices"><span class="product__prices-before"></span><span class="product__prices-new"></span></div>
+          </div>
+        </div>
+        <div class="product 36">
+          <div class="product__image"> <img src="" alt="Imagen del producto"/>
+            <button class="view_more">Ver más</button><span class="product__discount"></span>
+          </div>
+          <div class="product__info"> <span class="product__info-name"></span>
+            <div class="product__prices"><span class="product__prices-before"></span><span class="product__prices-new"></span></div>
+          </div>
+        </div>
+        <div class="product 37">
+          <div class="product__image"> <img src="" alt="Imagen del producto"/>
+            <button class="view_more">Ver más</button><span class="product__discount"></span>
+          </div>
+          <div class="product__info"> <span class="product__info-name"></span>
+            <div class="product__prices"><span class="product__prices-before"></span><span class="product__prices-new"></span></div>
           </div>
         </div>
       </div><img class="lines__image" src="../images/hojas_medio2.svg" alt="Imagen de hoja sencilla">
@@ -130,8 +131,10 @@
         </div>
       </div><span class="rights">© Mailin Distribuciones</span>
     </footer>
+    <script src="../js/render_product.js"></script>
     <script src="../js/lines_animations.js"></script>
     <script src="../js/modal_footer.js"> </script>
+    <script src="../js/modal_index.js"> </script>
     <script src="../js/modal_lines.js"> </script>
     <script src="../js/menu.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
