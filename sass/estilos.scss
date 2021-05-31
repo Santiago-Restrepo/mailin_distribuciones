@@ -62,7 +62,7 @@ body{
 }
 
 
-h1,h2,h3,h4,h5,h6,p,span,li,a,strike{
+h1,h2,h3,h4,h5,h6,p,span,li,a,strike, input{
     font-family: $fuente2;
 }
 
@@ -82,6 +82,9 @@ h5{
     font-size: 1.6em;
 }
 h6{
+    font-size: 1.4em;
+}
+input{
     font-size: 1.4em;
 }
 

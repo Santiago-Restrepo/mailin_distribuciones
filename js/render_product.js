@@ -1,5 +1,7 @@
 const API= "https://mailindistribucionesapi-default-rtdb.firebaseio.com/product/";
-var PRODUCTS_ARRAY= document.querySelectorAll(".product");
+const PRODUCT_NODELIST= document.querySelectorAll(".product");
+const PRODUCT_ARRAY = Array.apply(null, PRODUCT_NODELIST);
+let windowSize= (window.innerHeight);
 
 const renderProduct= async (element)=>{
 
@@ -22,6 +24,7 @@ const renderProduct= async (element)=>{
         }
         element.lastElementChild.firstElementChild.innerHTML= product.name //renderizado de descuento
         element.lastElementChild.lastElementChild.lastElementChild.innerHTML= `$${product.prices.current}` //renderizado de descuento
+        element.classList.add("fadeIn");
         
     } catch (error) {
         
@@ -29,8 +32,17 @@ const renderProduct= async (element)=>{
 
 }
 
+const renderVisibleProduct = () =>{
+    let result = PRODUCT_ARRAY.filter(catalog_product => windowSize > catalog_product.getBoundingClientRect().top && !catalog_product.lastElementChild.firstElementChild.textContent);
+    if (result) {
+        result.forEach(element => {
+            renderProduct(element);
+        });
+    }
+}
 
-PRODUCTS_ARRAY.forEach(element => {
-    renderProduct(element)
+window.addEventListener('scroll', ()=>{
+    renderVisibleProduct();
 });
 
+renderVisibleProduct();

@@ -55,7 +55,7 @@ const renderModal= ()=>{
 
 PRODUCT_MODAL.firstElementChild.addEventListener("click",closeProductModal);
 
-for (let i = 0; i < PRODUCTS_ARRAY.length; i++) {
-    const element = PRODUCTS_ARRAY[i];
+for (let i = 0; i < PRODUCT_ARRAY.length; i++) {
+    const element = PRODUCT_ARRAY[i];
     element.firstElementChild.firstElementChild.addEventListener(("click"),openProductModal);
 }

@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, li, a, strike {
+h1, h2, h3, h4, h5, h6, p, span, li, a, strike, input {
   font-family: "Rubik", "sans-serif";
 }
 
@@ -52,12 +52,14 @@ h6 {
   font-size: 1.4em;
 }
 
+input {
+  font-size: 1.4em;
+}
+
 .lines__label {
   display: block;
   font-size: 1.3em;
   margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 0.2em 0.5em;
   margin-bottom: 2.5em;
@@ -89,8 +91,6 @@ h6 {
   position: relative;
   margin: auto;
   width: 90%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   transform: translateY(-110%);
   transition: transform 1s ease;
@@ -107,8 +107,6 @@ h6 {
 }
 .modal .productModal__image {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .modal .productModal__image img {
@@ -260,8 +258,6 @@ h6 {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     max-width: 75em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
     background-color: #ffffff;
   }
@@ -282,8 +278,6 @@ h6 {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
     text-align: center;
   }
@@ -394,8 +388,6 @@ h6 {
     position: fixed;
     top: 2em;
     width: 80%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
     max-width: 60em;
     margin: 0 auto;
@@ -588,8 +580,6 @@ h6 {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     column-gap: 0.1em;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
   }
   .footer .buttons__container .footer__button {

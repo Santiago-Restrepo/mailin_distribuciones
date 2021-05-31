@@ -49,8 +49,7 @@ window.addEventListener('scroll', ()=>{
     }
     if(windowSize > flowers_positions[1]){
         story_flowers[1].classList.add('fadeInRight');
-    }
-    
+    } 
     //Comprobaciones de posicion de ubicación
     if(windowSize > location_position){
         location_container.classList.add('fadeIn');
