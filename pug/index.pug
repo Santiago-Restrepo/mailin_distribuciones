@@ -14,7 +14,6 @@ mixin line(imgUrl, nombre, lineaUrl)
         img(loading="lazy" src=""+imgUrl, alt="Imagen de la línea"+nombre).line__image
         a(href=""+lineaUrl).line__container 
             h3.line__container-name #{nombre}
-            //- a(href=""+lineaUrl).line__container-button ver catálogo 
 doctype html
 html(lang="en")#html
     head
@@ -70,19 +69,13 @@ html(lang="en")#html
                     i.fas.fa-arrow-left
                 .glider__list
                     +product()(class="1")
-                    
                     +product()(class="7")
-                    
                     +product()(class="1")
-                    
                     +product()(class="7")
-
                     +product()(class="1")
-                    
                     +product()(class="7")                    
                     
-                    
-                    
+                
                 button.glider__right
                     i.fas.fa-arrow-right
                 .glider__dots(role="tablist")
@@ -168,8 +161,8 @@ html(lang="en")#html
 
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(src="js/glider.js") 
-        script(src="js/index_animations.js") 
         script(src="js/render_product.js")  
+        script(src="js/index_animations.js") 
         script.
             var MODAL_BACKGROUND= document.querySelectorAll(".modal");
             var DISTRIBUTOR_MODAL= document.querySelector(".distributorModal");

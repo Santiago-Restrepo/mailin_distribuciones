@@ -2,7 +2,7 @@ const lines_array = document.querySelectorAll('.line');
 const lines_flowers = document.querySelectorAll('.lines__image');
 const story_flowers = document.querySelectorAll('.primaryLeaf');
 const location_container =  document.querySelector('.location__container');
-let windowSize= (window.innerHeight);
+windowSize= (window.innerHeight);
 let lines_positions=[];
 let flowers_positions=[];
 let location_position;

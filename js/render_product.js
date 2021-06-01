@@ -2,7 +2,7 @@ const API= "https://mailindistribucionesapi-default-rtdb.firebaseio.com/product"
 const PRODUCT_NODELIST= document.querySelectorAll(".product");
 const PRODUCT_ARRAY = Array.apply(null, PRODUCT_NODELIST);
 let loaded_products= [];
-let windowSize= (window.innerHeight * 2);
+let windowSize= (window.innerHeight * 2 );
 
 const renderProduct= async (element)=>{
     
@@ -14,10 +14,11 @@ const renderProduct= async (element)=>{
         let oldPrice = parseInt(product.prices.old.replace(".",""));
         let currentPrice = parseInt(product.prices.current.replace(".",""));
         let discount= Math.round(( oldPrice - currentPrice ) * 100 / oldPrice);
-    
+        
         //renderizado de producto
-    
+        
         element.firstElementChild.firstElementChild.setAttribute("src", product.images.catalog); //renderizado de imagen
+        debugger
         if(product.prices.old){
             element.firstElementChild.lastElementChild.style.display="block";
             element.firstElementChild.lastElementChild.innerHTML= `${discount}%` //renderizado de descuento
