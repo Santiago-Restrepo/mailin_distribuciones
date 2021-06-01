@@ -1,13 +1,13 @@
 var PRODUCT_MODAL= document.querySelector(".productModal");
 
-const openProductModal = async (e)=>{
+const openProductModal = (e)=>{
     //Guardamos la oferta que fue seleccionada accediendo al abuelo de la imagen clickeada
     try {
+        renderModal();
         let product_selected= e.target.parentElement.parentElement;
-        let product_number= product_selected.classList[1];//obtención de número de hijo
-        let productPromise = await fetch(`${API}${product_number}.json`);//llamado a la base de datos
-        let product = await productPromise.json();//llamado a la base de datos
-
+        let product_number= product_selected.classList[1];//obtención que representa en la base de datos firebase
+        let product = loaded_products.filter(element => element.id==product_number)[0];//De aquí obtiene el elemento que coincida con ese numero buscando en el 
+        //array de objetos "loaded_products" el cual guarda los elementos que han cargado
         PRODUCT_MODAL.childNodes[2].firstElementChild.setAttribute("src",product.images.modal);//colocación de imagen
         PRODUCT_MODAL.childNodes[4].childNodes[1].innerHTML= product.name;//colocación de nombre
         PRODUCT_MODAL.childNodes[4].childNodes[3].innerHTML= product.description;//colocación de descripción
@@ -18,12 +18,13 @@ const openProductModal = async (e)=>{
         }
         PRODUCT_MODAL.childNodes[4].childNodes[7].lastElementChild.innerHTML=`$${product.prices.current}`;//colocación de precio actual
 
-        renderModal();
         
     } catch (error) {
         renderModal();
+        console.error(error);
     }
 }
+
 const closeProductModal= ()=>{
     PRODUCT_MODAL.classList.remove("modal-visible");
     MODAL_BACKGROUND[0].classList.remove("is-visible")

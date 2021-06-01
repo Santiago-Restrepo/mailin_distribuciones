@@ -1,14 +1,16 @@
-const API= "https://mailindistribucionesapi-default-rtdb.firebaseio.com/product/";
+const API= "https://mailindistribucionesapi-default-rtdb.firebaseio.com/product";
 const PRODUCT_NODELIST= document.querySelectorAll(".product");
 const PRODUCT_ARRAY = Array.apply(null, PRODUCT_NODELIST);
+let loaded_products= [];
 let windowSize= (window.innerHeight);
 
 const renderProduct= async (element)=>{
-
+    
     try {
         let product_number= element.classList[1];
-        let productPromise = await fetch(`${API}${product_number}.json`);//llamado a la base de datos
+        let productPromise = await fetch(`${API}/${product_number}.json`);//llamado a la base de datos
         let product = await productPromise.json();//llamado a la base de datos
+        loaded_products.push(product);
         let oldPrice = parseInt(product.prices.old.replace(".",""));
         let currentPrice = parseInt(product.prices.current.replace(".",""));
         let discount= Math.round(( oldPrice - currentPrice ) * 100 / oldPrice);
@@ -33,12 +35,13 @@ const renderProduct= async (element)=>{
 }
 
 const renderVisibleProduct = () =>{
-    let result = PRODUCT_ARRAY.filter(catalog_product => windowSize > catalog_product.getBoundingClientRect().top && !catalog_product.lastElementChild.firstElementChild.textContent);
-    if (result) {
-        result.forEach(element => {
-            renderProduct(element);
-        });
-    }
+    //Result va ser el array que contenga todos los productos que se están "viendo en el momento"
+    let result = PRODUCT_ARRAY.filter(catalog_product => windowSize > catalog_product.getBoundingClientRect().top && !catalog_product.classList.contains("fadeIn"));
+    result.forEach(element => {
+        if(!element.classList.contains("fadeIn")){
+            renderProduct(element);  
+        } 
+    });
 }
 
 window.addEventListener('scroll', ()=>{
