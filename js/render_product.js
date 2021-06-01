@@ -2,7 +2,7 @@ const API= "https://mailindistribucionesapi-default-rtdb.firebaseio.com/product"
 const PRODUCT_NODELIST= document.querySelectorAll(".product");
 const PRODUCT_ARRAY = Array.apply(null, PRODUCT_NODELIST);
 let loaded_products= [];
-let windowSize= (window.innerHeight);
+let windowSize= (window.innerHeight * 2);
 
 const renderProduct= async (element)=>{
     
