@@ -103,10 +103,11 @@
   font-weight: 500;
 }
 #sales .glider .glider__list .product .product__info .product__prices-before {
+  display: none;
   color: #ec5248;
+  margin-right: 1em;
 }
 #sales .glider .glider__list .product .product__info .product__prices-new {
-  margin-left: 1em;
   color: #35B82C;
 }
 #sales .glider .glider__list .product .product__image {

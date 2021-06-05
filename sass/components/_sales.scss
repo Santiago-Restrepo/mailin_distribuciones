@@ -76,10 +76,11 @@
                             font-weight: 500;
                         }
                         &-before{
+                            display: none;
                             color: $Color-rojo;
+                            margin-right: 1em;
                         }
                         &-new{
-                            margin-left: 1em;
                             color: $Color-verde-intenso;
                         }
                     }
