@@ -1,6 +1,6 @@
 #sales{
     padding: 2em 0;
-    background-color: $Color-blanco-variacion;
+    background-color: $Color-blanco;
     .glider{
         position: relative;
         .glider__left,.glider__right{
@@ -11,9 +11,8 @@
             border: none;
             font-size: 2em;
             padding: .2em;
-            border-radius: .3em;
             color: $Color-blanco;
-            background-color: #000603da;
+            background-color: #00060393;
             
             cursor: pointer;
             transition: background .5s ease;

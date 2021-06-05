@@ -178,7 +178,6 @@
     </footer>
     <script async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="js/glider.js"> </script>
-    <script src="js/render_product.js"> </script>
     <script src="js/index_animations.js"> </script>
     <script>
       var MODAL_BACKGROUND= document.querySelectorAll(".modal");
@@ -215,7 +214,6 @@
       DISTRIBUTOR_BUTTON.addEventListener("click",openDistributorModal);
       WHOLESALE_BUTTON.addEventListener("click",openWholesaleModal);
     </script>
-    <script src="js/modal_index.js"> </script>
     <script>
       const hamburguer_button = document.querySelector('.hamburguer_button');
       const mobile_menu = document.querySelector('.mobile_menu');
@@ -270,8 +268,29 @@
               hamburguer_button.style.transform="rotateY(0deg)";
           }
       });
-      
+    </script><!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js"></script><!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-analytics.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+          apiKey: "AIzaSyDw0Z6fG-wgUPzt_LnH2g-JivHLvMZ2S8k",
+          authDomain: "mailindistribucionesapi.firebaseapp.com",
+          databaseURL: "https://mailindistribucionesapi-default-rtdb.firebaseio.com",
+          projectId: "mailindistribucionesapi",
+          storageBucket: "mailindistribucionesapi.appspot.com",
+          messagingSenderId: "816125570764",
+          appId: "1:816125570764:web:bd984fa62ab7f186d89c69",
+          measurementId: "G-GB2LF0G27Y"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
     </script>
+    <script src="js/render_product.js"></script>
+    <script src="js/modal_index.js"> </script>
+    <script src="js/mailin-analytics.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </body>

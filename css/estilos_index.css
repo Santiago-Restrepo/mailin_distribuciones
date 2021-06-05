@@ -25,7 +25,7 @@
 }
 #sales {
   padding: 2em 0;
-  background-color: #F1FBF3;
+  background-color: #ffffff;
 }
 #sales .glider {
   position: relative;
@@ -38,9 +38,8 @@
   border: none;
   font-size: 2em;
   padding: 0.2em;
-  border-radius: 0.3em;
   color: #ffffff;
-  background-color: #000603da;
+  background-color: #00060393;
   cursor: pointer;
   transition: background 0.5s ease;
 }
@@ -114,8 +113,6 @@
   position: relative;
   width: 80%;
   max-width: 30em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto;
   background-color: #ffffff;
@@ -131,8 +128,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 0.7em;
   font-size: 1.8em;
@@ -443,8 +438,6 @@
   }
   #story .story__container {
     max-width: 60em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
     margin: auto 0;
     padding: 2em;
@@ -489,8 +482,6 @@
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin: 1em auto;
   padding: 1em;

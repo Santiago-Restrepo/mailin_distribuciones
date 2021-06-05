@@ -4,12 +4,27 @@ const PRODUCT_ARRAY = Array.apply(null, PRODUCT_NODELIST);
 let loaded_products= [];
 let windowSize= (window.innerHeight * 2 );
 
+const fetchProduct = async (product_number) => {
+    let product = await firebase.database().ref().child("product").child(product_number).get().then((snapshot) => {
+        if (snapshot.exists()) {
+            return snapshot.val();
+        } else {
+            return null;
+        }
+    }).catch((error) => {
+        console.error(error);
+        return null;
+    });;
+    debugger
+    return product;    
+}
+
 const renderProduct= async (element)=>{
-    
     try {
         let product_number= element.classList[1];
         let productPromise = await fetch(`${API}/${product_number}.json`);//llamado a la base de datos
         let product = await productPromise.json();//llamado a la base de datos
+        // let product = await fetchProduct(product_number);//llamado a la base de datos
         loaded_products.push(product);
         let oldPrice = parseInt(product.prices.old.replace(".",""));
         let currentPrice = parseInt(product.prices.current.replace(".",""));
@@ -18,7 +33,6 @@ const renderProduct= async (element)=>{
         //renderizado de producto
         
         element.firstElementChild.firstElementChild.setAttribute("src", product.images.catalog); //renderizado de imagen
-        debugger
         if(product.prices.old){
             element.firstElementChild.lastElementChild.style.display="block";
             element.firstElementChild.lastElementChild.innerHTML= `${discount}%` //renderizado de descuento
