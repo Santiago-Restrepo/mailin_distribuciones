@@ -1,0 +1,25 @@
+{
+  "name": "mailin_distribuciones",
+  "version": "1.0.0",
+  "description": "Página web de Mailin Distribuciones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santiago-Restrepo/mailin_distribuciones.git"
+  },
+  "keywords": [
+    "Tienda online",
+    "Ecommerce",
+    "Colombia",
+    "Medellín"
+  ],
+  "author": "Santiago Restrepo Idárraga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santiago-Restrepo/mailin_distribuciones/issues"
+  },
+  "homepage": "https://github.com/Santiago-Restrepo/mailin_distribuciones#readme"
+}

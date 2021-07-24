@@ -1,3 +1,5 @@
 pug/
 sass/
 ideas/
+prepros.config
+.vscode/
