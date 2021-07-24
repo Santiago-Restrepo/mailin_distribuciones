@@ -24,33 +24,16 @@
   }
 }
 #sales {
+  margin: 3em 3em 0;
   padding: 2em 0;
   background-color: #ffffff;
+  box-shadow: 0px 3px 5px -2px #b3b1b1;
 }
 #sales .glider {
   position: relative;
 }
 #sales .glider .glider__left, #sales .glider .glider__right {
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  background: none;
-  border: none;
-  font-size: 2em;
-  padding: 0.2em;
-  color: #ffffff;
-  background-color: #00060393;
-  cursor: pointer;
-  transition: background 0.5s ease;
-}
-#sales .glider .glider__left:hover, #sales .glider .glider__right:hover {
-  background-color: #000603;
-}
-#sales .glider .glider__left {
-  left: 5%;
-}
-#sales .glider .glider__right {
-  right: 5%;
+  display: none;
 }
 #sales .glider-dots {
   margin-top: 1em;
@@ -62,23 +45,6 @@
 }
 #sales .glider-dot.active {
   background-color: #000603;
-}
-#sales .glider .glider__list {
-  /*Perspectiva*/
-  /*Fin perspectiva*/
-}
-#sales .glider .glider__list .left-1, #sales .glider .glider__list .left-2, #sales .glider .glider__list .left-3, #sales .glider .glider__list .left-4, #sales .glider .glider__list .right-1, #sales .glider .glider__list .right-2, #sales .glider .glider__list .right-3, #sales .glider .glider__list .right-4 {
-  z-index: 1;
-  opacity: 0.9;
-}
-#sales .glider .glider__list .active {
-  z-index: 2;
-}
-#sales .glider .glider__list .left-1 {
-  transform: translateX(25%) scale(0.8);
-}
-#sales .glider .glider__list .right-1 {
-  transform: translateX(-25%) scale(0.8);
 }
 #sales .glider .glider__list .product {
   width: 100%;
@@ -136,92 +102,22 @@
   color: #ffffff;
 }
 
-@media screen and (min-width: 425px) {
-  #sales .glider .glider__list .left-1 {
-    transform: translateX(30%) scale(0.8);
-  }
-  #sales .glider .glider__list .right-1 {
-    transform: translateX(-30%) scale(0.8);
-  }
-}
-@media screen and (min-width: 472px) {
-  #sales .glider .glider__list .left-1 {
-    transform: translateX(40%) scale(0.8);
-  }
-  #sales .glider .glider__list .right-1 {
-    transform: translateX(-40%) scale(0.8);
-  }
-}
 @media screen and (min-width: 550px) {
   #sales .glider {
     max-width: 76.8em;
-  }
-  #sales .glider .glider__list .left-1 {
-    transform: translateX(48%) scale(0.8);
-  }
-  #sales .glider .glider__list .right-1 {
-    transform: translateX(-48%) scale(0.8);
-  }
-  #sales .glider .glider__list .left-2 {
-    transform: translateX(100%) scale(0.7);
-  }
-  #sales .glider .glider__list .right-2 {
-    transform: translateX(-100%) scale(0.7);
   }
 }
 @media screen and (min-width: 597px) {
   #sales .glider .glider__list .product {
     transition: 0.5s ease;
   }
-  #sales .glider .glider__list .left-1 {
-    transform: translateX(53%) scale(0.8);
-  }
-  #sales .glider .glider__list .right-1 {
-    transform: translateX(-53%) scale(0.8);
-  }
-  #sales .glider .glider__list .left-2 {
-    transform: translateX(112%) scale(0.7);
-  }
-  #sales .glider .glider__list .right-2 {
-    transform: translateX(-112%) scale(0.7);
-  }
-  #sales .glider .glider__list .left-3 {
-    transform: translateX(130%) scale(0.6);
-  }
-  #sales .glider .glider__list .right-3 {
-    transform: translateX(-130%) scale(0.6);
-  }
 }
 @media screen and (min-width: 720px) {
   #sales {
-    padding: 7em 0;
+    padding: 3em 0;
   }
   #sales .glider .glider__list .product {
     transition: 0.6s ease;
-  }
-  #sales .glider .glider__list .left-1 {
-    transform: translateX(60%) scale(0.8);
-  }
-  #sales .glider .glider__list .right-1 {
-    transform: translateX(-60%) scale(0.8);
-  }
-  #sales .glider .glider__list .left-2 {
-    transform: translateX(126%) scale(0.7);
-  }
-  #sales .glider .glider__list .right-2 {
-    transform: translateX(-126%) scale(0.7);
-  }
-  #sales .glider .glider__list .left-3 {
-    transform: translateX(195%) scale(0.6);
-  }
-  #sales .glider .glider__list .right-3 {
-    transform: translateX(-195%) scale(0.6);
-  }
-  #sales .glider .glider__list .left-4 {
-    transform: translateX(225%) scale(0.5);
-  }
-  #sales .glider .glider__list .right-4 {
-    transform: translateX(-225%) scale(0.5);
   }
 }
 @media screen and (min-width: 768px) {
@@ -230,9 +126,38 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  #sales {
+    width: 70%;
+    max-width: 100em;
+    margin: 0 auto;
+  }
+  #sales .glider .glider__left, #sales .glider .glider__right {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2em;
+    padding: 0.2em;
+    color: #ffffff;
+    background-color: #00060393;
+    cursor: pointer;
+    transition: background 0.5s ease;
+  }
+  #sales .glider .glider__left:hover, #sales .glider .glider__right:hover {
+    background-color: #000603;
+  }
+  #sales .glider .glider__left {
+    left: 0;
+  }
+  #sales .glider .glider__right {
+    right: 0;
+  }
   #sales .glider .glider__list .product .product__image {
     max-width: 25em;
     overflow: hidden;
+    transition: opacity 1s;
   }
   #sales .glider .glider__list .product .product__image img {
     transition: transform 0.5s ease;
@@ -245,6 +170,13 @@
   }
   #sales .glider .glider__list .product .product__info {
     max-width: 25em;
+    transition: opacity 1s;
+  }
+  #sales .glider .glider__list .left-1 .product__image, #sales .glider .glider__list .left-1 .product__info, #sales .glider .glider__list .left-2 .product__image, #sales .glider .glider__list .left-2 .product__info {
+    opacity: 0.5;
+  }
+  #sales .glider .glider__list .right-1 .product__image, #sales .glider .glider__list .right-1 .product__info, #sales .glider .glider__list .right-2 .product__image, #sales .glider .glider__list .right-2 .product__info {
+    opacity: 0.5;
   }
 }
 #lines {
@@ -253,20 +185,6 @@
   flex-direction: column;
   align-items: center;
   padding: 3em 0;
-}
-#lines .lines__image {
-  position: absolute;
-  width: 10%;
-  max-width: 10em;
-}
-#lines .lines__image:nth-last-of-type(1) {
-  top: -1%;
-  left: 0;
-}
-#lines .lines__image:nth-last-of-type(2) {
-  transform: rotateY(180deg);
-  top: 50%;
-  right: 0;
 }
 #lines .lines__title {
   margin-bottom: 0.5em;
@@ -336,12 +254,6 @@
   #lines {
     padding-top: 5em;
   }
-  #lines .lines__image:nth-last-of-type(1) {
-    top: -10%;
-  }
-  #lines .lines__image:nth-last-of-type(2) {
-    top: 30%;
-  }
   #lines .lines__title {
     margin-bottom: 2em;
   }
@@ -353,9 +265,6 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  #lines .lines__image {
-    max-width: 7em;
-  }
   #lines .catalog {
     grid-template-columns: repeat(3, 1fr);
     max-width: 80em;

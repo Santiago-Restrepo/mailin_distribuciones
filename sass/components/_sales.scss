@@ -1,33 +1,13 @@
 #sales{
+    margin: 3em 3em 0;
     padding: 2em 0;
+    // border-bottom: 1px solid $Color-gris-claro;
     background-color: $Color-blanco;
+    box-shadow: 0px 3px 5px -2px $Color-gris-claro;
     .glider{
         position: relative;
         .glider__left,.glider__right{
-            z-index: 1;
-            position: absolute;
-            top: 50%;
-            background: none;
-            border: none;
-            font-size: 2em;
-            padding: .2em;
-            color: $Color-blanco;
-            background-color: #00060393;
-            
-            cursor: pointer;
-            transition: background .5s ease;
-            
-        }
-        .glider__left:hover,.glider__right:hover{
-            background-color: #000603;
-        }
-        .glider__left{
-            left: 5%;
-
-        }
-        .glider__right{
-            right: 5%;
-
+            display: none;
         }
         &-dots{
             margin-top: 1em;
@@ -41,21 +21,7 @@
             background-color: $Color-negro;
         }
         .glider__list{
-            /*Perspectiva*/
-            .left-1,.left-2,.left-3,.left-4,.right-1,.right-2,.right-3,.right-4{
-                z-index: 1;
-                opacity: .9;
-            }
-            .active{
-                z-index: 2;
-            }
-            .left-1{
-                transform: translateX(25%) scale(.8);
-            }
-            .right-1{
-                transform: translateX(-25%) scale(.8);
-            }
-            /*Fin perspectiva*/
+
             .product{
                 width: 100%;
                 transition: .3s ease;
@@ -123,91 +89,23 @@
     }
 }
 @media screen and (min-width: $break-mobile-L) {
-    #sales{
-        .glider{
-            .glider__list{
-                // .product{
-                //     .product__image{
-                //     }
-                // }
-                .left-1{
-                    transform: translateX(30%) scale(.8);
-                }
-                .right-1{
-                    transform: translateX(-30%) scale(.8);
-    
-                }
-            }
-        }
-    }
+
 }
-@media screen and (min-width: 472px) {
-    #sales{
-        .glider{
-            .glider__list{
-                // .product{
-                //     .product__image{
-                        
-                //     }
-                // }
-                .left-1{
-                    transform: translateX(40%) scale(.8);
-                }
-                .right-1{
-                    transform: translateX(-40%) scale(.8);
-                    
-                }
-            }
-        }
-    }
-}
+
 @media screen and (min-width: 550px) {
     #sales{
         .glider{
             max-width: 76.8em;
-            .glider__list{
-                .left-1{
-                    transform: translateX(48%) scale(.8);
-                }
-                .right-1{
-                    transform: translateX(-48%) scale(.8);
-                    
-                }
-                .left-2{
-                    transform: translateX(100%) scale(.7);
-                }
-                .right-2{
-                    transform: translateX(-100%) scale(.7);  
-                }
-            }
         }
     }
 }
 @media screen and (min-width: $break-mobile-tablet) {
     #sales{
+        
         .glider{
             .glider__list{
                 .product{
                     transition: .5s ease;
-                }
-                .left-1{
-                    transform: translateX(53%) scale(.8);
-                }
-                .right-1{
-                    transform: translateX(-53%) scale(.8);
-                    
-                }
-                .left-2{
-                    transform: translateX(112%) scale(.7);
-                }
-                .right-2{
-                    transform: translateX(-112%) scale(.7);  
-                }
-                .left-3{
-                    transform: translateX(130%) scale(.6);
-                }
-                .right-3{
-                    transform: translateX(-130%) scale(.6);  
                 }
             }
         }
@@ -215,37 +113,12 @@
 }
 @media screen and (min-width: 720px) {
     #sales{
-        padding: 7em 0;
+        padding: 3em 0;
         .glider{
             .glider__list{
                 
                 .product{
                     transition: .6s ease;
-                }
-                .left-1{
-                    transform: translateX(60%) scale(.8);
-                }
-                .right-1{
-                    transform: translateX(-60%) scale(.8);
-                    
-                }
-                .left-2{
-                    transform: translateX(126%) scale(.7);
-                }
-                .right-2{
-                    transform: translateX(-126%) scale(.7);  
-                }
-                .left-3{
-                    transform: translateX(195%) scale(.6);
-                }
-                .right-3{
-                    transform: translateX(-195%) scale(.6);  
-                }
-                .left-4{
-                    transform: translateX(225%) scale(.5);
-                }
-                .right-4{
-                    transform: translateX(-225%) scale(.5);  
                 }
             }
         }
@@ -268,36 +141,44 @@
         }
     }
 }
-// @media screen and (min-width: 850px) {
-//     #sales{
-//         .glider{
-//             .glider__list{
-//                 .left-1{
-//                     transform: translateX(73%) scale(.7);
-//                 }
-//                 .right-1{
-//                     transform: translateX(-73%) scale(.7);
-//                 }
-//                 // .left-2{
-//                 //     transform: translateX(153.5%) scale(.5);
-//                 // }
-//                 // .right-2{
-//                 //     transform: translateX(-153.5%) scale(.5);
-//                 // }
-//             }
-//         }
-//     }
-// }
+
 @media screen and (min-width: $break-laptop) {
     #sales{
-
+        width: 70%;
+        max-width: 100em;
+        margin: 0 auto;
         .glider{
+            .glider__left,.glider__right{
+                z-index: 1;
+                position: absolute;
+                top: 50%;
+                display: block;
+                background: none;
+                border: none;
+                font-size: 2em;
+                padding: .2em;
+                color: $Color-blanco;
+                background-color: #00060393;
+                cursor: pointer;
+                transition: background .5s ease;
+            }
+            .glider__left:hover,.glider__right:hover{
+                background-color: #000603;
+            }
+            .glider__left{
+                left: 0;
+    
+            }
+            .glider__right{
+                right: 0;
+    
+            }
             .glider__list{
                 .product{
-                    
                     .product__image{
                         max-width: 25em;
                         overflow: hidden;
+                        transition: opacity 1s;
                         img{
                             transition: transform .5s ease;
                         }
@@ -310,26 +191,21 @@
                     }
                     .product__info{
                         max-width: 25em;
+                        transition: opacity 1s;
 
+                    }
+                }
+                .left-1, .left-2{
+                    .product__image, .product__info{
+                        opacity: .5;
+                    }
+                }
+                .right-1, .right-2{
+                    .product__image, .product__info{
+                        opacity: .5;
                     }
                 }
             }
         }
     }
 }
-// @media screen and (min-width: $break-laptop-M) {
-//     #sales{
-//         .glider{
-//             max-width: 150em;
-//             .glider__list{
-//                 .product{
-//                     .product__image{
-//                         width: 50%;
-//                         max-width: 40em;
-//                     }
-//                 }
-                
-//             }
-//         }
-//     }
-// }
