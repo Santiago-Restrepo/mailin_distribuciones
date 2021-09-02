@@ -27,7 +27,6 @@ const fetchIp = async () =>{
 
 const fetchLocation = async (ip) =>{
     try{
-        // let locationPromise = await fetch(`https://ipwhois.app/json/${ip}`);
         let locationPromise = await fetch(`https://ipinfo.io/${ip}?token=298c4e899c2f78`);
         // ,{
         // headers: new Headers({

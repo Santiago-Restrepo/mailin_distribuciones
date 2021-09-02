@@ -14,8 +14,7 @@ const fetchProduct = async (product_number) => {
     }).catch((error) => {
         console.error(error);
         return null;
-    });;
-    debugger
+    });
     return product;    
 }
 
@@ -25,7 +24,7 @@ const renderProduct= async (element)=>{
         let productPromise = await fetch(`${API}/${product_number}.json`);//llamado a la base de datos
         let product = await productPromise.json();//llamado a la base de datos
         // let product = await fetchProduct(product_number);//llamado a la base de datos
-        loaded_products.push(product);
+        loaded_products.push(product);//Hacemos push al array loaded_products para no volver a cargar esos productos luego
         let oldPrice = parseInt(product.prices.old.replace(".",""));
         let currentPrice = parseInt(product.prices.current.replace(".",""));
         let discount= Math.round(( oldPrice - currentPrice ) * 100 / oldPrice);
@@ -44,7 +43,7 @@ const renderProduct= async (element)=>{
         element.classList.add("fadeIn");
         
     } catch (error) {
-        
+        console.error(error);
     }
 
 }

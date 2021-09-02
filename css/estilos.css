@@ -249,10 +249,6 @@ input {
     font-size: 70%;
   }
 
-  .lines__label {
-    display: none;
-  }
-
   .modal .productModal {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -26,8 +26,8 @@
 #sales {
   margin: 3em 3em 0;
   padding: 2em 0;
+  border-bottom: 1px solid #b3b1b1;
   background-color: #ffffff;
-  box-shadow: 0px 3px 5px -2px #b3b1b1;
 }
 #sales .glider {
   position: relative;
@@ -104,20 +104,12 @@
 
 @media screen and (min-width: 550px) {
   #sales .glider {
-    max-width: 76.8em;
+    margin: 0 5em;
   }
 }
 @media screen and (min-width: 597px) {
   #sales .glider .glider__list .product {
     transition: 0.5s ease;
-  }
-}
-@media screen and (min-width: 720px) {
-  #sales {
-    padding: 3em 0;
-  }
-  #sales .glider .glider__list .product {
-    transition: 0.6s ease;
   }
 }
 @media screen and (min-width: 768px) {
@@ -127,8 +119,7 @@
 }
 @media screen and (min-width: 1024px) {
   #sales {
-    width: 70%;
-    max-width: 100em;
+    width: 100%;
     margin: 0 auto;
   }
   #sales .glider .glider__left, #sales .glider .glider__right {

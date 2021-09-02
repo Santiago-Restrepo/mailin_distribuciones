@@ -1,9 +1,9 @@
 #sales{
     margin: 3em 3em 0;
     padding: 2em 0;
-    // border-bottom: 1px solid $Color-gris-claro;
+    border-bottom: 1px solid $Color-gris-claro;
     background-color: $Color-blanco;
-    box-shadow: 0px 3px 5px -2px $Color-gris-claro;
+    // box-shadow: 0px 3px 5px -2px $Color-gris-claro;
     .glider{
         position: relative;
         .glider__left,.glider__right{
@@ -95,13 +95,12 @@
 @media screen and (min-width: 550px) {
     #sales{
         .glider{
-            max-width: 76.8em;
+            margin: 0 5em;
         }
     }
 }
 @media screen and (min-width: $break-mobile-tablet) {
     #sales{
-        
         .glider{
             .glider__list{
                 .product{
@@ -111,23 +110,21 @@
         }
     }
 }
-@media screen and (min-width: 720px) {
-    #sales{
-        padding: 3em 0;
-        .glider{
-            .glider__list{
-                
-                .product{
-                    transition: .6s ease;
-                }
-            }
-        }
-    }
-}
+// @media screen and (min-width: 720px) {
+//     #sales{
+//         padding: 3em 0;
+//         .glider{
+//             .glider__list{      
+//                 .product{
+//                     transition: .6s ease;
+//                 }
+//             }
+//         }
+//     }
+// }
 @media screen and (min-width: $break-tablet) {
     #sales{
-        .glider{
-            
+        .glider{   
             .glider__list{
                 .product{
                     .product__image{
@@ -144,8 +141,7 @@
 
 @media screen and (min-width: $break-laptop) {
     #sales{
-        width: 70%;
-        max-width: 100em;
+        width: 100%;
         margin: 0 auto;
         .glider{
             .glider__left,.glider__right{

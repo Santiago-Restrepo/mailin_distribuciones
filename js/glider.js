@@ -31,7 +31,7 @@ window.addEventListener('load', function(){
 			settings: {
 				duration:1,
 				slidesToShow: 3,
-				draggable: true,
+				draggable: false,
 
 			  }
 			}

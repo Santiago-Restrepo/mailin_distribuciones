@@ -4,20 +4,20 @@ let catalog;
 
 
 const fetchCatalog = async () =>{
-    let catalog_promise = await fetch(`${API}.json`);
+    let catalog_promise = await fetch(`${API}.json`); // Petición para traer todo el catálogo de la API
     catalog =  await catalog_promise.json();
 };
 
-window.addEventListener('load', fetchCatalog);
+document.addEventListener('load', fetchCatalog);
 
 
 SEARCH_BAR.addEventListener('keyup', async (e)=>{
-    cleanCatalogContainer();
+    cleanCatalogContainer(); //Limpiamos todo lo que haya rederizado
     if(!catalog){
         fetchCatalog();
     }
-    filtered_catalog = catalog.filter(object => object.name.toLowerCase().includes(e.target.value.toLowerCase()));
-    renderFilteredCatalog(filtered_catalog);
+    filtered_catalog = catalog.filter(object => object.name.toLowerCase().includes(e.target.value.toLowerCase())); // filtra el catálogo por lo que se encuentre en el input
+    renderFilteredCatalog(filtered_catalog);// renderiza lo que haya hecho match
 
 });
 
