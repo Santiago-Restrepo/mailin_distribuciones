@@ -1,17 +1,3 @@
-.fadeWidth {
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-  animation-name: fadeWidth;
-}
-
-@keyframes fadeWidth {
-  from {
-    width: 15em;
-  }
-  to {
-    width: 25em;
-  }
-}
 .fadeIn {
   animation-duration: 1.5s;
   animation-fill-mode: both;
@@ -52,19 +38,5 @@
   }
   to {
     transform: translateX(0) rotateX(180deg);
-  }
-}
-@media screen and (min-width: 1024px) {
-  .fadeWidth {
-    animation-duration: 1.1s;
-  }
-
-  @keyframes fadeWidth {
-    from {
-      width: 15em;
-    }
-    to {
-      width: 21em;
-    }
   }
 }

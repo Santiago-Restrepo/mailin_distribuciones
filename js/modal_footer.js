@@ -3,7 +3,7 @@ var DISTRIBUTOR_MODAL= document.querySelector(".distributorModal");
 var DISTRIBUTOR_BUTTON= document.querySelector(".buttons__container > .footer__button:nth-of-type(1)");
 var WHOLESALE_MODAL= document.querySelector(".wholesaleModal");
 var WHOLESALE_BUTTON= document.querySelector(".buttons__container > .footer__button:nth-of-type(2)");
-const HTML_ELEMENT = document.querySelector("#html"); 
+
 
 const openDistributorModal =()=>{
     HTML_ELEMENT.style.overflow="hidden";

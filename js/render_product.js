@@ -31,7 +31,7 @@ const renderProduct= async (element)=>{
         
         //renderizado de producto
         
-        element.firstElementChild.firstElementChild.setAttribute("src", product.images.catalog); //renderizado de imagen
+        // element.firstElementChild.firstElementChild.setAttribute("src", product.images.catalog); //renderizado de imagen
         if(product.prices.old){
             element.firstElementChild.lastElementChild.style.display="block";
             element.firstElementChild.lastElementChild.innerHTML= `${discount}%` //renderizado de descuento

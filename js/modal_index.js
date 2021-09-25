@@ -8,7 +8,7 @@ const openProductModal = (e)=>{
         let product_number= product_selected.classList[1];//obtención que representa en la base de datos firebase
         let product = loaded_products.filter(element => element.id==product_number)[0];//De aquí obtiene el elemento que coincida con ese numero buscando en el 
         //array de objetos "loaded_products" el cual guarda los elementos que han cargado
-        PRODUCT_MODAL.childNodes[2].firstElementChild.setAttribute("src",product.images.modal);//colocación de imagen
+        // PRODUCT_MODAL.childNodes[2].firstElementChild.setAttribute("src",product.images.modal);//colocación de imagen
         PRODUCT_MODAL.childNodes[4].childNodes[1].innerHTML= product.name;//colocación de nombre
         PRODUCT_MODAL.childNodes[4].childNodes[3].innerHTML= product.description;//colocación de descripción
         PRODUCT_MODAL.childNodes[4].childNodes[5].innerHTML= `X ${product.size}`;//colocación del tamaño

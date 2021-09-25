@@ -195,13 +195,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15em;
+  width: 25em;
   height: 30em;
   margin-bottom: 3.5em;
   padding: 1.5em;
   background-color: #000603a9;
   box-shadow: 0px 2px 5px #0000009a;
   text-decoration: none;
+  transform: scale(0.3);
+  transition: transform 0.5s;
+  transform-origin: top;
 }
 #lines .catalog .line__image {
   z-index: -1;
@@ -240,6 +243,9 @@
   color: #72EF8B;
   text-decoration: none;
 }
+#lines .catalog .fadeWidth {
+  transform: scale(1);
+}
 
 @media screen and (min-width: 768px) {
   #lines {
@@ -262,7 +268,6 @@
   }
   #lines .catalog .line {
     overflow: hidden;
-    width: 15em;
     height: 26em;
   }
   #lines .catalog .line .line__image {

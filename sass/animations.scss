@@ -1,22 +1,3 @@
-.fadeWidth{
-    -webkit-animation-duration: .7s;
-    animation-duration: .7s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: fadeWidth;
-    animation-name: fadeWidth;
-}
-
-@keyframes fadeWidth{
-    from{
-        width: 15em;
-    }
-    
-    to{
-        width: 25em;
-    }
-
-}
 .fadeIn{
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
@@ -74,21 +55,4 @@
         transform: translateX(0) rotateX(180deg);
     }
 
-}
-
-@media screen and (min-width: 1024px) {
-    .fadeWidth{
-        -webkit-animation-duration: 1.1s;
-        animation-duration: 1.1s;
-    }
-    @keyframes fadeWidth{
-        from{
-            width: 15em;
-        }
-        
-        to{
-            width: 21em;
-        }
-    
-    }
 }
