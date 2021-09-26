@@ -11,17 +11,18 @@ class Catalog{
 
         this.setEntireCatalog(JSON.parse(window.localStorage.getItem('catalogJson')));
         //Renderizamos el catálogo que capturamos
-        this.renderCatalog(this.content)
+        this.renderCatalog(this.content);
     }
 
     getProductArray(jsonElement){
         let productArray = [];
+
         jsonElement.forEach(element => {
             productArray.push(new Product(element));
         });
         return productArray;
     }
-
+    
     setEntireCatalog(jsonCatalog){
         for (const category in jsonCatalog) {
             jsonCatalog[category].forEach(element => {

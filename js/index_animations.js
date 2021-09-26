@@ -54,7 +54,4 @@ window.addEventListener('scroll', ()=>{
     if(windowSize > location_position){
         location_container.classList.add('fadeIn');
     }
-
-
-    
 })

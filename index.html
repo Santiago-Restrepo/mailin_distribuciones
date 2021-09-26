@@ -177,98 +177,10 @@
       </div><span class="rights">© Mailin Distribuciones</span>
     </footer>
     <script async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="js/glider.js"> </script>
-    <script src="js/index_animations.js"> </script>
-    <script>
-      var MODAL_BACKGROUND= document.querySelectorAll(".modal");
-      var DISTRIBUTOR_MODAL= document.querySelector(".distributorModal");
-      var DISTRIBUTOR_BUTTON= document.querySelector(".buttons__container > .footer__button:nth-of-type(1)");
-      var WHOLESALE_MODAL= document.querySelector(".wholesaleModal");
-      var WHOLESALE_BUTTON= document.querySelector(".buttons__container > .footer__button:nth-of-type(2)");
-      const HTML_ELEMENT = document.querySelector("#html"); 
-      
-      const openDistributorModal =()=>{
-          HTML_ELEMENT.style.overflow="hidden";
-          MODAL_BACKGROUND[1].classList.add("is-visible");
-          DISTRIBUTOR_MODAL.classList.add("modal-visible");
-      
-      }
-      const closeDistributorModal= ()=>{
-          DISTRIBUTOR_MODAL.classList.remove("modal-visible");
-          MODAL_BACKGROUND[1].classList.remove("is-visible");
-          HTML_ELEMENT.style.overflow="auto";
-      }
-      const openWholesaleModal =()=>{
-          HTML_ELEMENT.style.overflow="hidden";
-          MODAL_BACKGROUND[2].classList.add("is-visible");
-          WHOLESALE_MODAL.classList.add("modal-visible");
-      }
-      const closeWholeModal= ()=>{
-          WHOLESALE_MODAL.classList.remove("modal-visible");
-          MODAL_BACKGROUND[2].classList.remove("is-visible");
-          HTML_ELEMENT.style.overflow="auto";
-      }
-      
-      DISTRIBUTOR_MODAL.firstElementChild.addEventListener("click",closeDistributorModal);
-      WHOLESALE_MODAL.firstElementChild.addEventListener("click",closeWholeModal);
-      DISTRIBUTOR_BUTTON.addEventListener("click",openDistributorModal);
-      WHOLESALE_BUTTON.addEventListener("click",openWholesaleModal);
-    </script>
-    <script>
-      const hamburguer_button = document.querySelector('.hamburguer_button');
-      const mobile_menu = document.querySelector('.mobile_menu');
-      const hero = document.querySelector('#hero');
-      const sales = document.querySelector('#sales');
-      const lines = document.querySelector('#lines');
-      const story = document.querySelector('#story');
-      const location_section = document.querySelector('#location');
-      const contact = document.querySelector('.footer');
-      const home_button = document.querySelector(".mobile_menu > li:nth-of-type(1)");
-      const contact_button = document.querySelector(".mobile_menu > li:nth-of-type(2)");
-      const sales_button = document.querySelector(".mobile_menu > li:nth-of-type(3)");
-      const lines_button = document.querySelector(".mobile_menu > li:nth-of-type(4)");
-      const story_button = document.querySelector(".mobile_menu > li:nth-of-type(5)");
-      const location_button = document.querySelector(".mobile_menu > li:nth-of-type(6)");
-      const sections = [home_button,contact_button,lines_button,story_button,location_button,sales_button];
-      
-      
-      //evento para cambiar de color el nav
-      
-      sections.forEach(element => {
-          element.addEventListener('click', ()=>{
-              sections.forEach(internalElement => {
-                  internalElement.classList.remove('active');
-              });
-              element.classList.add('active');
-          })
-      });
-      
-      //evento para cerrar menú mobile cada que se clickee una opción
-      
-      for (let i = 0; i < mobile_menu.children.length; i++) {
-          const element = mobile_menu.children[i];
-          element.addEventListener('click',()=>{
-              closeMenu();
-          })
-          
-      }
-      const closeMenu = ()=>{
-          hamburguer_button.click();
-      }
-      
-      //evento para intercambiar hamburguer menu por close button
-      
-      hamburguer_button.addEventListener("click", ()=>{
-          mobile_menu.classList.toggle("show");
-          if(mobile_menu.classList.contains('show')){
-              hamburguer_button.setAttribute('src', 'images/close_button.svg');
-              hamburguer_button.style.transform="rotateY(360deg)";
-          }else{
-              hamburguer_button.setAttribute('src', 'images/hamburguer_menu.svg')
-              hamburguer_button.style.transform="rotateY(0deg)";
-          }
-      });
-    </script><!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="js/glider.js"></script>
+    <script src="js/index.js" type="module"> </script>
+    <script src="js/index_animations.js"></script>
+    <script src="../js/menu.js"></script><!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js"></script><!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-analytics.js"></script>
     <script>
@@ -285,12 +197,8 @@
           measurementId: "G-GB2LF0G27Y"
       };
       // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-      
+      firebase.initializeApp(firebaseConfig)
     </script>
-    <script src="js/render_product.js"></script>
-    <script src="js/modal_index.js"> </script>
     <script src="js/mailin-analytics.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">

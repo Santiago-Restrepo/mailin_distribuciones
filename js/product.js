@@ -20,7 +20,7 @@ class Product{
         this.htmlElement.classList.add('product');
         this.htmlElement.innerHTML= `
         <div class="product__image">
-            <img src="${this.imagesUrl.catalog}" alt="Imagen del producto ${this.name}"/>
+            <img alt="Imagen del producto ${this.name}"/>
             <button class="view_more">Ver más</button>
             <span class="product__discount"></span>
         </div>
@@ -31,14 +31,33 @@ class Product{
                 <span class="product__prices-new">${this.prices.current}</span>
             </div>
         </div>`;
-        this.rendered = false;
-        this.modal = SingletonModal.getInstance();
-        this.addEventToButton();
+        this.htmlImageElement = this.htmlElement.firstElementChild.firstElementChild;
+        this.counter = 0;
+        this.productObserver = new IntersectionObserver(this.handleIntersection.bind(this), 
+            {
+            threshold: 1
+        });
+        this.productObserver.observe(this.htmlElement);
+        this.modal = SingletonModal.getInstance('product');
+        this.addModalEvent();
     };
 
-    addEventToButton(){
+    handleIntersection(entries){
+        let entry = entries[0];
+        if ((window.innerHeight)/1.2 > entry.target.getBoundingClientRect().top && this.htmlImageElement.src == '') {
+            this.htmlImageElement.setAttribute('src',this.imagesUrl.catalog);
+        }
+    }
+
+    addModalEvent(){
         //le añadimos el evento al botón correspondiente de la instancia del producto, además la función que será disparada cuando el evento sea accionada es una función a la cual le configuramos el bind para que el this con el que interactuemos en la función openModal sea la única instancia del modal, de paso le pasamos como parámetro this, osea la instancia del producto, debido a que la función openModal recibe un producto como parámetro
-        this.htmlElement.firstElementChild.children[1].addEventListener('click', this.modal.openModal.bind(this.modal,this))
+        if (window.matchMedia("(min-width: 1024px)").matches) {
+            /* La pantalla tiene al menos 1024 píxeles de ancho */
+            this.htmlElement.firstElementChild.children[1].addEventListener('click', this.modal.openModal.bind(this.modal,this))
+        } else {
+            /* La pantalla tiene menos de 1024 píxeles de ancho */
+            this.htmlElement.addEventListener('click', this.modal.openModal.bind(this.modal,this))
+          }
     }
     
 }
