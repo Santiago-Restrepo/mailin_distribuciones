@@ -12,7 +12,6 @@ class SingletonModal{
             'product': this.getProductInstance(),
             'distributor': this.getDistributorInstance(),
             'wholesale': this.getWholesaleInstance()
-
         }
         return options[type];
         
@@ -51,9 +50,10 @@ class SingletonModal{
 
                     //renderizado de elementos del modal
                     this.image.setAttribute('src',product.imagesUrl.modal);
+                    this.image.classList.remove('loadgif');
                     this.name.innerHTML = product.name;
                     this.description.innerHTML = product.description;
-                    this.size.innerHTML = product.size;
+                    this.size.innerHTML = `x ${product.size}`;
                     this.prices.current.innerHTML = product.prices.current;
                     this.prices.old.innerHTML = product.prices.old;
                 },
@@ -67,6 +67,7 @@ class SingletonModal{
                     //Luego resetea los valores que se encontraban en el modal
                     setTimeout(()=>{
                         this.image.setAttribute("src","../images/load.gif");//colocación de imagen
+                        this.image.classList.add('loadgif');
                         this.name.innerHTML= "Cargando...";
                         this.description.innerHTML= "Cargando...";
                         this.size.innerHTML= "Cargando...";//colocación del tamaño

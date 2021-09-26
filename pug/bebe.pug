@@ -54,28 +54,27 @@ html(lang="en")#html
                 a(href="quema-grasa.html").line__menu-element quema grasa
                 a(href="estuches.html").line__menu-element estuches
         main.catalog
-            img(src="../images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
             .catalog__container 
-                +product("")(class="32")
-                +product("")(class="33")       
-                +product("")(class="34")  
-                +product("")(class="0") 
-                +product("")(class="35")      
-                +product("")(class="47") 
-                +product("")(class="44") 
-                +product("")(class="74") 
-                +product("")(class="75")
-                +product("")(class="38")                      
-                +product("")(class="36")        
-                +product("")(class="37")      
-                +product("")(class="43") 
-                +product("")(class="45") 
-                +product("")(class="46") 
-                +product("")(class="71") 
-                +product("")(class="72") 
-                +product("")(class="73") 
+            img(src="../images/load.gif", alt="Imagen de carga").loadgif
+                //- +product("")(class="32")
+                //- +product("")(class="33")       
+                //- +product("")(class="34")  
+                //- +product("")(class="0") 
+                //- +product("")(class="35")      
+                //- +product("")(class="47") 
+                //- +product("")(class="44") 
+                //- +product("")(class="74") 
+                //- +product("")(class="75")
+                //- +product("")(class="38")                      
+                //- +product("")(class="36")        
+                //- +product("")(class="37")      
+                //- +product("")(class="43") 
+                //- +product("")(class="45") 
+                //- +product("")(class="46") 
+                //- +product("")(class="71") 
+                //- +product("")(class="72") 
+                //- +product("")(class="73") 
                  
-            img(src="../images/hojas_medio2.svg", alt="Imagen de hoja sencilla").lines__image
         .modal
             .distributorModal
                 img(src="../images/close_button.svg", alt="Menú de hamburguesa").close_button 
@@ -91,11 +90,6 @@ html(lang="en")#html
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1puLzSvehJP_yky7VS1LicPtRsnWOdbtCKzSCrqyi7QWiwA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 img(src="../images/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
         include componentes/_footer.pug
-        script(src="../js/render_product.js")
-        script(src="../js/lines_animations.js")
-        script(src="../js/modal_footer.js") 
-        script(src="../js/modal_index.js") 
-        script(src="../js/modal_lines.js") 
+        script(src="../js/index.js", type="module")
         script(src="../js/menu.js")
-        script(src="../js/search_product.js")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')

@@ -20,7 +20,7 @@ class Product{
         this.htmlElement.classList.add('product');
         this.htmlElement.innerHTML= `
         <div class="product__image">
-            <img alt="Imagen del producto ${this.name}"/>
+            <img src="../images/load.gif" alt="Imagen del producto ${this.name}" class="loadgif"/>
             <button class="view_more">Ver más</button>
             <span class="product__discount"></span>
         </div>
@@ -32,10 +32,10 @@ class Product{
             </div>
         </div>`;
         this.htmlImageElement = this.htmlElement.firstElementChild.firstElementChild;
-        this.counter = 0;
+        //Definimos un observador para cada producto y establecemos la misma instancia del producto como this a través del bind
         this.productObserver = new IntersectionObserver(this.handleIntersection.bind(this), 
             {
-            threshold: 1
+            threshold: 0.15
         });
         this.productObserver.observe(this.htmlElement);
         this.modal = SingletonModal.getInstance('product');
@@ -44,7 +44,9 @@ class Product{
 
     handleIntersection(entries){
         let entry = entries[0];
-        if ((window.innerHeight)/1.2 > entry.target.getBoundingClientRect().top && this.htmlImageElement.src == '') {
+        //Condicional en el cual preguntamos si el alto de nuestra pantalla es mayor a la distancia de los productos con respecto al top de nuestra página, además comprobamos si la imagen del producto contiene el atributo src="loadgif" para saber que no tenemos que volver a cargar la imagen en caso de que vuelva a cumplirse la primera condición
+        if (window.innerHeight > entry.target.getBoundingClientRect().top && this.htmlImageElement.src.split('/')[this.htmlImageElement.src.split('/').length-1] == 'load.gif') {
+            this.htmlImageElement.classList.remove('loadgif');
             this.htmlImageElement.setAttribute('src',this.imagesUrl.catalog);
         }
     }

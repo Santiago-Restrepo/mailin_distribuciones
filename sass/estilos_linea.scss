@@ -116,16 +116,20 @@ $break-laptop-L: 1440px;
             border: 0.5px solid $Color-gris-claro;
             overflow: hidden;
             opacity: 1;
-            transition: opacity .5s;
             &__image{
                 position: relative;
                 width: 100%;
                 height: fit-content;
+                .loadgif{
+                    display: flex;
+                    width: 100px;
+                    margin: 0 auto;
+                }
                 img{
                     width: 100%;
                     height: 100%;
-                    transition: transform .8s ease;
-                    -webkit-transition: transform .8s ease;
+                    // transition: transform .8s ease;
+                    // -webkit-transition: transform .8s ease;
                     object-fit: cover;
                     backface-visibility: hidden;
 

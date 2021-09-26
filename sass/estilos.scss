@@ -61,6 +61,12 @@ body{
     overflow-x: hidden;
 }
 
+.loadgif{
+    display: flex;
+    width: 100px;
+    margin: 0 auto;
+}
+
 
 h1,h2,h3,h4,h5,h6,p,span,li,a,strike, input{
     font-family: $fuente2;
@@ -138,10 +144,16 @@ input{
         &__image{
             width: 100%;
             height: fit-content;
+            .loadgif{
+                display: flex;
+                width: 100px;
+                margin: 0 auto;
+            }
             img{
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
+                transition: .5s;
             }
         }
         &__info{
