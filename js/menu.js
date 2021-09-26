@@ -51,20 +51,3 @@ hamburguer_button.addEventListener("click", ()=>{
         hamburguer_button.style.transform="rotateY(0deg)";
     }
 });
-
-
-
-
-
-
-// window.addEventListener('scroll',()=>{
-
-//     console.log(story.getBoundingClientRect().top)
-// //    if(hero.getBoundingClientRect().top === 0 || hero.getBoundingClientRect().bottom < 0 && hero.getBoundingClientRect().bottom > -100){
-// //     home_button.classList.toggle('active');
-// // }
-// // if(sales.getBoundingClientRect().top === 0 || sales.getBoundingClientRect().bottom === 0){
-// //     //    sales_button.classList.add('active');
-// //     home_button.classList.toggle('active');
-// //     }
-// });
