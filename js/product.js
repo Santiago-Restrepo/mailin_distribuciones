@@ -26,6 +26,7 @@ class Product{
         </div>
         <div class="product__info">
             <span class="product__info-name">${this.name}</span>
+            <span class="product__info-size">x ${this.size}</span>
             <div class="product__prices">
                 <span class="product__prices-before">${this.prices.old}</span>
                 <span class="product__prices-new">${this.prices.current}</span>

@@ -11,7 +11,8 @@
       "/sass",
       "/pug",
       "ideas",
-      "prepros.config"
+      "prepros.config",
+      "/catalogoJson"
     ],
     "rewrites": [
       {

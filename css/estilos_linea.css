@@ -98,6 +98,8 @@
 .catalog__container .product__image img {
   width: 100%;
   height: 100%;
+  transition: transform 0.8s ease;
+  -webkit-transition: transform 0.8s ease;
   object-fit: cover;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -137,7 +139,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5em;
-  height: 17.6em;
+  height: 20em;
   width: 100%;
   background-color: #ffffff;
 }
@@ -147,6 +149,11 @@
 .catalog__container .product__info-name {
   font-family: "Lora", "sans-serif";
   font-size: 1.6em;
+}
+.catalog__container .product__info-size {
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #000603;
 }
 .catalog__container .product__info .product__prices {
   display: flex;
@@ -222,6 +229,7 @@
   .catalog__container {
     max-width: 100em;
     grid-template-columns: repeat(5, 1fr);
+    align-items: center;
   }
   .catalog__container .product {
     max-width: 25em;
@@ -231,7 +239,7 @@
     display: block;
   }
   .catalog__container .product__info {
-    height: 9.4em;
+    height: 13.4em;
     z-index: 2;
   }
   .catalog__container .product:hover .view_more {

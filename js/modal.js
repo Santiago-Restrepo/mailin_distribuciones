@@ -32,6 +32,7 @@ class SingletonModal{
                     'old': document.querySelector(".productModal").children[2].children[3].children[0],
                     'current': document.querySelector(".productModal").children[2].children[3].children[1]
                 },
+                'link': document.querySelector(".productModal").children[2].children[4].children[1].children[0],
                 //función que recibe por parámetro el producto que va a renderizar en la ventana modal
                 'openModal':function(product){
                     //Momento en el que el modal es abierto junto con su backgound opaco
@@ -56,6 +57,8 @@ class SingletonModal{
                     this.size.innerHTML = `x ${product.size}`;
                     this.prices.current.innerHTML = product.prices.current;
                     this.prices.old.innerHTML = product.prices.old;
+                    this.link.setAttribute('href',`https://api.whatsapp.com/send?phone=+573208762984&text=Hola, estoy interesado en el producto ${product.name}, podrías darme más información por favor`)
+                    this.link.setAttribute('target',`_blank`)
                 },
                 //Función encargada de cerrar el modal
 

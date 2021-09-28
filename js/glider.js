@@ -3,7 +3,7 @@ const gliderArrowLeft = document.querySelector('.glider__left');
 const gliderArrowRight = document.querySelector('.glider__right');
 
 
-window.addEventListener('load', function(){
+window.addEventListener('load', async function(){
 	new Glider(document.querySelector('.glider__list'), {
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -37,7 +37,26 @@ window.addEventListener('load', function(){
 			}
 		]
 	});
+	// try {
+	// 	//bandera para comprobar si ya se hizo la petición ----IMPORTANT-----
+	// 	// if (!window.localStorage.getItem('catalogJson')) {
+	// 	// }
+	// 	let instagramPromise = await fetch('https://api.instagram.com/oembed/?url=https://www.instagram.com/p/CLrs35NL8cD.json',{
+	// 		method: 'GET',
+    //     	headers: new Headers({
+	// 			'Content-type': 'application/json',
+	// 			'Access-Control-Allow-Origin': '*'
+	// 		}),
+    //     	mode: 'cors'
+	// 	});
+	// 	debugger
+	// 	let instagramJson = await instagramPromise.json();//Conversión de promesa a JSON
+	// } catch (error) {
+	// 	console.error(error);
+	// }
 });
+
+
 
 // gliderList.addEventListener('scroll',stopScroll);
 
