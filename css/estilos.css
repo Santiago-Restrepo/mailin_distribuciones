@@ -335,7 +335,7 @@ input {
 .header .mobile_menu {
   z-index: 1;
   position: fixed;
-  top: -100%;
+  top: -100vh;
   left: 0;
   right: 0;
   display: flex;
