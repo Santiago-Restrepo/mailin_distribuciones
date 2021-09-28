@@ -146,6 +146,7 @@ input{
             height: fit-content;
             .loadgif{
                 display: flex;
+                -webkit-transform: scale(.3);
                 transform: scale(.3);
                 margin: 0 auto;
             }
