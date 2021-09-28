@@ -46,6 +46,14 @@
 #sales .glider-dot.active {
   background-color: #000603;
 }
+#sales .glider .glider__list .glider-track {
+  margin: 0 auto;
+}
+#sales .glider .glider__list h5 {
+  color: #000603;
+  font-weight: 300;
+  text-align: center;
+}
 #sales .glider .glider__list .product {
   width: 100%;
   transition: 0.3s ease;

@@ -21,7 +21,14 @@
             background-color: $Color-negro;
         }
         .glider__list{
-
+            .glider-track{
+                margin: 0 auto;
+            }
+            h5{
+                color: $Color-negro;
+                font-weight: 300;
+                text-align: center;
+            }
             .product{
                 width: 100%;
                 transition: .3s ease;
