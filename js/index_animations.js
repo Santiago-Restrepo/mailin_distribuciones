@@ -13,6 +13,7 @@ window.addEventListener('scroll', ()=>{
         lines_positions[index] = lines_array[index].getBoundingClientRect().top;
     }
 
+
     //posisicones de las flores
     flowers_positions[0]=story_flowers[0].getBoundingClientRect().top;
     flowers_positions[1]=story_flowers[1].getBoundingClientRect().top;

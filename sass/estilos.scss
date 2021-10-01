@@ -56,6 +56,19 @@ html{
     overflow-x: hidden;
 }
 
+*::-webkit-scrollbar{
+    width:1em;
+    // background-color: $Color-blanco;
+}
+*::-webkit-scrollbar-track {
+    background-color: $Color-blanco;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: $Color-gris-claro;
+    border-radius: 20px;
+    border: 3px solid $Color-blanco;
+}
+
 body{
     position: relative;
     overflow-x: hidden;

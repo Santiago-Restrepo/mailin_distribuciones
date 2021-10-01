@@ -19,6 +19,20 @@ html {
   overflow-x: hidden;
 }
 
+*::-webkit-scrollbar {
+  width: 1em;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b3b1b1;
+  border-radius: 20px;
+  border: 3px solid #ffffff;
+}
+
 body {
   position: relative;
   overflow-x: hidden;
