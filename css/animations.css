@@ -14,7 +14,7 @@
 }
 .fadeInLeft {
   animation-duration: 1.5s;
-  animation-fill-mode: none;
+  animation-fill-mode: both;
   animation-name: fadeInLeft;
 }
 
@@ -28,7 +28,7 @@
 }
 .fadeInRight {
   animation-duration: 1.5s;
-  animation-fill-mode: none;
+  animation-fill-mode: both;
   animation-name: fadeInRight;
 }
 
@@ -38,5 +38,19 @@
   }
   to {
     transform: translateX(0) rotateX(180deg);
+  }
+}
+.fadeInScale {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInScale;
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
   }
 }

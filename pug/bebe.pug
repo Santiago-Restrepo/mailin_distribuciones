@@ -44,36 +44,20 @@ html(lang="en")#html
                             a(href="https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w") 
                                 i.fab.fa-whatsapp
         section#line
-            span.line_title Línea bebé
-            input(type="text" placeholder="Buscar un producto").searchBar
             nav.line__menu
-                a(href="bebe.html").line__menu-element bebe
-                a(href="cosmetica.html").line__menu-element cosmética
                 a(href="cuidado-corporal.html").line__menu-element cuidado corporal
+                a(href="fragancias.html").line__menu-element fragancias
+                a(href="bebe.html").line__menu-element.lineActive bebé
                 a(href="capilar.html").line__menu-element capilar
-                a(href="quema-grasa.html").line__menu-element quema grasa
-                a(href="estuches.html").line__menu-element estuches
+                a(href="cuidado-personal.html").line__menu-element cuidado personal
+                a(href="green.html").line__menu-element green
+                a(href="chicos-chicas.html").line__menu-element chichos y chicas
+                a(href="blanca.html").line__menu-element blanca
+                a(href="masculina.html").line__menu-element masculina
+            input(type="text" placeholder="Buscar un producto").searchBar
         main.catalog
             .catalog__container 
             img(src="../images/load.gif", alt="Imagen de carga").loadgif
-                //- +product("")(class="32")
-                //- +product("")(class="33")       
-                //- +product("")(class="34")  
-                //- +product("")(class="0") 
-                //- +product("")(class="35")      
-                //- +product("")(class="47") 
-                //- +product("")(class="44") 
-                //- +product("")(class="74") 
-                //- +product("")(class="75")
-                //- +product("")(class="38")                      
-                //- +product("")(class="36")        
-                //- +product("")(class="37")      
-                //- +product("")(class="43") 
-                //- +product("")(class="45") 
-                //- +product("")(class="46") 
-                //- +product("")(class="71") 
-                //- +product("")(class="72") 
-                //- +product("")(class="73") 
                  
         .modal
             .distributorModal
@@ -90,6 +74,7 @@ html(lang="en")#html
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1puLzSvehJP_yky7VS1LicPtRsnWOdbtCKzSCrqyi7QWiwA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 img(src="../images/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
         include componentes/_footer.pug
+        script(src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js")
         script(src="../js/index.js", type="module")
         script(src="../js/menu.js")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')

@@ -4,3 +4,4 @@ ideas/
 prepros.config
 .vscode/
 /catalogoJson
+node_modules

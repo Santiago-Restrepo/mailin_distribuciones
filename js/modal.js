@@ -48,6 +48,11 @@ class SingletonModal{
                         }
                     });
                     this.closeButton.addEventListener('click',this.closeModal.bind(this));
+                    this.background.addEventListener('click',function(event){
+                        if (event.target != this.window && event.target.parentNode != this.window && event.target.parentNode.parentNode != this.window && event.target.parentNode.parentNode.parentNode != this.window && event.target.parentNode.parentNode.parentNode.parentNode != this.window && event.target != this.link) {
+                            this.closeModal();
+                        }
+                    }.bind(this));
 
                     //renderizado de elementos del modal
                     this.image.setAttribute('src',product.imagesUrl.modal);
@@ -105,6 +110,11 @@ class SingletonModal{
                         }
                     });
                     this.closeButton.addEventListener('click',this.closeModal.bind(this));
+                    this.background.addEventListener('click',function(event){
+                        if (event.target != this.window && event.target.parentNode != this.window) {
+                            this.closeModal();
+                        }
+                    }.bind(this));
                 },
                 //Función encargada de cerrar el modal
 
@@ -140,6 +150,11 @@ class SingletonModal{
                         }
                     });
                     this.closeButton.addEventListener('click',this.closeModal.bind(this));
+                    this.background.addEventListener('click',function(event){
+                        if (event.target != this.window && event.target.parentNode != this.window) {
+                            this.closeModal();
+                        }
+                    }.bind(this));
                 },
                 //Función encargada de cerrar el modal
 

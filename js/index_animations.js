@@ -9,12 +9,9 @@ let location_position;
 
 window.addEventListener('scroll', ()=>{
     //posisicones de las líneas
-    lines_positions[0]=lines_array[0].getBoundingClientRect().top;
-    lines_positions[1]=lines_array[1].getBoundingClientRect().top;
-    lines_positions[2]=lines_array[2].getBoundingClientRect().top;
-    lines_positions[3]=lines_array[3].getBoundingClientRect().top;
-    lines_positions[4]=lines_array[4].getBoundingClientRect().top;
-    lines_positions[5]=lines_array[5].getBoundingClientRect().top;
+    for(let index = 0; index < lines_array.length; index++) {
+        lines_positions[index] = lines_array[index].getBoundingClientRect().top;
+    }
 
     //posisicones de las flores
     flowers_positions[0]=story_flowers[0].getBoundingClientRect().top;
@@ -23,25 +20,11 @@ window.addEventListener('scroll', ()=>{
     //posicion de la ubicación
     location_position=location_container.getBoundingClientRect().top;
 
-
     //Comprobaciones de posiciones de líneas
-    if(windowSize > lines_positions[0]){
-        lines_array[0].classList.add('fadeWidth');
-    }
-    if(windowSize > lines_positions[1]){
-        lines_array[1].classList.add('fadeWidth');
-    }
-    if(windowSize > lines_positions[2]){
-        lines_array[2].classList.add('fadeWidth');
-    }
-    if(windowSize > lines_positions[3]){
-        lines_array[3].classList.add('fadeWidth');
-    }
-    if(windowSize > lines_positions[4]){
-        lines_array[4].classList.add('fadeWidth');
-    }
-    if(windowSize > lines_positions[5]){
-        lines_array[5].classList.add('fadeWidth');
+    for (let index = 0; index < lines_positions.length; index++) {
+        if (windowSize > lines_positions[index]) {
+            lines_array[index].classList.add('fadeInScale');
+        }
     }
     //Comprobaciones de posiciones de flores de historia
     if(windowSize > flowers_positions[0]){

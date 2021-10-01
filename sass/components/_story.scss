@@ -10,12 +10,12 @@
     .primaryLeaf:nth-last-of-type(1){
         top: -5%;
         right: -5%;
-        transform: rotateX(180deg);
+        transform: translateX(100%);
     }
     .primaryLeaf:nth-last-of-type(2){
         bottom: -7%;
         left: -5%;
-        transform: rotateY(180deg);
+        transform: translateX(-100%);
     }
     .story__container{
         padding: 1em;

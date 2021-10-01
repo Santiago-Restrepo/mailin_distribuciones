@@ -20,8 +20,8 @@
 .fadeInLeft{
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
-    -webkit-animation-fill-mode: none;
-    animation-fill-mode: none;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
 }
@@ -39,8 +39,8 @@
 .fadeInRight{
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
-    -webkit-animation-fill-mode: none;
-    animation-fill-mode: none;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
 }
@@ -53,6 +53,26 @@
     
     to{
         transform: translateX(0) rotateX(180deg);
+    }
+
+}
+
+.fadeInScale{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInScale;
+    animation-name: fadeInScale;
+}
+
+@keyframes fadeInScale{
+    from{
+        transform: scale(.5);
+    }
+    
+    to{
+        transform: scale(1);
     }
 
 }

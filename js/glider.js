@@ -38,16 +38,10 @@ window.addEventListener('load', async function(){
 		]
 	});
 	// try {
-	// 	//bandera para comprobar si ya se hizo la petición ----IMPORTANT-----
-	// 	// if (!window.localStorage.getItem('catalogJson')) {
-	// 	// }
-	// 	let instagramPromise = await fetch('https://api.instagram.com/oembed/?url=https://www.instagram.com/p/CLrs35NL8cD.json',{
-	// 		method: 'GET',
-    //     	headers: new Headers({
-	// 			'Content-type': 'application/json',
-	// 			'Access-Control-Allow-Origin': '*'
-	// 		}),
-    //     	mode: 'cors'
+
+	// 	let instagramPromise = await fetch('https://api.instagram.com/oembed/?url=https://www.instagram.com/p/CSs2l7ED_Rs/&access_token=IGQVJYUmVOUkh1M3dEQ1c3akYwTzNvU1VQU05RcVpwVm4tdW5KZAjQxTmRQaE1xSl9RM3RPajBwSndzcmJmUkFtc0VCb05qNnVtMHVUcTNYOEprc1BHbWszRHVWelJLMURXV2tXOGtXSDdHNXhmVmx3UgZDZD',{
+	// 		mode: 'no-cors',
+	// 		access_token:'IGQVJYUmVOUkh1M3dEQ1c3akYwTzNvU1VQU05RcVpwVm4tdW5KZAjQxTmRQaE1xSl9RM3RPajBwSndzcmJmUkFtc0VCb05qNnVtMHVUcTNYOEprc1BHbWszRHVWelJLMURXV2tXOGtXSDdHNXhmVmx3UgZDZD'
 	// 	});
 	// 	debugger
 	// 	let instagramJson = await instagramPromise.json();//Conversión de promesa a JSON

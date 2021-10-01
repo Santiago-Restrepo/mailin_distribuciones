@@ -9,6 +9,8 @@ $Color-blanco:  #ffffff;
 $Color-blanco-variacion:  #F1FBF3;
 $Color-rojo-intenso:  #B82C2C;
 $Color-rojo:  #ec5248;
+$Color-rosa:  #ee3596;
+$Color-rosa-claro:  #f7c4db;
 $Color-negro:  #000603;
 $Color-verde:  #10312A;
 $Color-verde-oscuro:  #202A26;
@@ -76,7 +78,23 @@ $break-laptop-L: 1440px;
         background-color: $Color-negro;
     }
     .line__menu{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 2em auto;
+        text-align: center;
+        &-element{
+            width: fit-content;
+            padding: .3em 1em;
+            text-decoration: none;
+            color: $Color-gris;
+            font-size: 1.3em;
+        }
+        .lineActive{
+            background-color: $Color-rosa-claro;
+            color: $Color-rosa;
+        }
     }
     .searchBar{
         width: 15em;
@@ -104,6 +122,7 @@ $break-laptop-L: 1440px;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         justify-items: center;
+        align-items: center;
         width: 100%;
         max-width: 55em;
         margin: 0 auto;
@@ -228,7 +247,7 @@ $break-laptop-L: 1440px;
         .logo{
             position: absolute;
             max-width: 10em;
-            top: 5.2em;
+            top: 11.2em;
             right: 2.2em;
         }
     }
@@ -236,10 +255,16 @@ $break-laptop-L: 1440px;
         .line_title{
             margin-top: 7em;
         }
+        .line__menu{
+            margin-top: 8em;
+            flex-direction: row;
+            justify-content: center;
+        }
     }
     .catalog{
         &__container{
             grid-template-columns: repeat(3,1fr);
+            margin-top: 2em;
             width: 100%;
             max-width: 70em;
             .product{
@@ -261,24 +286,14 @@ $break-laptop-L: 1440px;
     .header{
         .logo{
             max-width: 13em;
-            top: 4em;
         }
     }
-    #line{
-        position: relative;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: flex-end;
-        .searchBar{
-            position: absolute;
-            margin-right: 2em;
-        }
-    }
+
     .catalog{
         &__container{
             max-width: 100em;
+            margin-top: 4em;
             grid-template-columns: repeat(5,1fr);
-            align-items: center;
             .product{
                 max-width: 25em;
                 &__image{
