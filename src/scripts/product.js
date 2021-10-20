@@ -20,7 +20,7 @@ class Product{
         this.htmlElement.classList.add('product');
         this.htmlElement.innerHTML= `
         <div class="product__image">
-            <img src="../images/load.gif" alt="Imagen del producto ${this.name}" class="loadgif"/>
+            <img src="../assets/load.gif" alt="Imagen del producto ${this.name}" class="loadgif"/>
             <button class="view_more">Ver más</button>
             <span class="product__discount"></span>
         </div>

@@ -55,7 +55,7 @@ class SingletonModal{
                     }.bind(this));
 
                     //renderizado de elementos del modal
-                    this.image.setAttribute('src',product.imagesUrl.modal);
+                    this.image.setAttribute('src',product.assetsUrl.modal);
                     this.image.classList.remove('loadgif');
                     this.name.innerHTML = product.name;
                     this.description.innerHTML = product.description;
@@ -74,7 +74,7 @@ class SingletonModal{
                     document.querySelector("#html").style.overflow="scroll";
                     //Luego resetea los valores que se encontraban en el modal
                     setTimeout(()=>{
-                        this.image.setAttribute("src","../images/load.gif");//colocación de imagen
+                        this.image.setAttribute("src","../assets/load.gif");//colocación de imagen
                         this.image.classList.add('loadgif');
                         this.name.innerHTML= "Cargando...";
                         this.description.innerHTML= "Cargando...";

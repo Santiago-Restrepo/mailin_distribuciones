@@ -461,7 +461,7 @@ input {
   flex-direction: column;
   align-items: center;
   padding-top: 1em;
-  background-image: url("../images/hojas_ppal.svg");
+  background-image: url("../assets/hojas_ppal.svg");
   background-repeat: no-repeat;
   background-size: 15em;
   background-position-x: 110%;
