@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/Santiago-Restrepo/mailin_distribuciones#readme",
   "dependencies": {
-    "firebase": "^9.1.0"
+    "firebase": "^9.1.3"
+  },
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.43.3"
   }
 }
