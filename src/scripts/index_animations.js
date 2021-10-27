@@ -3,7 +3,7 @@ export const indexAnimations = ()=>{
     const lines_flowers = document.querySelectorAll('.lines__image');
     const story_flowers = document.querySelectorAll('.primaryLeaf');
     const location_container =  document.querySelector('.location__container');
-    const windowSize = (window.innerHeight)/1.1;
+    const windowSize = (window.innerHeight)/1.05;
     let lines_positions=[];
     let flowers_positions=[];
     let location_position;
