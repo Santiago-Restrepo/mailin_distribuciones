@@ -46,6 +46,7 @@ $break-laptop-L: 1440px
     justify-content: center
     
     .logo
+        right: 0
         top: 0
         z-index: 0
         position: relative        
@@ -104,7 +105,7 @@ $break-laptop-L: 1440px
         padding-left: 2em
         border: none
         border-bottom: 1px solid $Color-gris-claro
-        background-image: url(../assets/search-icon.svg)
+        //background-image: url(../assets/search-icon.svg)
         background-size: 15px 15px
         background-repeat: no-repeat
         background-position-y: center
@@ -150,7 +151,7 @@ $break-laptop-L: 1440px
                     transition: transform .8s ease
                     -webkit-transition: transform .8s ease
                     object-fit: cover
-                    backface-visibility: hidden
+                    image-rendering: pixelated
 
                 
                 .view_more
@@ -193,16 +194,18 @@ $break-laptop-L: 1440px
                 width: 100%
                 background-color: $Color-blanco
                 &-description,&-link
+                    color: $Color-gris-oscuro
                     display: none
                 
                 &-name
+                    color: $Color-gris-oscuro
                     font-family: $fuente1
                     font-size: 1.6em
                 
                 &-size
                     font-size: 1.4em
                     font-weight: 500
-                    color: $Color-negro
+                    color: $Color-gris-oscuro
                 
                 .product__prices
                     display: flex

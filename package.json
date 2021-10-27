@@ -4,8 +4,7 @@
   "description": "Página web de Mailin Distribuciones",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --watch --mode=development",
-    "serve": "serve dist/",
+    "dev": "webpack serve --mode=development",
     "build": "webpack --mode=production"
   },
   "repository": {
@@ -24,28 +23,26 @@
     "url": "https://github.com/Santiago-Restrepo/mailin_distribuciones/issues"
   },
   "homepage": "https://github.com/Santiago-Restrepo/mailin_distribuciones#readme",
-  "dependencies": {
-    "firebase": "^9.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.8",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.2.3",
     "css-loader": "^5.2.7",
     "css-minimizer-webpack-plugin": "^3.1.0",
     "html-loader": "^2.1.2",
-    "html-webpack-plugin": "^5.3.2",
+    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^1.6.2",
     "pug": "^3.0.2",
     "pug-html-loader": "^1.1.5",
     "robotstxt-webpack-plugin": "^7.0.0",
-    "sass": "^1.42.1",
+    "sass": "^1.43.3",
     "sass-loader": "^12.1.0",
-    "serve": "^12.0.0",
-    "terser-webpack-plugin": "^5.2.4",
+    "sass-resources-loader": "^2.2.4",
     "url-loader": "^4.1.1",
-    "webpack": "^5.46.0",
-    "webpack-cli": "^4.7.2"
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.3.1"
   }
 }

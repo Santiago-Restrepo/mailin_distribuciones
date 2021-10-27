@@ -51,6 +51,7 @@ html(lang="en")#html
                                 i.fab.fa-whatsapp
         
         section#hero
+            img(src="../assets/paisaje.jpg", alt="Imagen de ofiartes")
         section#sales
             span.lines__label Ofertas
             .glider
@@ -74,7 +75,7 @@ html(lang="en")#html
                 +line("https://firebasestorage.googleapis.com/v0/b/mailindistribucionesapi.appspot.com/o/aux%2Fgreeeen.jpg?alt=media&token=ef92345d-06db-4f35-9534-926ed43a7b8f", "Green", "green.html")
                 +line("https://autismodiario.com/wp-content/uploads/2012/04/cms-image-000010198-1200x795.jpg", "Chicos y chicas", "chicos-chicas.html")
                 +line("https://firebasestorage.googleapis.com/v0/b/mailindistribucionesapi.appspot.com/o/aux%2Fblancaaaa.jpg?alt=media&token=b22308f4-1349-4fc7-be4e-549663fc7274", "Blanca", "blanca.html")
-                +line("https://assets.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "Masculina", "masculina.html")
+                +line("https://www.esenzzia.com/modules/xtoblog/views/img/post/172.jpg", "Masculina", "masculina.html")
         section#story 
             img(src="../assets/hojas_ppal.svg", alt="Imagen de hoja colorida").primaryLeaf
             .story__container 
@@ -109,48 +110,8 @@ html(lang="en")#html
                 h1.distributorModal__title Regálanos tus datos y pronto nos pondremos en contacto contigo
                 //- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1puLzSvehJP_yky7VS1LicPtRsnWOdbtCKzSCrqyi7QWiwA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 img(src="../assets/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
-        footer.footer#contact
-            span.lines__label Contacto
-            .buttons__container
-                button.footer__button 
-                    h3.footer__button-title Conviértete en un distribuidor
-                    i.fas.fa-arrow-right.footer__button-arrow 
-                    span.footer__button-description Has parte de esta maravillosa empresa y contribuirás 
-                                                    |a la economía de este país
-                button.footer__button 
-                    h3.footer__button-title Comprar al por mayor
-                    i.fas.fa-arrow-right.footer__button-arrow 
-                    span.footer__button-description Has parte de esta maravillosa empresa y contribuirás 
-                                                    |a la economía de este país
-            .footer__container
-                .contact 
-                    h2.contact__title Contacto 
-                    span.contact__info Ana Catalina Restrepo Ramírez
-                    span.contact__info +57 320 8762984
-                    span.contact__info mailindistribuciones@gmail.com
-                .social_media 
-                    h2.social_media-title Síguenos 
-                    .social_media-container
-                        a(href="https://www.instagram.com/mailin_distribuciones/") 
-                            i.fab.fa-instagram 
-                        a(href="https://api.whatsapp.com/send?phone=573208762984&fbclid=IwAR123Wo7Xz5luFCOJkw-6zmsO57RViufn7Ykp-b8NwMpVujdYjV71MwmF8w") 
-                            i.fab.fa-whatsapp
-                        a(href="https://www.facebook.com/Mailin-Distribuciones-110829377246916") 
-                            i.fab.fa-facebook-f
-                        a(href="https://www.google.com/search?ei=Dow6YKulNZaKwbkPpfKD4Ao&q=MAILIN+DISTRIBUCIONES+SAS&oq=MAILIN+DISTRIBUCIONES+SAS&gs_lcp=Cgdnd3Mtd2l6EAMyBQgmELADUNYOWNYOYOcPaAFwAHgAgAGiAYgBogGSAQMwLjGYAQCgAQGqAQdnd3Mtd2l6yAEBwAEB&sclient=gws-wiz&ved=0ahUKEwir5Pfc1YrvAhUWRTABHSX5AKwQ4dUDCA0&uact=5") 
-                            i.fab.fa-google
-            span.rights © Mailin Distribuciones
-
+        include ./componentes/_footer.pug
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
-        script(src="https://www.gstatic.com/firebasejs/8.6.4/firebase.js")
-        script(src="https://www.gstatic.com/firebasejs/8.6.4/firebase-database.js")
-        //- script(src="js/glider.js")
-        //- script(src="js/index.js", type="module") 
-        //- script(src="js/index_animations.js")
-        //- script(src="../js/menu.js")
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
-        //- script(src="js/mailin-analytics.js")
 
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')

@@ -32,22 +32,22 @@ module.exports = {
                 use: [
                     MiniCSSExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader'
+                    'sass-loader',
+                    {
+                        // Variables
+                        loader: 'sass-resources-loader',
+                        options: {
+                            resources: './src/styles/estilos.sass'
+                        }
+                    }
                 ]
             },
             {
-                test: /\.png|.svg|.jpg|.gif|.webp$/,
+                test: /\.png|.gif|.svg|.webp|.jpg|.jpeg$/,
                 include: [
                     path.resolve(__dirname, "src/assets")
                 ],
-                use: [
-                  {
-                    loader: 'url-loader',
-                    options: {
-                      name: "styles/[name].[ext]",
-                    },
-                  },
-                ]
+                type: 'asset/resource'
             }
         ],
     },

@@ -55,7 +55,7 @@ class SingletonModal{
                     }.bind(this));
 
                     //renderizado de elementos del modal
-                    this.image.setAttribute('src',product.assetsUrl.modal);
+                    this.image.setAttribute('src',product.imagesUrl.modal);
                     this.image.classList.remove('loadgif');
                     this.name.innerHTML = product.name;
                     this.description.innerHTML = product.description;

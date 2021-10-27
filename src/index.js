@@ -1,44 +1,27 @@
+import('./styles/estilos.sass');
 if (window.location.href.split('/')[window.location.href.split('/').length-1].split('.')[0] != 'index' && window.location.href.split('/')[window.location.href.split('/').length-1].split('.')[0] != '') {
     import('./styles/estilos_linea.sass');    
 }else{
+    import('./scripts/index_animations').then((indexAnimations) => indexAnimations.indexAnimations() )
 }
-import('./styles/estilos.sass');
-
-import('./scripts/index_animations').then((indexAnimations) => indexAnimations.indexAnimations() )
-
+import('./scripts/menu').then((menu) => menu.menu())
 
 import SingletonModal from "./scripts/modal.js";
 import Catalog from './scripts/catalog.js';
-// import { initializeApp } from 'firebase/app';
 
 window.addEventListener('load', async ()=>{
 
-    var firebaseConfig = {
-        apiKey: "AIzaSyDw0Z6fG-wgUPzt_LnH2g-JivHLvMZ2S8k",
-        authDomain: "mailindistribucionesapi.firebaseapp.com",
-        databaseURL: "https://mailindistribucionesapi-default-rtdb.firebaseio.com",
-        projectId: "mailindistribucionesapi",
-        storageBucket: "mailindistribucionesapi.appspot.com",
-        messagingSenderId: "816125570764",
-        appId: "1:816125570764:web:bd984fa62ab7f186d89c69",
-        measurementId: "G-GB2LF0G27Y"
-    };
-
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig)
-    
-    
     //Definimos la página actual para saber qué catálogo cargar/renderizar, esto lo hallamos mediante la URL y jugando con Strings
     window.localStorage.setItem('actualPage',window.location.href.split('/')[window.location.href.split('/').length-1].split('.')[0]);
-    window.localStorage.setItem('API','https://mailindistribucionesapi-default-rtdb.firebaseio.com/category');
+    window.localStorage.setItem('API','https://mailindistribucionesapi-default-rtdb.firebaseio.com/category.json');
     //Comprobamos si estamos en el index, si es así no tendremos que traer un catálogo y nos ahorramos procesamiento
     if (window.localStorage.getItem('actualPage') != 'index' && window.localStorage.getItem('actualPage') != '') {
         try {
             //bandera para comprobar si ya se hizo la petición
             // if (window.localStorage.getItem('catalogJson') === null || window.localStorage.getItem('catalogJson') == '') {
                 // }
-            let catalogPromise = await app.database().ref('category/').get();
-            let catalogJson = catalogPromise.val();
+            let catalogPromise = await fetch(window.localStorage.getItem('API'));
+            let catalogJson = await catalogPromise.json();
             window.localStorage.setItem('catalogJson',JSON.stringify(catalogJson));
             const catalog_container = document.querySelector('.catalog__container');
             
