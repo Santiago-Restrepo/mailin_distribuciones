@@ -1,3 +1,5 @@
+import loadGif from "../assets/load.gif"
+
 class SingletonModal{
     static #productInstance;
     static #distributorInstance;
@@ -74,7 +76,7 @@ class SingletonModal{
                     document.querySelector("#html").style.overflow="scroll";
                     //Luego resetea los valores que se encontraban en el modal
                     setTimeout(()=>{
-                        this.image.setAttribute("src","../assets/load.gif");//colocación de imagen
+                        this.image.setAttribute("src", loadGif);//colocación de imagen
                         this.image.classList.add('loadgif');
                         this.name.innerHTML= "Cargando...";
                         this.description.innerHTML= "Cargando...";
@@ -159,7 +161,7 @@ class SingletonModal{
                 //Función encargada de cerrar el modal
 
                 'closeModal':function() {
-                    //P rimero cierrra el modal y quita visibilización al background
+                    //Primero cierrra el modal y quita visibilización al background
                     this.window.classList.remove("modal-visible");
                     this.background.classList.remove("is-visible");
                     document.querySelector("#html").style.overflow="scroll";

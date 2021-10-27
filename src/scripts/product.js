@@ -1,4 +1,5 @@
 import SingletonModal from "./modal.js";
+import loadGif from "../assets/load.gif"
 
 class Product{
     constructor(jsonElement){
@@ -20,7 +21,7 @@ class Product{
         this.htmlElement.classList.add('product');
         this.htmlElement.innerHTML= `
         <div class="product__image">
-            <img src="../assets/load.gif" alt="Imagen del producto ${this.name}" class="loadgif"/>
+            <img src=${loadGif} alt="Imagen del producto ${this.name}" class="loadgif"/>
             <button class="view_more">Ver más</button>
             <span class="product__discount"></span>
         </div>
@@ -45,8 +46,8 @@ class Product{
 
     handleIntersection(entries){
         let entry = entries[0];
-        //Condicional en el cual preguntamos si el alto de nuestra pantalla es mayor a la distancia de los productos con respecto al top de nuestra página, además comprobamos si la imagen del producto contiene el atributo src="loadgif" para saber que no tenemos que volver a cargar la imagen en caso de que vuelva a cumplirse la primera condición
-        if (window.innerHeight > entry.target.getBoundingClientRect().top && this.htmlImageElement.src.split('/')[this.htmlImageElement.src.split('/').length-1] == 'load.gif') {
+        //Condicional en el cual preguntamos si el alto de nuestra pantalla es mayor a la distancia de los productos con respecto al top de nuestra página, además comprobamos si la imagen del producto contiene el atributo src="nombre de gif de carga compilado" para saber que no tenemos que volver a cargar la imagen en caso de que vuelva a cumplirse la primera condición
+        if (window.innerHeight > entry.target.getBoundingClientRect().top && this.htmlImageElement.src.split('/')[this.htmlImageElement.src.split('/').length-1] == loadGif.split('/')[this.htmlImageElement.src.split('/').length-1]) {
             this.htmlImageElement.classList.remove('loadgif');
             this.htmlImageElement.setAttribute('src',this.imagesUrl.catalog);
         }
