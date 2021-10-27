@@ -1,0 +1,188 @@
+.footer
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 1em
+    overflow: hidden
+    .buttons__container
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: 100%
+        .footer__button
+            display: grid
+            grid-template-areas: "title arrow" "description description"
+            width: 90%
+            max-width: 30em
+            padding: 1.5em
+            margin-bottom: 1em
+            color: $Color-blanco
+            background-color: $Color-negro
+            text-align: start
+            border: none
+            cursor: pointer
+            transition: background .5s ease
+            &-title
+                grid-area: title
+                margin-bottom: 1em
+                font-size: 1.1em
+                font-weight: 500
+            
+            &-arrow
+                grid-area: arrow
+                justify-self: center
+                align-self: flex-start
+                font-size: 1.5em
+            
+            &-description
+                grid-area: description
+                font-size: .8em
+                font-weight: 300
+            
+            
+        
+        .footer__button:nth-of-type(1):hover
+            background-color: #00140a
+        
+        .footer__button:nth-of-type(2):hover
+            background-color: #0a0116
+        
+    
+    .footer__container
+        position: relative
+        margin-top: 3em
+        width: 100%
+        padding: 0 2em
+
+        .contact
+            color: $Color-negro
+            &__title
+                font-weight: 600
+                margin-bottom: .8em
+            
+            &__info
+                display: block
+                font-size: 1.4em
+                font-weight: 300
+                margin-bottom: .2em
+            
+        
+        .social_media
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin-top: 3em
+            &-title
+                margin-bottom: 1em
+                padding-bottom: .5em
+                border-bottom: 2px solid $Color-gris
+            
+            &-container
+                display: flex
+                justify-content: space-between
+                margin-bottom: 1.5em
+                width: 50%
+                a
+                    color: $Color-negro
+                    i
+                        font-size: 3em
+    .rights
+        display: inline-block
+        width: 100%
+        margin-bottom: 1em
+        color: $Color-negro
+        font-size: 1.3em
+        font-weight: 500
+        text-align: center
+    .hojasPpal
+        z-index: -1
+        position: absolute
+        bottom: -25px
+        right: -15px
+        width: 50%
+        max-width: 20em
+
+
+@media screen and (min-width: $break-mobile-M) 
+    .footer
+        .footer__container
+            padding: 0 4em
+        
+    
+
+@media screen and (min-width: $break-mobile-L) 
+    .footer
+        background-size: 18em
+        background-position: 105% 110%
+    
+
+@media screen and (min-width: $break-mobile-tablet) 
+    .footer
+        background-size: 18em
+        background-position: 105% 110%
+        .footer__container
+            padding: 0 9.3em
+            .social_media
+                .social_media-container
+                    max-width: 15em
+                
+            
+        
+    
+
+
+@media screen and (min-width: $break-tablet) 
+    .footer
+        background-position: 105% 120%
+        .buttons__container
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            justify-items: center
+            column-gap: 0.1em
+            width: fit-content
+            .footer__button
+                width: 100%
+                max-width: 23em
+                height: 9em
+            
+        
+        .footer__container
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            width: 60em
+            padding: 0 2em
+            .social_media
+                width: 13em
+                margin: 0
+                justify-self: flex-end
+                .social_media-container
+                    width: 100%
+                
+            
+        
+    
+
+
+@media screen and (min-width: $break-laptop) 
+    .footer
+        background-size: 25em
+        background-position-y: 132%
+        .buttons__container
+            .footer__button
+                max-width: 35em
+                height: 12em
+                &-title
+                    font-size: 1.2em
+                
+                &-description
+                    font-size: 1.2em
+                
+            
+        
+        .rights
+            margin-top: 1em
+        
+    

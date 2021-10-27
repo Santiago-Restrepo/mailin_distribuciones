@@ -1,0 +1,97 @@
+#story
+    position: relative
+    background-color: $Color-negro
+    padding: 6em 3em
+    .primaryLeaf
+        position: absolute
+        width: 50%
+        max-width: 20em
+    
+    .primaryLeaf:nth-last-of-type(1)
+        top: -5%
+        right: -5%
+        transform: translateX(100%)
+    
+    .primaryLeaf:nth-last-of-type(2)
+        bottom: -7%
+        left: -5%
+        transform: translateX(-100%)
+    
+    .story__container
+        padding: 1em
+        color: $Color-blanco
+        border: 2px solid $Color-morado-claro
+        border-radius: 1em
+        text-align: center
+        &-title
+            margin-bottom: .5em
+        
+        &-parraph
+            font-size: 1.4em
+            font-weight: 300
+        
+    
+
+
+@media screen and (min-width: $break-mobile-L) 
+    #story
+        display: flex
+        justify-content: center
+        .story__container
+            width: 80%
+            max-width: 50em
+        
+       
+
+@media screen and (min-width: $break-mobile-tablet) 
+    #story
+        .primaryLeaf
+            max-width: 25em
+        
+       
+
+@media screen and (min-width: $break-laptop) 
+    #story
+        height: 100vh
+        .primaryLeaf
+            max-width: 32em
+        
+        .primaryLeaf:nth-last-of-type(1)
+            top: -10%
+            right: -3%
+        
+        .primaryLeaf:nth-last-of-type(2)
+            bottom: -10%
+            left: -3%
+        
+        .story__container
+           max-width: 60em
+           height: fit-content
+           margin: auto 0
+           padding: 2em
+        
+       
+
+
+@media screen and (min-width: $break-laptop-S) 
+    #story
+        .primaryLeaf
+            max-width: 45em
+        
+    
+
+@media screen and (min-width: $break-laptop-M) 
+    #story
+        .primaryLeaf
+            max-width: 50em
+        
+    
+
+@media screen and (min-width: $break-laptop-L) 
+    #story
+        .primaryLeaf
+            max-width: 55em
+        
+    
+
+
