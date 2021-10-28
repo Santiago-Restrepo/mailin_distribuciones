@@ -6,10 +6,9 @@ mixin line(imgUrl, nombre, lineaUrl)
 doctype html
 html(lang="en")#html
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Home
+        head
+            include ./componentes/_head.pug     
+            +Head("Inicio", "Somos una empresa 100% Colombiana, comercializadora de productos para el cuidado personal, contamos con una gran variedad de líneas, todas ellas enfocadas a un segmento especial de clientes entre ellos, tiendas del peluquero, tiendas naturistas, tiendas médicas, Gimnasios, Spa, pañaleras, droguerías, entre otras. Entre los productos que se ofrecen tenemos: línea capilar, línea de bebe, línea dolores musculares, línea quema grasa, tratamiento antisudoral, línea facial, splash dama, caballero, adolescentes y niños, línea cuidado corporal, línea estuches y maquillaje.")   
     body
                     
         header.header
