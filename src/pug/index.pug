@@ -4,7 +4,7 @@ mixin line(imgUrl, nombre, lineaUrl)
         a(href=""+lineaUrl).line__container 
             h3.line__container-name #{nombre}
 doctype html
-html(lang="en")#html
+html(lang="es")#html
     head
         head
             include ./componentes/_head.pug     
@@ -71,8 +71,6 @@ html(lang="en")#html
                                         |para el cuidado personal, cuenta con 
                                         |una gran variedad de lineas, enfocadas a un segmento especial de clientes entre ellos: droguerías, tiendas naturistas, Tiendas medicas, tiendas del peluquero, gimnasios, spa, entre otros. Nace en el mes de Marzo de 2016 fruto de un sueño de una pareja de soñadores que querían hacer de sus conocimientos y sus ganas, un proyecto que los llevara a tener una visión diferente del mundo 
                                         |empresarial, esta vez no como empleados,  esta vez desde el lado que todo emprendedor sueña.
-
-                                        |Nuestros productos son elaborados por un reconocido laboratorio Colombiano ubicado en la ciudad de Barranquilla llamado Ross D Elen, con mas de 45 años de experiencia en el mercado, especializado en productos exclusivos para el cuidado personal, industria netamente Colombiana que aporta al empleo y crecimiento de la economia de nuestro pais.
             img(src="../assets/hojas_ppal.svg", alt="Imagen de hoja colorida").primaryLeaf
         section#location
             span.lines__label Ubicación
@@ -82,21 +80,7 @@ html(lang="en")#html
                     h3 Encuentranos en:
                     h6 Cl. 20 #71-29 PISO 2
                     span  Medellín, Antioquia
-        .modal
-            .distributorModal
-                img(src="../assets/close_button.svg", alt="Menú de hamburguesa").close_button 
-                img(src="../assets/hoja_sencilla.svg", alt="Imagen de hoja sencilla").form__image
-                h1.distributorModal__title Regálanos tus datos y pronto nos pondremos en contacto contigo
-                //- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOtaUtxRweXQMUqnLia9gtU6sZfetwFUnb-JoduV4OBMiHbg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-                img(src="../assets/hoja_sencilla.svg", alt="Imagen de hoja sencilla").form__image
-
-        .modal 
-            .wholesaleModal
-                img(src="../assets/close_button.svg", alt="Menú de hamburguesa").close_button 
-                img(src="../assets/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
-                h1.distributorModal__title Regálanos tus datos y pronto nos pondremos en contacto contigo
-                //- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1puLzSvehJP_yky7VS1LicPtRsnWOdbtCKzSCrqyi7QWiwA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-                img(src="../assets/hojas_ppal.svg", alt="Imagen de hoja sencilla").form__image
+        include ./componentes/_footerModals.pug
         include ./componentes/_footer.pug
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
 
