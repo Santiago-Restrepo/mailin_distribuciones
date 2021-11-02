@@ -1,17 +1,22 @@
-const database = firebase.database();
 const today = new Date();
 const userDate = `${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
 const userHour = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
 let userIp;
 let userLocation;
-let findIP;
-
-const writeUserData = (location, date, hour) => {
-    firebase.database().ref('visits/').push({
-        location: location,
-        date : date,
-        hour : hour
-    });
+    
+const writeUserData = async (location, date, hour) => {
+    try {
+        return await fetch(window.localStorage.getItem('analyticsAPI'), {
+            method:"post",
+            body:JSON.stringify({
+                "location" : location,
+                "date": date,
+                "hour": hour
+            })
+        });
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 const fetchIp = async () =>{
@@ -29,20 +34,19 @@ const fetchLocation = async (ip) =>{
     try{
         let locationPromise = await fetch(`https://ipinfo.io/${ip}?token=298c4e899c2f78`);
         // ,{
-        // headers: new Headers({
-        //     'mode':'no-cors'
-        // })});
-        let location = await locationPromise.json();
-        return location;    
-    }catch(error){
-        console.error(error);
-    }
-    
-}
+            // headers: new Headers({
+                //     'mode':'no-cors'
+                // })});
+                let location = await locationPromise.json();
+                return location;    
+            }catch(error){
+                console.error(error);
+            }
+            
+        }
 
-
-window.addEventListener('load', async () =>{
+export const mailinAnalytics = async () =>{
     userIp = await fetchIp();
     userLocation = await fetchLocation(userIp);
-    writeUserData(userLocation, userDate, userHour);
-});
+    writeUserData(userLocation,userDate,userHour);
+}

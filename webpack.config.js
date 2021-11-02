@@ -3,11 +3,11 @@
 const path = require('path');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const cssMinimizer = require('css-minimizer-webpack-plugin');
 const terserPlugin = require('terser-webpack-plugin');
-
 const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
+
 
 module.exports = {
     entry: './src/index.js',
@@ -117,6 +117,12 @@ module.exports = {
             filename: 'masculina.html',
             inject: true,
             minify: true
+        }),
+        new Dotenv({
+            // ruta del archivo .env
+            path: './.env',
+            // configuración
+            systemvars: true
         }),
         new RobotstxtPlugin()
     ],

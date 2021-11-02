@@ -8,7 +8,7 @@ html(lang="es")#html
     head
         head
             include ./componentes/_head.pug     
-            +Head("Inicio", "Somos una empresa 100% Colombiana, comercializadora de productos para el cuidado personal, contamos con una gran variedad de líneas, todas ellas enfocadas a un segmento especial de clientes entre ellos, tiendas del peluquero, tiendas naturistas, tiendas médicas, Gimnasios, Spa, pañaleras, droguerías, entre otras. Entre los productos que se ofrecen tenemos: línea capilar, línea de bebe, línea dolores musculares, línea quema grasa, tratamiento antisudoral, línea facial, splash dama, caballero, adolescentes y niños, línea cuidado corporal, línea estuches y maquillaje.")   
+            +Head("Inicio", "Somos una empresa 100% Colombiana, comercializadora de productos para el cuidado personal, contamos con una gran variedad de líneas, todas ellas enfocadas a un segmento especial de clientes entre ellos, tiendas del peluquero, tiendas naturistas, tiendas médicas, Gimnasios, Spa, pañaleras, droguerías, entre otras. Entre los productos que se ofrecen tenemos: línea capilar, línea de bebe, línea dolores musculares, línea quema grasa, tratamiento antisudoral, línea facial, splash dama, caballero, adolescentes y niños, línea cuidado corporal, línea estuches y maquillaje.")
     body
                     
         header.header
@@ -49,7 +49,14 @@ html(lang="es")#html
             img(src="../assets/paisaje.jpg", alt="Imagen de ofiartes")
         section#sales
             span.lines__label Ofertas
-            h5 no hay ofertas disponibles en este momento                   
+            .glider
+                button(aria-label="Previous" type="button" class="glider-prev")
+                    i(class="fas fa-arrow-left")
+                .glider__list
+
+                button(aria-label="Next" type="button" class="glider-next")
+                    i(class="fas fa-arrow-right")
+                div(role="tablist" class="glider__dots")
         section#lines 
             h1.lines__title Descubre nuestros productos 
             span.lines__label Líneas
@@ -82,8 +89,7 @@ html(lang="es")#html
                     span  Medellín, Antioquia
         include ./componentes/_footerModals.pug
         include ./componentes/_footer.pug
-        script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
-
-        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css")
+        script(async src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')
             

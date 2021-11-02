@@ -1,19 +1,23 @@
 import('./styles/estilos.sass');
+import('./scripts/menu').then((menu) => menu.menu())
 if (window.location.href.split('/')[window.location.href.split('/').length-1].split('.')[0] != 'index' && window.location.href.split('/')[window.location.href.split('/').length-1].split('.')[0] != '') {
     import('./styles/estilos_linea.sass');    
 }else{
     import('./scripts/index_animations').then((indexAnimations) => indexAnimations.indexAnimations() )
+    import ("./scripts/mailin-analytics").then((mailinAnalytics) => mailinAnalytics.mailinAnalytics());
+    import('./scripts/glider').then((gliderSales) => gliderSales.gliderSales())
 }
-import('./scripts/menu').then((menu) => menu.menu())
 
 import SingletonModal from "./scripts/modal.js";
 import Catalog from './scripts/catalog.js';
 
-window.addEventListener('load', async ()=>{
 
+window.addEventListener('load', async ()=>{
+    
     //Definimos la página actual para saber qué catálogo cargar/renderizar, esto lo hallamos mediante la URL y jugando con Strings
     window.localStorage.setItem('actualPage',window.location.href.split('/')[window.location.href.split('/').length-1].split('.')[0]);
     window.localStorage.setItem('API','https://mailindistribucionesapi-default-rtdb.firebaseio.com/category.json');
+    window.localStorage.setItem('analyticsAPI','https://mailindistribucionesapi-default-rtdb.firebaseio.com/visits.json');
     //Comprobamos si estamos en el index, si es así no tendremos que traer un catálogo y nos ahorramos procesamiento
     if (window.localStorage.getItem('actualPage') != 'index' && window.localStorage.getItem('actualPage') != '') {
         try {
@@ -30,6 +34,7 @@ window.addEventListener('load', async ()=>{
                 container: catalog_container,
                 searchBar: document.querySelector('.searchBar'),
             });
+
         } catch (error) {
             console.error(error);
         }
