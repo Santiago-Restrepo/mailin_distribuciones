@@ -57,6 +57,11 @@ export const gliderSales = async()=>{
 			salesElement.appendChild(noOfferElement);
 		}
 	} catch (error) {
+		//Creación de h5 con contenido de "No hay ofertas disponibles"
+		const noOfferElement = document.createElement("h5");
+		noOfferElement.innerHTML = "No hay ofertas disponibles"
+		salesElement.appendChild(noOfferElement);
+		
 		console.error(error);
 	}
 	
