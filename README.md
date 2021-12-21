@@ -1,7 +1,7 @@
 
 # Mailin Distribuciones web Page
 
-Web page for distribution company Mailin Distribuciones
+Web page for distribution company **Mailin Distribuciones**. This is an ecommerce in wich users can buy all their products via WhatsApp and know more about the company. Users can also become part of the company using the forms on the page
 
 ### Installation 🔧
 
