@@ -28,4 +28,4 @@ Web page for distribution company Mailin Distribuciones
 * [Santiago Restrepo](https://github.com/Santiago-Restrepo) - *Development | Design | Deploy | Documentation*
 
 ---
-Made with ❤️ by [Santiago Restrepo](https://github.com/santiago-restrepo) 😊
+📖 Made with ❤️ by [Santiago Restrepo](https://github.com/santiago-restrepo) 😊
