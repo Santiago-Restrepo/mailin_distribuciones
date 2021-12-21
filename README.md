@@ -8,7 +8,7 @@ Web page for distribution company Mailin Distribuciones
 1. `npm install` -> Installing packages with npm
 2. `npm run dev` -> Compiling WebPack in development mode
 
-## Deploy 📦
+## Deployment 📦
 
 1. `npm run build` -> Compiling WebPack in production mode
 
