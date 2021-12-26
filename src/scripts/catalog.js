@@ -5,7 +5,7 @@ class Catalog{
         this.entireCatalog = [];
         this.type = config.type;
         this.container = config.container;
-        this.content = this.getProductArray(JSON.parse(window.localStorage.getItem('catalogJson'))[`${this.type}`]);
+        this.content = this.getProductArray(JSON.parse(window.localStorage.getItem('catalogJson')).filter((item)=> item.metadata.tags[0].sys.id === this.type));
         this.searchBar = config.searchBar;
         this.searchBar.addEventListener('keyup', this.searchCatalog.bind(this));
         this.loadgif = this.container.nextSibling;
@@ -20,17 +20,15 @@ class Catalog{
         let productArray = [];
         //Recorremos elemento JSON que nos llegue por parámetro para retornar una Array de productos basado en esos elementos
         jsonElement.forEach(element => {
-            productArray.push(new Product(element));
+            productArray.push(new Product(element.fields));
         });
         return productArray;
     }
     
     setEntireCatalog(jsonCatalog){
-        for (const category in jsonCatalog) {
-            jsonCatalog[category].forEach(element => {
-                this.entireCatalog.push(new Product(element))//enviamos el JSON que nos llegó como parametro
-            });
-        }
+        jsonCatalog.forEach(element => {
+            this.entireCatalog.push(new Product(element.fields))
+        });
     }
 
     renderCatalog(content){

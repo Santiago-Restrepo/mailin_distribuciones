@@ -8,12 +8,12 @@ class Product{
         this.name = jsonElement.name;
         this.description = jsonElement.description;
         this.imagesUrl={
-            'catalog':jsonElement.images.catalog,
-            'modal':jsonElement.images.modal
+            'catalog': jsonElement.catalogImage,
+            'modal':jsonElement.modalImage || jsonElement.catalogImage
         };
         this.prices={
-            'current':jsonElement.prices.current,
-            'old':jsonElement.prices.old
+            'current':jsonElement.currentPrice,
+            'old':jsonElement.oldPrice || ''
         };
         this.size= jsonElement.size;
         
@@ -49,7 +49,7 @@ class Product{
         //Condicional en el cual preguntamos si el alto de nuestra pantalla es mayor a la distancia de los productos con respecto al top de nuestra página, además comprobamos si la imagen del producto contiene el atributo src="nombre de gif de carga compilado" para saber que no tenemos que volver a cargar la imagen en caso de que vuelva a cumplirse la primera condición
         if (window.innerHeight > entry.target.getBoundingClientRect().top && this.htmlImageElement.src.split('/')[this.htmlImageElement.src.split('/').length-1] == loadGif.split('/')[this.htmlImageElement.src.split('/').length-1]) {
             this.htmlImageElement.classList.remove('loadgif');
-            this.htmlImageElement.setAttribute('src',this.imagesUrl.catalog);
+            this.htmlImageElement.setAttribute('src',`https:${this.imagesUrl.catalog.fields.file.url}`);
         }
     }
 

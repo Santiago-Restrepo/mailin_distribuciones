@@ -10,9 +10,11 @@ import { client } from '../client';
 
 export const gliderSales = async()=>{
 	try {
-		const salesResponse = await client.getEntries();
+		const contentfulResponse = await client.getEntries({
+			limit: 200
+		});
 		//Filtramos la respuesta del contentful por las ofertas activas
-		const sales = salesResponse.items.filter((item) => item.sys.contentType.sys.id === "sales").filter((sale)=> sale.fields.active)
+		const sales = contentfulResponse.items.filter((item) => item.sys.contentType.sys.id === "sales").filter((sale)=> sale.fields.active)
 		//Si no hay ninguna oferta activa se renderizará "No hay ofertas disponibles"
 		if (sales.length > 0) {
 			gliderElement.classList.remove("hide");

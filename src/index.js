@@ -10,6 +10,7 @@ if (window.location.href.split('/')[window.location.href.split('/').length-1].sp
 
 import SingletonModal from "./scripts/modal.js";
 import Catalog from './scripts/catalog.js';
+import { client } from './client';
 
 
 window.addEventListener('load', async ()=>{
@@ -21,11 +22,10 @@ window.addEventListener('load', async ()=>{
     //Comprobamos si estamos en el index, si es así no tendremos que traer un catálogo y nos ahorramos procesamiento
     if (window.localStorage.getItem('actualPage') != 'index' && window.localStorage.getItem('actualPage') != '') {
         try {
-            //bandera para comprobar si ya se hizo la petición
-            // if (window.localStorage.getItem('catalogJson') === null || window.localStorage.getItem('catalogJson') == '') {
-                // }
-            let catalogPromise = await fetch(window.localStorage.getItem('API'));
-            let catalogJson = await catalogPromise.json();
+            const contentfulResponse = await client.getEntries({
+			limit: 200
+		    });
+            let catalogJson = contentfulResponse.items.filter((item) => item.sys.contentType.sys.id === "product")
             window.localStorage.setItem('catalogJson',JSON.stringify(catalogJson));
             const catalog_container = document.querySelector('.catalog__container');
             
